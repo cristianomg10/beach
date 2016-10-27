@@ -16,10 +16,14 @@ $input			= new Matrix([
 
 $expectedOutput = new Vector([0, 0, 0, 1]);
 
-$slp = new SingleLayerPerceptron(3, 100);
+$slp = new SingleLayerPerceptron(3, 100, new Step(), $expectedOutput);
 $slp->setInput($input);
-$slp->setActivationFunction(new Step());
-$slp->setExpectedOutput($expectedOutput);
 $slp->setLearningRate(0.5);
 $slp->setMomentumRate(0.3);
+$slp->train();
 echo "Input ok<br>";
+
+# verify
+$slp->setInput($input);
+$ret = $slp->run();
+echo "Input test: " . json_encode($input) . " | Output: " . $ret . "<br>";

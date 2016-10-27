@@ -55,6 +55,7 @@ class Perceptron {
 	public function calculate(){
 		//setting value as as 0
 		$this->output = 0;
+
 		for ($i = 0; $i < count($this->input); ++$i){
 			$this->output += $this->weights[$i] * $this->input[$i];
 		}
@@ -92,4 +93,22 @@ class Perceptron {
 	public function getError(){
 	    return $this->expectedOutput - $this->output;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getWeights()
+    {
+        return $this->weights;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBias()
+    {
+        return $this->bias;
+    }
+
+
 }
