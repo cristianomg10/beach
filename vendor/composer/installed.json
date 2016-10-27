@@ -1,0 +1,68 @@
+[
+    {
+        "name": "markrogoyski/math-php",
+        "version": "v0.13.0",
+        "version_normalized": "0.13.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/markrogoyski/math-php.git",
+            "reference": "22cd591827282c1901003b39334bbdec12ba19e9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/markrogoyski/math-php/zipball/22cd591827282c1901003b39334bbdec12ba19e9",
+            "reference": "22cd591827282c1901003b39334bbdec12ba19e9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "satooshi/php-coveralls": "dev-master",
+            "squizlabs/php_codesniffer": "2.*"
+        },
+        "time": "2016-10-16 05:59:16",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MathPHP\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mark Rogoyski",
+                "email": "mark@rogoyski.com",
+                "homepage": "https://github.com/markrogoyski",
+                "role": "Developer"
+            },
+            {
+                "name": "Kevin Nowaczyk",
+                "role": "Contributor"
+            },
+            {
+                "name": "Jakob Sandberg",
+                "role": "Contributor"
+            }
+        ],
+        "description": "Math Library for PHP. Features descriptive statistics and regressions; Continuous and discrete probability distributions; Linear algebra with matrices and vectors, Numerical analysis; special mathematical functions; Algebra",
+        "homepage": "https://github.com/markrogoyski/math-php/",
+        "keywords": [
+            "algebra",
+            "combinatorics",
+            "distributions",
+            "linear algebra",
+            "math",
+            "mathematics",
+            "matrix",
+            "numerical analysis",
+            "probability",
+            "regressions",
+            "statistics"
+        ]
+    }
+]
