@@ -62,6 +62,8 @@ class Perceptron {
 
 		$this->output += $this->bias;
 		$this->output = $this->activationFunction->activationFunction($this->output);
+
+        return $this->output;
 	}
 
     /**
