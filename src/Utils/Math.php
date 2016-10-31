@@ -1,4 +1,6 @@
 <?php
+namespace App\Utils;
+
 /**
  * Created by PhpStorm.
  * User: cristiano

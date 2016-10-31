@@ -4,7 +4,6 @@ namespace App\ANN;
 use App\ActivationFunctions\IActivationFunction;
 
 class Perceptron {
-
 	private $weights;
 	private $input;
 	private $output;
