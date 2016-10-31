@@ -19,11 +19,11 @@ If you want to create your own activation function, you just need to:
  
  use App\ActivationFunctions\IActivationFunction;
 
- class StepFunction implements IActivationFunction
+ class MyFunction implements IActivationFunction
  {
      public function activationFunction($value)
      {
-         return ($value >= 0.5 ? 1 : 0);
+         return $value * -1;
      }
  }
  
