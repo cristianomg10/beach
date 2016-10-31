@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'MathPHP\\' => array($vendorDir . '/markrogoyski/math-php/src'),
-    'App\\' => array($baseDir . '/app'),
+    'App\\' => array($baseDir . '/src'),
 );

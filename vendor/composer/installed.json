@@ -1,17 +1,17 @@
 [
     {
         "name": "markrogoyski/math-php",
-        "version": "v0.13.0",
-        "version_normalized": "0.13.0.0",
+        "version": "v0.14.0",
+        "version_normalized": "0.14.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/markrogoyski/math-php.git",
-            "reference": "22cd591827282c1901003b39334bbdec12ba19e9"
+            "reference": "fd047c89a9d506ea2c31286d960caa436aad9385"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/markrogoyski/math-php/zipball/22cd591827282c1901003b39334bbdec12ba19e9",
-            "reference": "22cd591827282c1901003b39334bbdec12ba19e9",
+            "url": "https://api.github.com/repos/markrogoyski/math-php/zipball/fd047c89a9d506ea2c31286d960caa436aad9385",
+            "reference": "fd047c89a9d506ea2c31286d960caa436aad9385",
             "shasum": ""
         },
         "require": {
@@ -21,7 +21,7 @@
             "satooshi/php-coveralls": "dev-master",
             "squizlabs/php_codesniffer": "2.*"
         },
-        "time": "2016-10-16 05:59:16",
+        "time": "2016-10-26 05:56:31",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

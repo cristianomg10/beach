@@ -1,4 +1,7 @@
 <?php
+namespace App\ANN;
+
+use App\ActivationFunctions\IActivationFunction;
 
 class Perceptron {
 

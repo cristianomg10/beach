@@ -3,9 +3,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
-
-require_once 'Perceptron.class.php';
-require 'Step.class.php';
+use App\ANN\Perceptron;
+use App\ActivationFunctions\StepFunction;
 
 # set values
 $expectedOutput = new Vector([0, 0, 0, 1]);
@@ -27,7 +26,7 @@ $beta           = 0.3;
 
 # initial setting of a neuron
 $p = new Perceptron;
-$p->setActivationFunction(new Step());
+$p->setActivationFunction(new StepFunction());
 
 # training
 while ($err > 0 /*&& $epoch <= $maxEpochs*/) {

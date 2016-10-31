@@ -1,4 +1,5 @@
 <?php
+namespace App\ActivationFunctions;
 
 /**
  * Created by PhpStorm.

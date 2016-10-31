@@ -1,4 +1,5 @@
 <?php
+namespace App\Loggable;
 
 /**
  * Created by PhpStorm.

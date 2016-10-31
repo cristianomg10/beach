@@ -1,10 +1,12 @@
 <?php
-use \MathPHP\LinearAlgebra\Matrix;
-use \MathPHP\LinearAlgebra\Vector;
+namespace App\ANN;
 
-require_once 'Perceptron.class.php';
-require_once 'IActivationFunction.php';
-require_once 'ILoggable.php';
+use MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\Vector;
+use App\ANN\Perceptron;
+use App\Loggable\ILoggable;
+use App\ActivationFunctions\IActivationFunction;
+
 /**
  * Created by PhpStorm.
  * User: cristiano

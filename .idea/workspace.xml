@@ -1,15 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rna/ELM.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rna/ILoggable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rna/PerceptronLearning.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rna/ScreenWriterLoggable.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rna/SingleLayerPerceptron.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/indexSLP.php" afterPath="$PROJECT_DIR$/rna/indexPerceptronLearning.php" />
+    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autoload.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/classic algorithms/dijkstra.php" afterPath="$PROJECT_DIR$/src/classic algorithms/dijkstra.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/ELM.class.php" afterPath="$PROJECT_DIR$/src/ANN/ELM.class.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/IActivationFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/ILoggable.php" afterPath="$PROJECT_DIR$/src/Loggable/ILoggable.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/Perceptron.class.php" afterPath="$PROJECT_DIR$/src/ANN/Perceptron.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/PerceptronLearning.php" afterPath="$PROJECT_DIR$/src/ANN/PerceptronLearning.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/README.md" afterPath="$PROJECT_DIR$/src/ANN/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/ScreenWriterLoggable.php" afterPath="$PROJECT_DIR$/src/Loggable/ScreenWriterLoggable.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/Sigmoidal.class.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/Step.class.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/index.php" afterPath="$PROJECT_DIR$/src/ANN/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/rna/indexPerceptronLearning.php" afterPath="$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/utils/Math.php" afterPath="$PROJECT_DIR$/src/utils/Math.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rna/Perceptron.class.php" afterPath="$PROJECT_DIR$/rna/Perceptron.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/.travis.yml" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/LICENSE.txt" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/README.md" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/coding_standard.xml" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/coding_standard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/composer.json" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Algebra.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Algebra.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/BadDataException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/BadDataException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/BadParameterException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/BadParameterException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/IncorrectTypeException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/IncorrectTypeException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/MathException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/MathException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/MatrixException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/MatrixException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/OutOfBoundsException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/OutOfBoundsException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/VectorException.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Exception/VectorException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Finance.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Finance.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Arithmetic.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Arithmetic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Map/Multi.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Map/Multi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Map/Single.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Map/Single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Piecewise.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Piecewise.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Polynomial.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Polynomial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Special.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Special.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Support.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Functions/Support.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/ColumnVector.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/ColumnVector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/DiagonalMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/DiagonalMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/FunctionMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/FunctionMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/FunctionSquareMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/FunctionSquareMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/MatrixFactory.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/MatrixFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/RowVector.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/RowVector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/SquareMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/SquareMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/VandermondeMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/VandermondeMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/VandermondeSquareMatrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/VandermondeSquareMatrix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Vector.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Vector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/ClampedCubicSpline.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/ClampedCubicSpline.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/Interpolation.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/Interpolation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/LagrangePolynomial.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/LagrangePolynomial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NaturalCubicSpline.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NaturalCubicSpline.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NevillesMethod.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NevillesMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NewtonPolynomialForward.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/Interpolation/NewtonPolynomialForward.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/FivePointFormula.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/FivePointFormula.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/NumericalDifferentiation.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/NumericalDifferentiation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/SecondDerivativeMidpointFormula.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/SecondDerivativeMidpointFormula.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/ThreePointFormula.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalDifferentiation/ThreePointFormula.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/BoolesRule.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/BoolesRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/MidpointRule.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/MidpointRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/NumericalIntegration.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/NumericalIntegration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/RectangleMethod.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/RectangleMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/SimpsonsRule.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/SimpsonsRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/SimpsonsThreeEighthsRule.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/SimpsonsThreeEighthsRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/TrapezoidalRule.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/TrapezoidalRule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/Validation.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/NumericalIntegration/Validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/BisectionMethod.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/BisectionMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/FixedPointIteration.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/FixedPointIteration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/NewtonsMethod.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/NewtonsMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/SecantMethod.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/SecantMethod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/Validation.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/NumericalAnalysis/RootFinding/Validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Combinatorics.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Combinatorics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Beta.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Beta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Cauchy.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Cauchy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/ChiSquared.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/ChiSquared.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Continuous.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Continuous.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/DiracDelta.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/DiracDelta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Exponential.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Exponential.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/F.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/F.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Laplace.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Laplace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/LogLogistic.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/LogLogistic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/LogNormal.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/LogNormal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Logistic.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Logistic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/NoncentralT.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/NoncentralT.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Normal.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Normal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Pareto.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Pareto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/StandardNormal.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/StandardNormal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/StudentT.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/StudentT.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Uniform.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Uniform.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Weibull.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Continuous/Weibull.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Bernoulli.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Bernoulli.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Binomial.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Binomial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Discrete.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Discrete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Geometric.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Geometric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Multinomial.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Multinomial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/NegativeBinomial.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/NegativeBinomial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Pascal.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Pascal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Poisson.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/Poisson.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/ShiftedGeometric.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Discrete/ShiftedGeometric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Distribution.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Distribution.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/ChiSquared.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/ChiSquared.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/StandardNormal.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/StandardNormal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/TDistribution.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Probability/Distribution/Table/TDistribution.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Advanced.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Basic.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Basic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/SetTheory/ImmutableSet.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/SetTheory/ImmutableSet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/SetTheory/Set.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/SetTheory/Set.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/ANOVA.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/ANOVA.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Average.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Average.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Correlation.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Correlation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Descriptive.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Descriptive.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Distribution.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Distribution.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/EffectSize.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/EffectSize.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Experiment.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Experiment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/RandomVariable.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/RandomVariable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/HanesWoolf.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/HanesWoolf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LOESS.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LOESS.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Linear.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Linear.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LinearThroughPoint.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LinearThroughPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LineweaverBurk.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/LineweaverBurk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Methods/LeastSquares.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Methods/LeastSquares.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Methods/WeightedLeastSquares.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Methods/WeightedLeastSquares.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/LinearModel.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/LinearModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/MichaelisMenten.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/MichaelisMenten.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/PowerModel.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Models/PowerModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/NonParametricRegression.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/NonParametricRegression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/ParametricRegression.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/ParametricRegression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/PowerLaw.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/PowerLaw.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Regression.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/Regression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/TheilSen.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/TheilSen.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/WeightedLinear.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Regression/WeightedLinear.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Significance.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Statistics/Significance.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Algebra/AlgebraTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Algebra/AlgebraTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Finance/FinanceTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Finance/FinanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/ArithmeticTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/ArithmeticTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/Map/MultiTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/Map/MultiTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/Map/SingleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/Map/SingleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/PiecewiseTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/PiecewiseTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/PolynomialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/PolynomialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/SpecialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/SpecialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/SupportTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Functions/SupportTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/ColumnVectorTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/ColumnVectorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/DiagonalMatrixTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/DiagonalMatrixTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/FunctionMatrixTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/FunctionMatrixTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixAxiomsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixAxiomsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixColumnOperationsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixColumnOperationsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixDecompositionsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixDecompositionsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixFactoryTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixNormsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixNormsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixOperationsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixOperationsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixRowOperationsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixRowOperationsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/MatrixTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/RowVectorTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/RowVectorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/SquareMatrixTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/SquareMatrixTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VandermondeMatrixTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VandermondeMatrixTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorAxiomsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorAxiomsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorNormsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorNormsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorOperationsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorOperationsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/LinearAlgebra/VectorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/ClampedCubicSplineTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/ClampedCubicSplineTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/InterpolationTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/InterpolationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/LagrangePolynomialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/LagrangePolynomialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NaturalCubicSplineTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NaturalCubicSplineTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NevillesMethodTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NevillesMethodTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NewtonPolynomialForwardTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/Interpolation/NewtonPolynomialForwardTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/FivePointFormulaTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/FivePointFormulaTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/NumericalDifferentiationTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/NumericalDifferentiationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/SecondDerivativeMidpointFormulaTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/SecondDerivativeMidpointFormulaTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/ThreePointFormulaTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalDifferentiation/ThreePointFormulaTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/BoolesRuleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/BoolesRuleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/MidpointRuleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/MidpointRuleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/NumericalIntegrationTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/NumericalIntegrationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/RectangleMethodTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/RectangleMethodTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/SimpsonsRuleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/SimpsonsRuleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/SimpsonsThreeEighthsRuleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/SimpsonsThreeEighthsRuleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/TrapezoidalRuleTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/NumericalIntegration/TrapezoidalRuleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/BisectionMethodTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/BisectionMethodTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/FixedPointIterationTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/FixedPointIterationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/NewtonsMethodTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/NewtonsMethodTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/SecantMethodTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/NumericalAnalysis/RootFinding/SecantMethodTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/CombinatoricsAxiomsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/CombinatoricsAxiomsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/CombinatoricsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/CombinatoricsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/BetaTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/BetaTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/CauchyTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/CauchyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ChiSquaredTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ChiSquaredTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/DiracDeltaTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/DiracDeltaTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ExponentialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ExponentialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/FTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/FTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LaplaceTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LaplaceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LimitsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LimitsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogLogisticTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogLogisticTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogNormalTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogNormalTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogisticTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/LogisticTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/NoncentralTTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/NoncentralTTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/NormalTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/NormalTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ParetoTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/ParetoTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/StandardNormalTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/StandardNormalTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/StudentTTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/StudentTTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/UniformTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/UniformTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/WeibullTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Continuous/WeibullTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/BernoulliTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/BernoulliTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/BinomialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/BinomialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/GeometricTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/GeometricTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/LimitsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/LimitsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/MultinomialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/MultinomialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/NegativeBinomialTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/NegativeBinomialTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/PascalTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/PascalTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/PoissonTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/PoissonTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/ShiftedGeometricTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Discrete/ShiftedGeometricTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/ChiSquaredTableTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/ChiSquaredTableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/StandardNormalTableTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/StandardNormalTableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/TDistributionTableTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Probability/Distribution/Table/TDistributionTableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Sequence/AdvancedTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Sequence/AdvancedTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Sequence/BasicTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Sequence/BasicTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/ImmutableSetTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/ImmutableSetTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetAxiomsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetAxiomsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetOperationsTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetOperationsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/SetTheory/SetTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/ANOVATest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/ANOVATest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/AverageTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/AverageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/CorrelationTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/CorrelationTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/DescriptiveTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/DescriptiveTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/DistributionTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/DistributionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/EffectSizeTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/EffectSizeTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/ExperimentTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/ExperimentTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/RandomVariableTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/RandomVariableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/HanesWoolfTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/HanesWoolfTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LOESSTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LOESSTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LinearTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LinearTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LinearThroughPointTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LinearThroughPointTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LineweaverBurkTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/LineweaverBurkTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/PowerLawTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/PowerLawTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/RegressionTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/RegressionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/TheilSenTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/TheilSenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/WeightedLinearTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/Regression/WeightedLinearTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/SignificanceTest.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/Statistics/SignificanceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/bootstrap.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/phpunit.xml" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/tests/phpunit.xml" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +271,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rna/index.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+            <state relative-caret-position="420">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding>
                 <element signature="e#58#91#0#PHP" expanded="true" />
               </folding>
@@ -42,69 +283,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexPerceptronLearning.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rna/indexPerceptronLearning.php">
+      <file leaf-file-name="indexPerceptronLearning.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+            <state relative-caret-position="825">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
-                <element signature="e#115#148#0#PHP" expanded="true" />
+                <element signature="e#139#172#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Perceptron.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+      <file leaf-file-name="Perceptron.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1136">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PerceptronLearning.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
+        <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#40#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ILoggable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rna/ILoggable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-461">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ELM.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rna/ELM.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
               <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
-                <element signature="e#93#127#0#PHP" expanded="true" />
+                <element signature="e#26#59#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Math.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/Math.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -112,6 +320,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Cristiano Garcia" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -120,7 +333,6 @@
         <option value="$PROJECT_DIR$/rna/Sigmoidal.php" />
         <option value="$PROJECT_DIR$/rna/Step.class.php" />
         <option value="$PROJECT_DIR$/utils/Math.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/rna/IActivationFunction.php" />
         <option value="$PROJECT_DIR$/rna/Neuron.class.php" />
         <option value="$PROJECT_DIR$/rna/Sigmoidal.class.php" />
@@ -135,7 +347,24 @@
         <option value="$PROJECT_DIR$/rna/indexSLP.php" />
         <option value="$PROJECT_DIR$/rna/ScreenWriterLoggable.php" />
         <option value="$PROJECT_DIR$/rna/PerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/autoload.php" />
         <option value="$PROJECT_DIR$/rna/indexPerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/rna/Perceptron.class.php" />
+        <option value="$PROJECT_DIR$/src/rna/indexPerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/src/RNA/PerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/src/RNA/indexPerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/src/RNA/ILoggable.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/StepFunctions.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunctions.php" />
+        <option value="$PROJECT_DIR$/src/Loggable/ScreenWriterLoggable.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
+        <option value="$PROJECT_DIR$/src/ANN/PerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
+        <option value="$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php" />
+        <option value="$PROJECT_DIR$/src/ANN/index.php" />
       </list>
     </option>
   </component>
@@ -180,11 +409,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -205,6 +457,24 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="vendor">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="utils">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -219,12 +489,103 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="rna">
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Loggable">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="classic algorithms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ANN">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ActivationFunctions">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="beach">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -237,6 +598,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Loggable" />
+      <recent name="$PROJECT_DIR$/src/ActivationFunctions" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/utils" />
     </key>
   </component>
@@ -314,20 +678,25 @@
       <workItem from="1477566963378" duration="3867000" />
       <workItem from="1477572352626" duration="6945000" />
       <workItem from="1477603773239" duration="11956000" />
+      <workItem from="1477914508904" duration="3186000" />
+      <workItem from="1477951055889" duration="1378000" />
+      <workItem from="1477952458344" duration="2051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54835000" />
+    <option name="totallyTimeSpent" value="61450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26210606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38201383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -338,7 +707,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -354,6 +722,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Use of Autoloading and organising into folders." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use of Autoloading and organising into folders." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -361,75 +733,27 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#58#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/indexPerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#115#148#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
-          <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#58#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/indexPerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <element signature="e#115#148#0#PHP" expanded="true" />
+            <element signature="e#139#172#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
           <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
           <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
+            <element signature="e#26#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
@@ -449,27 +773,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/indexPerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <element signature="e#115#148#0#PHP" expanded="true" />
+            <element signature="e#139#172#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
           <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
           <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
+            <element signature="e#26#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -479,7 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
@@ -489,17 +813,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
+            <element signature="e#26#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
@@ -507,14 +831,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/IActivationFunction.php">
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
@@ -524,17 +848,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
+            <element signature="e#26#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
@@ -542,14 +866,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/IActivationFunction.php">
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -559,7 +883,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
@@ -567,7 +891,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -577,7 +901,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
@@ -585,7 +909,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -595,7 +919,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
@@ -603,7 +927,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -613,7 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
@@ -621,7 +945,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -631,49 +955,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Math.php">
+    <entry file="file://$PROJECT_DIR$/src/utils/Math.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/IActivationFunction.php">
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Step.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -701,21 +997,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/IActivationFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Sigmoidal.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/README.md">
+    <entry file="file://$PROJECT_DIR$/src/ANN/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
@@ -735,18 +1017,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/ELM.class.php">
+    <entry file="file://$PROJECT_DIR$/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Finance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Advanced.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Algebra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loggable/ILoggable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Loggable/ScreenWriterLoggable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/ELM.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2460">
           <caret line="164" column="39" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
           <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-            <element signature="e#93#127#0#PHP" expanded="true" />
+            <element signature="e#6#91#0#PHP" expanded="false" />
+            <element signature="e#93#127#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Math.php">
+    <entry file="file://$PROJECT_DIR$/src/utils/Math.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -754,56 +1132,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rna/index.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+        <state relative-caret-position="45">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#139#172#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="e#58#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/ScreenWriterLoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/ILoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/PerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/Perceptron.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rna/indexPerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-          <folding>
-            <element signature="e#115#148#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

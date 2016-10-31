@@ -1,6 +1,7 @@
 <?php
+namespace App\Loggable;
 
-require_once "ILoggable.php";
+use App\Loggable\ILoggable;
 
 /**
  * Created by PhpStorm.
