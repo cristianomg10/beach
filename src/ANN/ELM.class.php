@@ -1,5 +1,7 @@
 <?php
+namespace App\ANN;
 /**
+ **** NOT YET FINISHED
  * Created by PhpStorm.
  * User: cristiano
  * Date: 10/27/16
@@ -8,8 +10,7 @@
 
 use \MathPHP\LinearAlgebra\Matrix;
 use \MathPHP\LinearAlgebra\Vector;
-
-require_once 'IActivationFunction.php';
+use App\ActivationFunctions\IActivationFunction;
 
 class ELM {
     private $nHiddenNodes;

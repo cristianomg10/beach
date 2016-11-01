@@ -110,4 +110,20 @@ class Math
         }
 
     }
+
+    /**
+     * Generate random vector
+     * @param $length of the vector
+     * @param $coeficient number to be multiplied to the random number.
+     * @return array
+     */
+    static function generateRandomVector($length, $coeficient){
+        $vector = [];
+
+        for ($i = 0; $i < $length; ++$i){
+            $vector[$i] = (mt_rand() / mt_getrandmax()) * $coeficient;
+        }
+
+        return $vector;
+    }
 }

@@ -15,4 +15,12 @@ class StepFunction implements IActivationFunction
     {
         return ($value >= 0.5 ? 1 : 0);
     }
+
+    public function derivative($value)
+    {
+        if ($value == 0.5) {
+            return INF;
+        }
+        return 0;
+    }
 }

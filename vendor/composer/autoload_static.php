@@ -29,13 +29,15 @@ class ComposerStaticInitf9086cc1f627b4bcf0b4e5a9384ee01d
     );
 
     public static $classMap = array (
+        'App\\ANN\\ELM' => __DIR__ . '/../..' . '/src/ANN/ELM.class.php',
         'App\\ANN\\Perceptron' => __DIR__ . '/../..' . '/src/ANN/Perceptron.php',
         'App\\ANN\\PerceptronLearning' => __DIR__ . '/../..' . '/src/ANN/PerceptronLearning.php',
+        'App\\ANN\\SingleLayerPerceptron' => __DIR__ . '/../..' . '/src/ANN/SingleLayerPerceptron.php',
         'App\\ActivationFunctions\\IActivationFunction' => __DIR__ . '/../..' . '/src/ActivationFunctions/IActivationFunction.php',
         'App\\ActivationFunctions\\SigmoidalFunction' => __DIR__ . '/../..' . '/src/ActivationFunctions/SigmoidalFunction.php',
         'App\\ActivationFunctions\\StepFunction' => __DIR__ . '/../..' . '/src/ActivationFunctions/StepFunction.php',
         'App\\Loggable\\ILoggable' => __DIR__ . '/../..' . '/src/Loggable/ILoggable.php',
-        'App\\Loggable\\ScreenWriterLoggable' => __DIR__ . '/../..' . '/src/Loggable/ScreenWriterLoggable.php',
+        'App\\Loggable\\ScreenWriterLoggable' => __DIR__ . '/../..' . '/src/Loggable/HTMLLoggable.php',
         'App\\Utils\\Math' => __DIR__ . '/../..' . '/src/Utils/Math.php',
         'MathPHP\\Algebra' => __DIR__ . '/..' . '/markrogoyski/math-php/src/Algebra.php',
         'MathPHP\\Exception\\BadDataException' => __DIR__ . '/..' . '/markrogoyski/math-php/src/Exception/BadDataException.php',

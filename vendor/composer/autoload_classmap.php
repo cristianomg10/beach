@@ -6,13 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\ANN\\ELM' => $baseDir . '/src/ANN/ELM.class.php',
     'App\\ANN\\Perceptron' => $baseDir . '/src/ANN/Perceptron.php',
     'App\\ANN\\PerceptronLearning' => $baseDir . '/src/ANN/PerceptronLearning.php',
+    'App\\ANN\\SingleLayerPerceptron' => $baseDir . '/src/ANN/SingleLayerPerceptron.php',
     'App\\ActivationFunctions\\IActivationFunction' => $baseDir . '/src/ActivationFunctions/IActivationFunction.php',
     'App\\ActivationFunctions\\SigmoidalFunction' => $baseDir . '/src/ActivationFunctions/SigmoidalFunction.php',
     'App\\ActivationFunctions\\StepFunction' => $baseDir . '/src/ActivationFunctions/StepFunction.php',
     'App\\Loggable\\ILoggable' => $baseDir . '/src/Loggable/ILoggable.php',
-    'App\\Loggable\\ScreenWriterLoggable' => $baseDir . '/src/Loggable/ScreenWriterLoggable.php',
+    'App\\Loggable\\ScreenWriterLoggable' => $baseDir . '/src/Loggable/HTMLLoggable.php',
     'App\\Utils\\Math' => $baseDir . '/src/Utils/Math.php',
     'MathPHP\\Algebra' => $vendorDir . '/markrogoyski/math-php/src/Algebra.php',
     'MathPHP\\Exception\\BadDataException' => $vendorDir . '/markrogoyski/math-php/src/Exception/BadDataException.php',

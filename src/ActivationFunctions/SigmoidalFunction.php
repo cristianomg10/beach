@@ -15,4 +15,8 @@ class SigmoidalFunction implements IActivationFunction
     {
         return 1 / (1 + M_E ^ (- $value));
     }
+
+    public function derivative($value){
+        return  (M_E ^ (-$value)) / ((1 + M_E ^ (-$value)) **2);
+    }
 }

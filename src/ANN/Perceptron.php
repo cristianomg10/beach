@@ -76,6 +76,14 @@ class Perceptron {
 		$this->activationFunction = $function;
 	}
 
+    /**
+     * Get the activation function of the neuron.
+     * @return mixed
+     */
+	public function getActivationFunction(){
+        return $this->activationFunction;
+    }
+
 	/**
 	 * Returns the square error
 	 * @return double

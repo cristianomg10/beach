@@ -30,14 +30,16 @@ class PerceptronLearning
      * @param IActivationFunction $af
      * @param $expectedOutput
      */
-    function __construct(int $maxEpochs, IActivationFunction $af, $expectedOutput)
+    function __construct(int $maxEpochs, IActivationFunction $af, $expectedOutput = [])
     {
         $this->perceptron = new Perceptron();
         $this->perceptron->setActivationFunction($af);
 
         $this->maxEpochs = $maxEpochs;
-        $this->setExpectedOutput($expectedOutput);
 
+        if ($expectedOutput != []){
+            $this->setExpectedOutput($expectedOutput);
+        }
     }
 
     /**
@@ -87,7 +89,7 @@ class PerceptronLearning
 
 
     private function write($text){
-        $this->loggable->write($text);
+        if (isset($this->loggable)) $this->loggable->write($text);
     }
 
     /**
@@ -100,7 +102,7 @@ class PerceptronLearning
         }
 
         $this->perceptron->setWeights($weights);
-        $this->perceptron->setBias(mt_rand() / mt_getrandmax());
+        $this->perceptron->setBias(/*mt_rand() / mt_getrandmax()*/ 1);
 
     }
 

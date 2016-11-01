@@ -10,4 +10,5 @@ namespace App\ActivationFunctions;
 interface IActivationFunction
 {
     public function activationFunction($value);
+    public function derivative($value);
 }
