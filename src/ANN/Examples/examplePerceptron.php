@@ -1,5 +1,9 @@
 <?php
-require_once(__DIR__ . '/../vendor/autoload.php');
+namespace App\ANN\Examples;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
@@ -15,7 +19,7 @@ $input			= new Matrix([
 ]);
 
 $weights		= new Vector([mt_rand() / mt_getrandmax(), mt_rand() / mt_getrandmax()]);
-$bias 			= mt_rand() / mt_getrandmax();
+$bias 			= 1;
 
 # maximum epochs
 $maxEpochs  	= 100;

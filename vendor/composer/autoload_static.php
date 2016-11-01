@@ -36,6 +36,7 @@ class ComposerStaticInitf9086cc1f627b4bcf0b4e5a9384ee01d
         'App\\ActivationFunctions\\StepFunction' => __DIR__ . '/../..' . '/src/ActivationFunctions/StepFunction.php',
         'App\\Loggable\\ILoggable' => __DIR__ . '/../..' . '/src/Loggable/ILoggable.php',
         'App\\Loggable\\ScreenWriterLoggable' => __DIR__ . '/../..' . '/src/Loggable/ScreenWriterLoggable.php',
+        'App\\Utils\\Math' => __DIR__ . '/../..' . '/src/Utils/Math.php',
         'MathPHP\\Algebra' => __DIR__ . '/..' . '/markrogoyski/math-php/src/Algebra.php',
         'MathPHP\\Exception\\BadDataException' => __DIR__ . '/..' . '/markrogoyski/math-php/src/Exception/BadDataException.php',
         'MathPHP\\Exception\\BadParameterException' => __DIR__ . '/..' . '/markrogoyski/math-php/src/Exception/BadParameterException.php',

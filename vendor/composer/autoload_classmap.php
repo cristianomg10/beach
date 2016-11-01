@@ -13,6 +13,7 @@ return array(
     'App\\ActivationFunctions\\StepFunction' => $baseDir . '/src/ActivationFunctions/StepFunction.php',
     'App\\Loggable\\ILoggable' => $baseDir . '/src/Loggable/ILoggable.php',
     'App\\Loggable\\ScreenWriterLoggable' => $baseDir . '/src/Loggable/ScreenWriterLoggable.php',
+    'App\\Utils\\Math' => $baseDir . '/src/Utils/Math.php',
     'MathPHP\\Algebra' => $vendorDir . '/markrogoyski/math-php/src/Algebra.php',
     'MathPHP\\Exception\\BadDataException' => $vendorDir . '/markrogoyski/math-php/src/Exception/BadDataException.php',
     'MathPHP\\Exception\\BadParameterException' => $vendorDir . '/markrogoyski/math-php/src/Exception/BadParameterException.php',
