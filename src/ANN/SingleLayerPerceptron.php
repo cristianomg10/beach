@@ -94,38 +94,38 @@ class SingleLayerPerceptron
     }
 
     public function train(){
-        for ($i = 0; $i < $this->input->getN(); ++$i) {
 
-            $columnInput = $this->input->getColumn($i);
-            $expectedOutput = $this->expectedOutput->get($i);
+        $epoch = 1;
+        /* Run the epochs (batch training) */
+        while ($epoch < $this->maxEpochs){
+            $accumulatedError = [];
+            for ($i = 0; $i < $this->input->getN(); ++$i) {
 
-            /**
-             * Calculate the inputs with the hidden
-             * perceptrons. The results are stored in $y
-             */
-            $y = [];
-            foreach ($this->hiddenPerceptrons as $p){
-                $p->setInput($columnInput);
+                $columnInput = $this->input->getColumn($i);
+                $expectedOutput = $this->expectedOutput->get($i);
 
-                $y[] = $p->calculate();
-            }
+                $inputForOutputLayer = [];
+                for ($j = 0; $j < $this->nHiddenPerceptrons; ++$j){
+                    $this->hiddenPerceptrons[$j]->setInput($columnInput);
+                    $inputForOutputLayer[] = $this->hiddenPerceptrons[$j]->calculate();
+                }
 
-            /**
-             * Get the results of the hidden layer,
-             * and set as input for each output Neuron.
-             */
-            $errorToBeBackpropagated = 0;
-            foreach ($this->outputPerceptrons as $op){
-                $op = $this->outputPerceptrons[0];
-                $op->setInput($y);
-                $op->setExpectedOutput($expectedOutput);
-
-                $errorToBeBackpropagated = (new Matrix([$y]))->scalarMultiply($op->calculate()); //* $op->getActivationFunction()->derivative();
+                $outputPerceptron = $this->outputPerceptrons[0];
+                $outputPerceptron->setInput($inputForOutputLayer);
+                $outputPerceptron->setExpectedOutput($expectedOutput);
+                
+                $output[] = $outputPerceptron->calculate();
+                $accumulatedError[] = $outputPerceptron->getError();
 
             }
 
-            echo $errorToBeBackpropagated;
+            // OutputLayer dJdW2
+            for ($j = 0; $j < $this->nHiddenPerceptrons; ++$j){
 
+            }
+
+            var_dump($accumulatedError);
+            ++$epoch;
         }
     }
 
