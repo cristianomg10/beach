@@ -19,7 +19,7 @@ use App\ActivationFunctions\SigmoidalFunction;
 use App\ActivationFunctions\StepFunction;
 use App\ANN\SingleLayerPerceptron;
 
-$slp = new SingleLayerPerceptron(3, new SigmoidalFunction(), new StepFunction(), 0.7, 0.3, 2, 1, 100);
+$slp = new SingleLayerPerceptron(3, new SigmoidalFunction(), new SigmoidalFunction(), 0.7, 0.3, 2, 1, 100);
 
 $input			= new Matrix([
     [0, 0, 1, 1],
