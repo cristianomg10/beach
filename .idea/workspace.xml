@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" afterPath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +30,8 @@
       <file leaf-file-name="SingleLayerPerceptron.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="150" column="58" selection-start-line="150" selection-start-column="58" selection-end-line="150" selection-end-column="58" />
+            <state relative-caret-position="420">
+              <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
               <folding>
                 <element signature="e#6#113#0#PHP" expanded="true" />
                 <element signature="e#135#158#0#PHP" expanded="true" />
@@ -51,10 +53,10 @@
       <file leaf-file-name="exampleSingleLayerPerceptron.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
               <folding>
-                <element signature="e#237#270#0#PHP" expanded="true" />
+                <element signature="e#237#290#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +65,8 @@
       <file leaf-file-name="SigmoidalFunction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -150,11 +152,12 @@
         <option value="$PROJECT_DIR$/src/Loggable/TerminalLoggable.php" />
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/PerceptronLearning.php" />
         <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
       </list>
     </option>
@@ -491,12 +494,12 @@
       <workItem from="1477952458344" duration="5621000" />
       <workItem from="1478001201775" duration="21255000" />
       <workItem from="1478276644457" duration="10904000" />
-      <workItem from="1478297947144" duration="10448000" />
+      <workItem from="1478297947144" duration="30506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107627000" />
+    <option name="totallyTimeSpent" value="127685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -564,13 +567,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -907,6 +903,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+          <folding>
+            <element signature="e#237#290#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
@@ -915,28 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="e#237#270#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="150" column="58" selection-start-line="150" selection-start-column="58" selection-end-line="150" selection-end-column="58" />
+        <state relative-caret-position="420">
+          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
           <folding>
             <element signature="e#6#113#0#PHP" expanded="true" />
             <element signature="e#135#158#0#PHP" expanded="true" />

@@ -12,6 +12,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
+use App\ActivationFunctions\RoundedSigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 
