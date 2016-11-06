@@ -9,6 +9,7 @@
 
 namespace App\ANN;
 
+use App\ActivationFunctions\StepFunction;
 use App\ANN\Perceptron;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
@@ -18,6 +19,7 @@ use MathPHP\LinearAlgebra\Vector;
 class SingleLayerPerceptron
 {
     private $expectedOutput;
+    private $output;
     private $input;
     private $inputLayerSize;
     private $learningRate;
@@ -30,6 +32,7 @@ class SingleLayerPerceptron
     private $nHiddenPerceptrons;
     private $hiddenLayerActivationFunction;
     private $outputLayerActivationFunction;
+    private $J;
 
     /**
      * SingleLayerPerceptron constructor. First implemented to only one neuron in the output layer.
@@ -54,6 +57,30 @@ class SingleLayerPerceptron
 
         $this->initializeHiddenLayer();
         $this->initializeOutputLayer();
+    }
+
+    private function log($text){
+        echo "$text<br>";
+    }
+
+    public function __toString() : string
+    {
+        $text = '';
+        $text .= "Hidden Layer: <br>";
+        for ($i = 0; $i < $this->nHiddenPerceptrons; ++$i){
+            $text .= ">> Perceptron $i: " . new Matrix([$this->hiddenPerceptrons[$i]->getWeights()]) . "<br>";
+        }
+
+        $text .= "Output Layer: <br>";
+        for ($i = 0; $i < $this->nOutputPerceptrons; ++$i){
+            $text .= ">> Perceptron $i: " . new Matrix([$this->outputPerceptrons[$i]->getWeights()]) . "<br>";
+        }
+
+        $text .= "Input: {$this->input}<br>";
+        $text .= "Output: {$this->output}<br>";
+
+        $text .= "<br>J: {$this->J}<br>";
+        return $text;
     }
 
     /**
@@ -118,12 +145,17 @@ class SingleLayerPerceptron
              */
 
             $z3 = [];
+            $z2 = [];
             $hiddenOutputs = []; // z3
             $x = $this->input->transpose(); // 4x2
             $y = $this->expectedOutput->asColumnMatrix(); // 4x1
+            $a2 = []; // 4 x 3
             $yHat = [];
+            $this->output = [];
 
             // calculate z3 and yHat
+            $outputPerceptron = $this->outputPerceptrons[0];
+
             for ($i = 0; $i < $this->input->getN(); ++$i) {
 
                 $columnInput = $this->input->getColumn($i);
@@ -134,101 +166,97 @@ class SingleLayerPerceptron
                     $this->hiddenPerceptrons[$j]->setInput($columnInput);
                     $inputForOutputLayer[] = $this->hiddenPerceptrons[$j]->calculate();
                 }
+
                 $hiddenOutputs[$i] = $inputForOutputLayer;
 
-                $outputPerceptron = $this->outputPerceptrons[0];
                 $outputPerceptron->setInput($inputForOutputLayer);
                 $outputPerceptron->setExpectedOutput($expectedOutput);
 
-                $z3[] = $outputPerceptron->getActivationFunction()->derivative($outputPerceptron->calculate());
-                $yHat[] = $outputPerceptron->getError();
+                $z2[$i] = $inputForOutputLayer;
+                $z3[] = $outputPerceptron->calculate();
+                $this->output[] = (new StepFunction())->activationFunction($outputPerceptron->calculate());
+                $a2[$i] = $inputForOutputLayer;
+
+                $yHat[] = $outputPerceptron->calculate();
             }
 
-            echo ($y);
-            echo (new Matrix([$yHat]));
+            // Matrix object doesn't accept multiplication by zero :(
+            $this->output = new Matrix([$this->output]);
+            $rows = (new Matrix($a2))->getN();
 
-            $z3 = (new Matrix([$z3]));
-            die($y->subtract(new Matrix([$yHat]))->transpose());
-            //stopped here
+            $w2 = $outputPerceptron->getWeights();
+            for ($i = 0; $i < count($w2); ++$i){
+                for ($j = 0; $j < $rows; ++$j)
+                    $a2[$i][$j] = $a2[$i][$j] * $w2[$i];
+            }
+
+            $a2 = (new Matrix($a2));
+            $yHat = (new Matrix([$yHat]))->transpose();
+            $z3 = (new Matrix([$z3]))->transpose();
+            $w2 = (new Matrix([$w2]))->transpose();
+            $oldJ = $this->J;
+            $this->J = $this->costFunction($y, $yHat);
+
+            if ($oldJ < $this->J){
+                $factor = -1;
+            }
 
             // OutputLayer dJdW2
             $hiddenOutputs = (new Matrix($hiddenOutputs));
-
-            $delta3 = (new Matrix([$yHat]))
+            $delta3 = ($y->subtract($yHat))
                 ->scalarMultiply(-1)
-                ->hadamardProduct(new Matrix([$z3]))->transpose();
+                ->hadamardProduct($this->hiddenLayerActivationFunction->derivative($z3))
 
-            $dJdW2 = [];
+            ;
 
-            die($hiddenOutputs);
+            $dJdW2 = $a2->transpose()->multiply($delta3);
+            # till here: WORKING :D
+            $z2 = (new Matrix($z2));
 
+            $dJdW1 = $delta3->multiply($w2->transpose())->hadamardProduct($this->hiddenLayerActivationFunction->derivative($z2));
+            $dJdW1 = $x->transpose()->multiply($dJdW1);
 
-            /*
-            echo "$delta3 <br>";
-            echo "$hiddenOutputs {$hiddenOutputs->getM()}x{$hiddenOutputs->getN()}<br>";
-            echo "{$hiddenOutputs->transpose()} {$hiddenOutputs->transpose()->getM()}x{$hiddenOutputs->transpose()->getN()}<br>";
-            */
-            for ($j = 0; $j < $hiddenOutputs->getN(); ++$j){ //  1 * (3)
-                for ($k = 0; $k < $delta3->getN(); ++$k){ // 3 * (4)
-                    if (!isset($dJdW2[$j])) $dJdW2[$j] = 0;
-                    $dJdW2[$j] +=  $hiddenOutputs->transpose()->get($j, $k) * $delta3->get(0, $j);
-                    //echo "Result:$dJdW2[$j] j:$j k:$k delta3(0,$j):{$delta3->get(0, $j)} hiddenOutputs->transpose->get($j, $k):{$hiddenOutputs->transpose()->get($j, $k)} <br>";
+            // update weights
+            $firstLayerWeights = $dJdW1->transpose()->getMatrix();
+            for ($i = 0; $i < $this->nHiddenPerceptrons; ++$i){
+                $weights = [];
+                $w = $this->hiddenPerceptrons[$i]->getWeights();
+
+                for ($j = 0; $j < count($this->hiddenPerceptrons[$i]->getWeights()); ++$j) {
+                    $weights[] = $w[$j] + $firstLayerWeights[$i][$j] * $factor;
                 }
+
+                $this->hiddenPerceptrons[$i]->setWeights($weights);
             }
 
-            // first layer
-            $xTdelta3 = [];
+            $outputLayerWeights = $dJdW2->transpose()->getMatrix();
+            for ($i = 0; $i < $this->nOutputPerceptrons; ++$i){
+                $weights = [];
+                $w = $this->outputPerceptrons[$i]->getWeights();
 
-            for ($j = 0; $j < $this->input->getM(); ++$j){
-                for ($k = 0; $k < $this->input->getN(); ++$k){
-                    $xTdelta3[$j][$k] = $this->input->get($j, $k) * $delta3->get(0, $k);
+                for ($j = 0; $j < count($this->outputPerceptrons[$i]->getWeights()); ++$j) {
+                    $weights[] = $w[$j] + $outputLayerWeights[$i][$j] * $factor;
                 }
+
+                $this->outputPerceptrons[$i]->setWeights($weights);
             }
 
-            $z2 = [];
-            $z2p = []; //z2 prime
-            for ($j = 0; $j < $this->nHiddenPerceptrons; ++$j){
-                $weights = $this->hiddenPerceptrons[$j]->getWeights();
-                for ($k = 0; $k < count($weights); ++$k) {
-                    echo "$j $k <br>";
-                    $z2[$j][] = $weights[$k] * $this->input->transpose()->get($j, $k);
-                    $z2p[$j][] = $this->hiddenPerceptrons[$j]->getActivationFunction()->derivative($weights[$k]);
-                }
-            }
-
-            $z2 = new Matrix($z2);
-            $z2p = new Matrix($z2p);
-            $xTdelta3 = new Matrix($xTdelta3);
-
-
-            echo "$xTdelta3 <br>";
-            echo "$z2p <br>";
-            die($z2p->multiply($xTdelta3));
-
-            $outputPerceptron = $this->outputPerceptrons[0];
-            $delta2 = (new Matrix([$outputPerceptron->getWeights()]))->transpose()->multiply($delta3); // w(2)T x d3
-            $input  = $this->input->transpose();
-            $dJdW1 = [];
-
-            echo $delta2;
-            echo ($this->input);
-            die("Ue");
-            echo "{$delta2->multiply($this->input->transpose())}";
-
-            for ($j = 0; $j < $hiddenOutputs->getN(); ++$j){ //  1 * (3)
-                for ($k = 0; $k < $delta2->getN(); ++$k){ // 3 * (4)
-                    if (!isset($dJdW1[$j])) $dJdW1[$j] = 0;
-                    $dJdW1[$j] +=  $hiddenOutputs->transpose()->get($j, $k) * $delta2->get(0, $j);
-                    //echo "Result:$dJdW2[$j] j:$j k:$k delta3(0,$j):{$delta3->get(0, $j)} hiddenOutputs->transpose->get($j, $k):{$hiddenOutputs->transpose()->get($j, $k)} <br>";
-                }
-            }
-
-
-            //echo ("Delta2: $delta2<br>Delta3: $delta3 <br> Input: $input<br>");
-            echo "dJdW1: " . new Matrix([$dJdW1]) . "<br>";
-            die();
+            echo "Epoca $epoch: <br>";
+            echo $this;
             ++$epoch;
         }
+    }
+
+    private function costFunction($y, $yHat){
+        $element = $y->subtract($yHat)->getMatrix();
+
+        $sum = 0;
+        for ($i = 0; $i < count($element); ++$i){
+            for ($j = 0; $j < count($element[$i]); ++$j){
+                $sum += $element[$i][$j];
+            }
+        }
+        return 0.5 * $sum ** 2;
     }
 
 }

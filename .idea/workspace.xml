@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" afterPath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
     </list>
     <ignored path="beach.iws" />
@@ -26,15 +26,15 @@
     <favorites_list name="beach" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SingleLayerPerceptron.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SingleLayerPerceptron.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+            <state relative-caret-position="172">
+              <caret line="225" column="78" selection-start-line="225" selection-start-column="78" selection-end-line="225" selection-end-column="78" />
               <folding>
                 <element signature="e#6#113#0#PHP" expanded="true" />
-                <element signature="e#135#158#0#PHP" expanded="true" />
+                <element signature="e#135#176#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,18 +43,18 @@
       <file leaf-file-name="Perceptron.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
+            <state relative-caret-position="-435">
               <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exampleSingleLayerPerceptron.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="exampleSingleLayerPerceptron.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
               <folding>
                 <element signature="e#237#290#0#PHP" expanded="true" />
               </folding>
@@ -65,9 +65,11 @@
       <file leaf-file-name="SigmoidalFunction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding>
+                <element signature="e#42#90#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,21 +77,11 @@
       <file leaf-file-name="Math.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
+            <state relative-caret-position="585">
               <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
               <folding>
                 <element signature="e#28#113#0#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IActivationFunction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -151,14 +143,14 @@
         <option value="$PROJECT_DIR$/src/ANN/ELM.class.php" />
         <option value="$PROJECT_DIR$/src/Loggable/TerminalLoggable.php" />
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/PerceptronLearning.php" />
         <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
-        <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
+        <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
       </list>
     </option>
   </component>
@@ -379,10 +371,10 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
-      <pane id="ProjectPane">
+      <pane id="Scratches">
         <subPane />
       </pane>
-      <pane id="Scratches">
+      <pane id="ProjectPane">
         <subPane />
       </pane>
     </panes>
@@ -403,9 +395,12 @@
       <recent name="$PROJECT_DIR$/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.PerceptronTest">
+  <component name="RunManager" selected="JavaScript Debug.SingleLayerPerceptron.php">
     <configuration default="false" name="PerceptronTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\ANN\Tests\PerceptronTest" file="$PROJECT_DIR$/src/ANN/Tests/PerceptronTest.php" scope="Class" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SingleLayerPerceptron.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/beach/src/ANN/SingleLayerPerceptron.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -454,12 +449,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit.PerceptronTest" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.PerceptronTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.PerceptronTest" />
       </list>
     </recent_temporary>
   </component>
@@ -494,12 +491,13 @@
       <workItem from="1477952458344" duration="5621000" />
       <workItem from="1478001201775" duration="21255000" />
       <workItem from="1478276644457" duration="10904000" />
-      <workItem from="1478297947144" duration="30506000" />
+      <workItem from="1478297947144" duration="30884000" />
+      <workItem from="1478440299919" duration="16039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127685000" />
+    <option name="totallyTimeSpent" value="144102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -514,7 +512,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21823618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -562,7 +560,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -887,19 +885,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
-          <folding>
-            <element signature="e#28#113#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,39 +899,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
+    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        <state relative-caret-position="585">
+          <caret line="119" column="20" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
           <folding>
-            <element signature="e#237#290#0#PHP" expanded="true" />
+            <element signature="e#28#113#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
+        <state relative-caret-position="-435">
           <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#42#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        <state relative-caret-position="172">
+          <caret line="225" column="78" selection-start-line="225" selection-start-column="78" selection-end-line="225" selection-end-column="78" />
           <folding>
             <element signature="e#6#113#0#PHP" expanded="true" />
-            <element signature="e#135#158#0#PHP" expanded="true" />
+            <element signature="e#135#176#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <folding>
+            <element signature="e#237#290#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

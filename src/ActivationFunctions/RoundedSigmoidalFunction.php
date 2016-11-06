@@ -19,4 +19,5 @@ class RoundedSigmoidalFunction implements IActivationFunction
     public function derivative($value){
         return  (M_E ^ (-$value)) / ((1 + M_E ^ (-$value)) **2);
     }
+
 }

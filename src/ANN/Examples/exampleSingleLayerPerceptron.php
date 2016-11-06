@@ -20,7 +20,7 @@ use App\ActivationFunctions\SigmoidalFunction;
 use App\ActivationFunctions\StepFunction;
 use App\ANN\SingleLayerPerceptron;
 
-$slp = new SingleLayerPerceptron(3, new SigmoidalFunction(), new SigmoidalFunction(), 0.7, 0.3, 2, 1, 100);
+$slp = new SingleLayerPerceptron(3, new SigmoidalFunction(), new SigmoidalFunction(), 01.2, 0.8, 2, 1, 200);
 
 $input			= new Matrix([
     [0, 0, 1, 1],
@@ -28,9 +28,6 @@ $input			= new Matrix([
 ]);
 
 $expectedOutput = new Vector([1, 0, 0, 1]);
-
-$A = new Matrix([[1, 2], [3, 4]]);
-$B = new Matrix([[-1, 3], [4, 2]]);
 
 $slp->setInput($input);
 $slp->setExpectedOutput($expectedOutput);
