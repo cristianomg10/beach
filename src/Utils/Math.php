@@ -114,16 +114,42 @@ class Math
     /**
      * Generate random vector
      * @param $length of the vector
-     * @param $coeficient number to be multiplied to the random number.
+     * @param float|number $coefficient number to be multiplied to the random number.
      * @return array
      */
-    static function generateRandomVector($length, $coeficient){
+    static function generateRandomVector($length, $coefficient=1.0){
         $vector = [];
 
         for ($i = 0; $i < $length; ++$i){
-            $vector[$i] = (mt_rand() / mt_getrandmax()) * $coeficient;
+            $vector[$i] = Math::getRandomValue($coefficient);
         }
 
         return $vector;
+    }
+
+    /**
+     * @param $m
+     * @param $n
+     * @param $coefficient
+     * @return array
+     */
+    static function generateRandomMatrix($m, $n, $coefficient=1.0){
+        $matrix = [];
+
+        for ($i = 0; $i < $m; ++$i){
+            for ($j = 0; $j < $n; ++$j){
+                $matrix[$i][$j] = Math::getRandomValue($coefficient);
+            }
+        }
+
+        return $matrix;
+    }
+
+    /**
+     * @param float $coefficient
+     * @return float|int
+     */
+    static function getRandomValue($coefficient = 1.0){
+        return (mt_rand() / mt_getrandmax()) * ($coefficient);
     }
 }

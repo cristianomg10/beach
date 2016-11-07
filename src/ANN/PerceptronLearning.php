@@ -1,6 +1,7 @@
 <?php
 namespace App\ANN;
 
+use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 use App\ANN\Perceptron;
@@ -98,11 +99,11 @@ class PerceptronLearning
     private function initialize(){
         $weights = [];
         for ($i = 0; $i < $this->input->getM(); ++$i) {
-            $weights[] = mt_rand() / mt_getrandmax();
+            $weights[] = Math::getRandomValue();
         }
 
         $this->perceptron->setWeights($weights);
-        $this->perceptron->setBias(/*mt_rand() / mt_getrandmax()*/ 1);
+        $this->perceptron->setBias(Math::getRandomValue());
 
     }
 

@@ -29,7 +29,7 @@ class ComposerStaticInitf9086cc1f627b4bcf0b4e5a9384ee01d
     );
 
     public static $classMap = array (
-        'App\\ANN\\ELM' => __DIR__ . '/../..' . '/src/ANN/ELM.class.php',
+        'App\\ANN\\ELM' => __DIR__ . '/../..',
         'App\\ANN\\Perceptron' => __DIR__ . '/../..' . '/src/ANN/Perceptron.php',
         'App\\ANN\\PerceptronLearning' => __DIR__ . '/../..' . '/src/ANN/PerceptronLearning.php',
         'App\\ANN\\SingleLayerPerceptron' => __DIR__ . '/../..' . '/src/ANN/SingleLayerPerceptron.php',

@@ -8,12 +8,15 @@ namespace App\ANN;
  * Time: 9:56 PM
  */
 
+use App\Utils\Math;
 use \MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use \MathPHP\LinearAlgebra\Vector;
 use App\ActivationFunctions\IActivationFunction;
 
-class ELM {
-    private $nHiddenNodes;
+class ExtremeLearningMachine {
+    private $nHiddenPerceptrons;
+    private $hiddenPerceptrons;
     private $activationFunction;
     private $c = 1;
     private $bias;
@@ -33,9 +36,9 @@ class ELM {
     /**
      * @param mixed $input
      */
-    public function setInput($input)
+    public function setInput(Matrix $input)
     {
-        $this->input = $input;
+        $this->input = $input->transpose();
     }
 
     /**
@@ -49,25 +52,25 @@ class ELM {
     /**
      * @param mixed $output
      */
-    public function setOutput($output)
+    public function setOutput(Matrix $output)
     {
-        $this->output = $output;
+        $this->output = $output->transpose();
     }
 
     /**
      * @return mixed
      */
-    public function getNHiddenNodes()
+    public function getNHiddenPerceptrons()
     {
-        return $this->nHiddenNodes;
+        return $this->nHiddenPerceptrons;
     }
 
     /**
-     * @param mixed $nHiddenNodes
+     * @param mixed $nHiddenPerceptrons
      */
-    public function setNHiddenNodes($nHiddenNodes)
+    public function setNHiddenPerceptrons($nHiddenPerceptrons)
     {
-        $this->nHiddenNodes = $nHiddenNodes;
+        $this->nHiddenPerceptrons = $nHiddenPerceptrons;
     }
 
     /**
@@ -152,17 +155,60 @@ class ELM {
 
     /**
      * ELM constructor.
-     * @param $nHiddenNodes
+     * @param $nHiddenPerceptrons
      * @param $c
      * @param IActivationFunction $activationFunction
      */
-    function  __construct($nHiddenNodes, $c, IActivationFunction $activationFunction){
-        $this->nHiddenNodes = $nHiddenNodes;
+    function  __construct($nHiddenPerceptrons, $c, IActivationFunction $activationFunction){
+        $this->nHiddenPerceptrons = $nHiddenPerceptrons;
         $this->c = $c;
         $this->activationFunction = $activationFunction;
     }
 
     function learn(){
-        $nOutputNeurons = $this->output + 1;
+        // Create perceptrons;
+        for ($i = 0; $i < $this->nHiddenPerceptrons; ++$i){
+            $p = new Perceptron();
+            $p->setBias(Math::getRandomValue());
+            $p->setWeights(Math::generateRandomVector($this->input->getM()));
+            $p->setActivationFunction($this->activationFunction);
+            $this->hiddenPerceptrons[$i] = $p;
+        }
+
+        // Run perceptrons
+        $h = [];
+        for ($i = 0; $i < $this->input->getM(); ++$i){
+            for ($j = 0; $j <  $this->nHiddenPerceptrons; ++$j){
+                $this->hiddenPerceptrons[$j]->setInput($this->input->getRow($i));
+                $h[$i][$j] = $this->hiddenPerceptrons[$j]->calculate();
+            }
+        }
+
+        // Add regularization factor
+        $h = new Matrix($h);
+        $b = $h->multiply($h->transpose())->getMatrix();
+
+        for ($i = 0; $i < count($b); ++$i){
+            $b[$i][$i] += 1.0 / $this->c;
+        }
+
+        $b = new Matrix($b);
+        //till here: nice
+
+        $temp = $b->inverse()->multiply($h)->getMatrix();
+        $output = $this->output->transpose()->getMatrix();
+        //echo new Matrix($temp) . "<br>";
+        //echo new Matrix($output) . "<br>";
+        $outputWeights = [];
+
+        for ($i = 0; $i < count($temp); ++$i){
+            for ($j = 0; $j < count($temp[$i]); ++$j){
+                //echo "temp[$i][$j]: {$temp[$i][$j]} * output[0][$i]: {$output[0][$i]} <br>";
+                $outputWeights[$i][$j] = $temp[$i][$j] * $output[0][$i];
+            }
+        }
+
+        $outputWeights = new Matrix($outputWeights);
+        echo $outputWeights;
     }
 }
