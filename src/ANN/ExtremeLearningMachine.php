@@ -1,7 +1,6 @@
 <?php
 namespace App\ANN;
 /**
- **** NOT YET FINISHED
  * Created by PhpStorm.
  * User: cristiano
  * Date: 10/27/16

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/README.md" afterPath="$PROJECT_DIR$/src/ANN/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,19 +36,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtremeLearningMachine.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExtremeLearningMachine.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="186" column="27" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+            <state relative-caret-position="30">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
               <folding>
-                <element signature="e#135#176#0#PHP" expanded="true" />
+                <element signature="e#112#153#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ANN/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
-        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
         <option value="$PROJECT_DIR$/src/ANN/README.md" />
+        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
       </list>
     </option>
   </component>
@@ -518,12 +518,12 @@
       <workItem from="1478483078846" duration="634000" />
       <workItem from="1478516950473" duration="8967000" />
       <workItem from="1478544251783" duration="3283000" />
-      <workItem from="1478569203126" duration="5131000" />
+      <workItem from="1478569203126" duration="5217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162720000" />
+    <option name="totallyTimeSpent" value="162806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -960,16 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="186" column="27" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
-          <folding>
-            <element signature="e#135#176#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -978,6 +968,16 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="e#112#153#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
