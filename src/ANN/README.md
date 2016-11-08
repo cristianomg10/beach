@@ -15,4 +15,4 @@ There are examples on how to train a Perceptron and how to use the classes ```Pe
 
 ## Thanks
 
-Thanks to Diego Catalano (https://github.com/DiegoCatalano/), for helping with the implementation of Extreme Learning Machine.
+Thanks to Diego Catalano (https://github.com/DiegoCatalano/), for helping me with the implementation of the Extreme Learning Machine.

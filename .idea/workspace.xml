@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/README.md" afterPath="$PROJECT_DIR$/src/ANN/README.md" />
     </list>
     <ignored path="beach.iws" />
@@ -54,7 +53,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="255">
-                <caret line="17" column="126" selection-start-line="17" selection-start-column="126" selection-end-line="17" selection-end-column="126" />
+                <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -519,12 +518,12 @@
       <workItem from="1478483078846" duration="634000" />
       <workItem from="1478516950473" duration="8967000" />
       <workItem from="1478544251783" duration="3283000" />
-      <workItem from="1478569203126" duration="5088000" />
+      <workItem from="1478569203126" duration="5131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162677000" />
+    <option name="totallyTimeSpent" value="162720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -975,7 +974,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="255">
-            <caret line="17" column="126" selection-start-line="17" selection-start-column="126" selection-end-line="17" selection-end-column="126" />
+            <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
             <folding />
           </first_editor>
           <second_editor />
