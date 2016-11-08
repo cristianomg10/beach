@@ -184,7 +184,7 @@ class ExtremeLearningMachine {
             $this->hiddenPerceptrons[$i] = $p;
         }
 
-        // Run perceptrons
+        // Run perceptrons3
         $h = [];
         for ($i = 0; $i < $this->input->getM(); ++$i){
             for ($j = 0; $j <  $this->nHiddenPerceptrons; ++$j){

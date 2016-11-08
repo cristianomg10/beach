@@ -12,3 +12,7 @@ It is under development, and requires PHP7 and markrogoyski/math-php .
 ## Examples
 
 There are examples on how to train a Perceptron and how to use the classes ```Perceptron``` and ```PerceptronLearning``` in the folder ```ANN/Examples```.
+
+## Thanks
+
+Thanks to Diego Catalano (https://github.com/DiegoCatalano/), for helping with the implementation of Extreme Learning Machine.
