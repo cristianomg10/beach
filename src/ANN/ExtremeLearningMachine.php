@@ -8,6 +8,7 @@ namespace App\ANN;
  * Time: 9:56 PM
  */
 
+use App\ActivationFunctions\StepFunction;
 use App\Utils\Math;
 use \MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\MatrixFactory;
@@ -22,6 +23,7 @@ class ExtremeLearningMachine {
     private $bias;
     private $inputWeight;
     private $outputWeight;
+    private $outputPerceptron;
     private $input;
     private $output;
 
@@ -170,7 +172,14 @@ class ExtremeLearningMachine {
         for ($i = 0; $i < $this->nHiddenPerceptrons; ++$i){
             $p = new Perceptron();
             $p->setBias(Math::getRandomValue());
-            $p->setWeights(Math::generateRandomVector($this->input->getM()));
+
+            $v = Math::generateRandomVector($this->input->getM(), 2);
+
+            for ($j = 0; $j < count($v); ++$j){
+                $v[$j] -= 1;
+            }
+
+            $p->setWeights($v);
             $p->setActivationFunction($this->activationFunction);
             $this->hiddenPerceptrons[$i] = $p;
         }
@@ -195,20 +204,40 @@ class ExtremeLearningMachine {
         $b = new Matrix($b);
         //till here: nice
 
-        $temp = $b->inverse()->multiply($h)->getMatrix();
-        $output = $this->output->transpose()->getMatrix();
-        //echo new Matrix($temp) . "<br>";
-        //echo new Matrix($output) . "<br>";
-        $outputWeights = [];
 
-        for ($i = 0; $i < count($temp); ++$i){
-            for ($j = 0; $j < count($temp[$i]); ++$j){
-                //echo "temp[$i][$j]: {$temp[$i][$j]} * output[0][$i]: {$output[0][$i]} <br>";
-                $outputWeights[$i][$j] = $temp[$i][$j] * $output[0][$i];
+        $outputWeights =
+            $this->output
+            ->transpose()
+            ->multiply($b->inverse()->multiply($h));
+
+        $this->outputPerceptron = new Perceptron();
+        $this->outputPerceptron->setWeights($outputWeights->getRow(0));
+        $this->outputPerceptron->setBias(0);
+        $this->outputPerceptron->setActivationFunction(new StepFunction());
+    }
+
+    /**
+     * @param Matrix $input Parameters where the rows are the registers
+     * and the cols are the features.
+     * @return Matrix
+     */
+    public function classify(Matrix $input){
+        $input = $input->transpose();
+        $output = [];
+
+        for ($j = 0; $j < $input->getN(); ++$j) {
+
+            $inputForOutput = [];
+            for ($i = 0; $i < $this->nHiddenPerceptrons; ++$i) {
+                $p = $this->hiddenPerceptrons[$i];
+                $p->setInput($input->getColumn($j));
+                $inputForOutput[] = $p->calculate();
             }
+
+            $this->outputPerceptron->setInput($inputForOutput);
+            $output[] = $this->outputPerceptron->calculate();
         }
 
-        $outputWeights = new Matrix($outputWeights);
-        echo $outputWeights;
+        return new Matrix([$output]);
     }
 }

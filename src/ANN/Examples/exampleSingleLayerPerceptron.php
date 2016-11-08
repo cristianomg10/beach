@@ -32,3 +32,4 @@ $expectedOutput = new Vector([1, 0, 0, 1]);
 $slp->setInput($input);
 $slp->setExpectedOutput($expectedOutput);
 $slp->train();
+
