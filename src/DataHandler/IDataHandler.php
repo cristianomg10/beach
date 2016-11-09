@@ -9,7 +9,7 @@
 namespace App\DataHandler;
 
 
-interface IDataset
+interface IDataHandler
 {
     public function open($source = '');
     public function setAttrIndex($attrIndex);

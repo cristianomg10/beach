@@ -11,7 +11,7 @@ namespace App\DataHandler;
 
 use MathPHP\LinearAlgebra\Matrix;
 
-class CSVDataHandler implements IDataset
+class CSVDataHandler implements IDataHandler
 {
     private $data;
     private $firstLineAsAttrName;

@@ -4,7 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders." />
+    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/IDataset.php" afterPath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
+    </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -76,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IDataset.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataset.php">
+      <file leaf-file-name="IDataHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="90">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -96,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="915">
@@ -146,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rna/Sigmoidal.class.php" />
         <option value="$PROJECT_DIR$/rna/index.php" />
         <option value="$PROJECT_DIR$/rna/README.md" />
         <option value="$PROJECT_DIR$/rna/Perceptron.class.php" />
@@ -197,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" />
         <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
       </list>
     </option>
   </component>
@@ -624,12 +627,12 @@
       <workItem from="1478569203126" duration="5805000" />
       <workItem from="1478631041422" duration="53000" />
       <workItem from="1478631189072" duration="614000" />
-      <workItem from="1478644004832" duration="12085000" />
+      <workItem from="1478644004832" duration="12175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176146000" />
+    <option name="totallyTimeSpent" value="176236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -1027,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1074,6 +1069,14 @@
           <folding>
             <element signature="e#129#175#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
