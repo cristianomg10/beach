@@ -4,24 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/Datasets/small-wine-dataset.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/Datasets/wine-dataset.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataHandler/IDataset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Perceptron.php" afterPath="$PROJECT_DIR$/src/ANN/Perceptron.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" afterPath="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/StepFunction.php" />
-    </list>
+    <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders." />
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -641,12 +624,12 @@
       <workItem from="1478569203126" duration="5805000" />
       <workItem from="1478631041422" duration="53000" />
       <workItem from="1478631189072" duration="614000" />
-      <workItem from="1478644004832" duration="11977000" />
+      <workItem from="1478644004832" duration="12085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176038000" />
+    <option name="totallyTimeSpent" value="176146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
