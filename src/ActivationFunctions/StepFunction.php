@@ -11,7 +11,7 @@ use App\ActivationFunctions\IActivationFunction;
  */
 class StepFunction implements IActivationFunction
 {
-    public function activationFunction($value)
+    public function compute($value)
     {
         return ($value >= 0.5 ? 1 : 0);
     }

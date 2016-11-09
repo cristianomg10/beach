@@ -7,12 +7,13 @@ namespace App\ANN;
  * Time: 9:56 PM
  */
 
+use App\ActivationFunctions\RoundedSigmoidalFunction;
+use App\ActivationFunctions\SigmoidalFunction;
 use App\ActivationFunctions\StepFunction;
 use App\Utils\Math;
 use \MathPHP\LinearAlgebra\Matrix;
-use MathPHP\LinearAlgebra\MatrixFactory;
-use \MathPHP\LinearAlgebra\Vector;
 use App\ActivationFunctions\IActivationFunction;
+use App\ActivationFunctions\RoundFunction;
 
 class ExtremeLearningMachine {
     private $nHiddenPerceptrons;
@@ -212,7 +213,7 @@ class ExtremeLearningMachine {
         $this->outputPerceptron = new Perceptron();
         $this->outputPerceptron->setWeights($outputWeights->getRow(0));
         $this->outputPerceptron->setBias(0);
-        $this->outputPerceptron->setActivationFunction(new StepFunction());
+        $this->outputPerceptron->setActivationFunction(new RoundFunction());
     }
 
     /**

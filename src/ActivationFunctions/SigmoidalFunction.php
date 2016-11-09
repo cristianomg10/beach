@@ -13,19 +13,26 @@ use MathPHP\LinearAlgebra\Vector;
  */
 class SigmoidalFunction implements IActivationFunction
 {
+    private $step;
+
+    function __construct($step = 1)
+    {
+        $this->step = $step;
+    }
+
     private function formula($value){
         $calc = (1 + M_E ^ (- $value));
         if ($calc == 0){
             return 0.0000000000001;
         }
-        return 1 / $calc;
+        return (1 / $calc) * $this->step;
     }
 
     private function derivativeFormula($value){
         return (M_E ^ ($value))/(((M_E ^ ($value)) + 1) ** 2);
     }
 
-    public function activationFunction($value)
+    public function compute($value)
     {
         if ($value instanceof Matrix){
             $ret = [];

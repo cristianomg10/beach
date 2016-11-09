@@ -174,7 +174,7 @@ class SingleLayerPerceptron
 
                 $z2[$i] = $inputForOutputLayer;
                 $z3[] = $outputPerceptron->calculate();
-                $this->output[] = (new StepFunction())->activationFunction($outputPerceptron->calculate());
+                $this->output[] = (new StepFunction())->compute($outputPerceptron->calculate());
                 $a2[$i] = $inputForOutputLayer;
 
                 $yHat[] = $outputPerceptron->calculate();

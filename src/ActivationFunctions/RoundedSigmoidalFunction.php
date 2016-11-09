@@ -11,7 +11,7 @@ namespace App\ActivationFunctions;
 
 class RoundedSigmoidalFunction implements IActivationFunction
 {
-    public function activationFunction($value)
+    public function compute($value)
     {
         return round(1 / (1 + M_E ^ (- $value)));
     }

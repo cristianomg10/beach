@@ -25,4 +25,14 @@ $elm->learn();
 
 $inputForTest = new Matrix([[0, 1], [1, 1], [0, 0], [1, 0], [0, 0]]);
 $values = $elm->classify($inputForTest);
+echo $values . "<BR>";
+
+$elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());
+$elm->setInput(new Matrix([[0,0,1,1],[0,1,0,1]]));
+$elm->setOutput(new Matrix([[0,1,1,0]]));
+$elm->setActivationFunction(new SigmoidalFunction());
+$elm->learn();
+
+$inputForTest = new Matrix([[0, 1], [1, 1], [0, 0], [1, 0], [0, 0]]);
+$values = $elm->classify($inputForTest);
 echo $values;
