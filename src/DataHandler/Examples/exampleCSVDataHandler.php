@@ -20,8 +20,8 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 $data = new CSVDataHandler(0);
 $data->open('../Datasets/wine-dataset.csv');
 $data->setAttrIndex(0);
-$unlabeled = $data->getUnlabeledData()->transpose();
-$label = $data->getLabelForUnlabeledData();
+$unlabeled = $data->getUnlabeledDataForTraining()->transpose();
+$label = $data->getLabelForTraining();
 
 $elm = new ExtremeLearningMachine(250, 30, new SigmoidalFunction());
 $elm->setInput($unlabeled);
@@ -47,8 +47,8 @@ echo $elm->classify($test);
 $data = new CSVDataHandler();
 $data->open('../Datasets/iris.csv');
 $data->setAttrIndex(4);
-$unlabeled = $data->getUnlabeledData()->transpose();
-$label = $data->getLabelForUnlabeledData();
+$unlabeled = $data->getUnlabeledDataForTraining()->transpose();
+$label = $data->getLabelForTraining();
 
 $elm = new ExtremeLearningMachine(120, 30, new SigmoidalFunction());
 $elm->setInput($unlabeled);

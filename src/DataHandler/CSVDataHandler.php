@@ -9,6 +9,7 @@
 namespace App\DataHandler;
 
 
+use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 
 class CSVDataHandler implements IDataHandler
@@ -19,6 +20,10 @@ class CSVDataHandler implements IDataHandler
     private $attributesQty;
     private $attrIndex;
     private $label;
+    private $labelForValidation;
+    private $validationRate;
+    private $qtyForTraining;
+    private $qtyForValidation;
 
     function __construct($firstLineAsAttrName = 0){
         $this->firstLineAsAttrName = $firstLineAsAttrName;
@@ -28,6 +33,7 @@ class CSVDataHandler implements IDataHandler
     {
         $row = 1;
         $saved = [];
+        $num = 0;
 
         if (($handle = fopen($source, "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
@@ -63,12 +69,13 @@ class CSVDataHandler implements IDataHandler
         $this->data = $newArray;
     }
 
-    public function getUnlabeledData()
+    public function getUnlabeledDataForTraining()
     {
-        $data = $this->data;
+        $this->shuffle();
+        $data = array_slice($this->data, 0, $this->qtyForTraining, true);
         $dataLabel = [];
 
-        for ($i = 0; $i < $this->length; ++$i){
+        for ($i = 0; $i < $this->qtyForTraining; ++$i){
             $dataLabel[$i] = $data[$i][$this->attrIndex];
             unset($data[$i][$this->attrIndex]);
             $data[$i] = array_values($data[$i]);
@@ -79,7 +86,7 @@ class CSVDataHandler implements IDataHandler
         return (new Matrix($data));
     }
 
-    public function getLabelForUnlabeledData(){
+    public function getLabelForTraining(){
         return $this->label;
     }
 
@@ -89,5 +96,37 @@ class CSVDataHandler implements IDataHandler
         if (is_array($this->data) && !is_array($this->data)) return (new Matrix([$this->data]))->transpose();
 
         return (new Matrix($this->data))->transpose();
+    }
+
+    public function getUnlabeledDataForValidation()
+    {
+        $this->shuffle();
+        $data = array_slice($this->data, 0, $this->qtyForValidation, true);
+        $dataLabel = [];
+
+        for ($i = 0; $i < $this->qtyForValidation; ++$i){
+            $dataLabel[$i] = $data[$i][$this->attrIndex];
+            unset($data[$i][$this->attrIndex]);
+            $data[$i] = array_values($data[$i]);
+        }
+
+        $this->labelForValidation = new Matrix([$dataLabel]);
+
+        return (new Matrix($data));
+    }
+
+    public function getLabelForValidation()
+    {
+        return $this->labelForValidation;
+    }
+
+    /**
+     * @param $rate in %
+     */
+    public function setValidationRate($rate)
+    {
+        $this->validationRate = $rate;
+        $this->qtyForTraining = round($this->length * (100 - $rate)/100);
+        $this->qtyForValidation = $this->length - $this->qtyForTraining;
     }
 }

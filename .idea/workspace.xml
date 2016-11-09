@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -35,6 +37,52 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVDataHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
+              <folding>
+                <element signature="e#121#140#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iris.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exampleDataHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+              <folding>
+                <element signature="e#43#89#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+              <folding>
+                <element signature="e#129#175#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,7 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rna/index.php" />
         <option value="$PROJECT_DIR$/rna/README.md" />
         <option value="$PROJECT_DIR$/rna/Perceptron.class.php" />
         <option value="$PROJECT_DIR$/rna/SingleLayerPerceptron.php" />
@@ -98,16 +145,17 @@
         <option value="$PROJECT_DIR$/src/DataHandler/IDataset.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/wine-dataset.csv" />
         <option value="$PROJECT_DIR$/src/DataHandler/small-wine-dataset.csv" />
-        <option value="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" />
-        <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
-        <option value="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php" />
       </list>
     </option>
   </component>
@@ -535,12 +583,12 @@
       <workItem from="1478569203126" duration="5805000" />
       <workItem from="1478631041422" duration="53000" />
       <workItem from="1478631189072" duration="614000" />
-      <workItem from="1478644004832" duration="12282000" />
+      <workItem from="1478644004832" duration="15460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176343000" />
+    <option name="totallyTimeSpent" value="179521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -589,13 +637,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -894,14 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -944,32 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-          <folding>
-            <element signature="e#129#175#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/wine-dataset.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -986,6 +993,52 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="e#129#175#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
+          <folding>
+            <element signature="e#121#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+          <folding>
+            <element signature="e#43#89#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
