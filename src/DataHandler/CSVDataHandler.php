@@ -83,7 +83,7 @@ class CSVDataHandler implements IDataHandler
 
         $this->label = new Matrix([$dataLabel]);
 
-        return (new Matrix($data));
+        return (new Matrix($data))->transpose();
     }
 
     public function getLabelForTraining(){
@@ -112,7 +112,7 @@ class CSVDataHandler implements IDataHandler
 
         $this->labelForValidation = new Matrix([$dataLabel]);
 
-        return (new Matrix($data));
+        return (new Matrix($data))->transpose();
     }
 
     public function getLabelForValidation()

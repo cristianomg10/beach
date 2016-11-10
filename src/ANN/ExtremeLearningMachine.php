@@ -10,22 +10,52 @@ namespace App\ANN;
 use App\ActivationFunctions\RoundedSigmoidalFunction;
 use App\ActivationFunctions\SigmoidalFunction;
 use App\ActivationFunctions\StepFunction;
+use App\DataHandler\ISerializable;
 use App\Utils\Math;
 use \MathPHP\LinearAlgebra\Matrix;
 use App\ActivationFunctions\IActivationFunction;
 use App\ActivationFunctions\RoundFunction;
 
-class ExtremeLearningMachine {
+class ExtremeLearningMachine implements  ISerializable {
     private $nHiddenPerceptrons;
     private $hiddenPerceptrons;
     private $activationFunction;
     private $c = 1;
-    private $bias;
-    private $inputWeight;
-    private $outputWeight;
     private $outputPerceptron;
     private $input;
-    private $output;
+    private $expectedOutput;
+
+    /**
+     * @return mixed
+     */
+    public function getHiddenPerceptrons()
+    {
+        return $this->hiddenPerceptrons;
+    }
+
+    /**
+     * @param mixed $hiddenPerceptrons
+     */
+    public function setHiddenPerceptrons($hiddenPerceptrons)
+    {
+        $this->hiddenPerceptrons = $hiddenPerceptrons;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOutputPerceptron()
+    {
+        return $this->outputPerceptron;
+    }
+
+    /**
+     * @param mixed $outputPerceptron
+     */
+    public function setOutputPerceptron($outputPerceptron)
+    {
+        $this->outputPerceptron = $outputPerceptron;
+    }
 
     /**
      * @return mixed
@@ -46,17 +76,17 @@ class ExtremeLearningMachine {
     /**
      * @return mixed
      */
-    public function getOutput()
+    public function getExpectedOutput()
     {
-        return $this->output;
+        return $this->expectedOutput;
     }
 
     /**
-     * @param mixed $output
+     * @param mixed $expectedOutput
      */
-    public function setOutput(Matrix $output)
+    public function setExpectedOutput(Matrix $expectedOutput)
     {
-        $this->output = $output->transpose();
+        $this->expectedOutput = $expectedOutput->transpose();
     }
 
     /**
@@ -108,54 +138,6 @@ class ExtremeLearningMachine {
     }
 
     /**
-     * @return mixed
-     */
-    public function getBias()
-    {
-        return $this->bias;
-    }
-
-    /**
-     * @param mixed $bias
-     */
-    public function setBias($bias)
-    {
-        $this->bias = $bias;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getInputWeight()
-    {
-        return $this->inputWeight;
-    }
-
-    /**
-     * @param mixed $inputWeight
-     */
-    public function setInputWeight($inputWeight)
-    {
-        $this->inputWeight = $inputWeight;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOutputWeight()
-    {
-        return $this->outputWeight;
-    }
-
-    /**
-     * @param mixed $outputWeight
-     */
-    public function setOutputWeight($outputWeight)
-    {
-        $this->outputWeight = $outputWeight;
-    }
-
-    /**
      * ELM constructor.
      * @param $nHiddenPerceptrons
      * @param $c
@@ -186,9 +168,9 @@ class ExtremeLearningMachine {
 
         // Run perceptrons3
         $h = [];
-        for ($i = 0; $i < $this->input->getM(); ++$i){
+        for ($i = 0; $i < $this->input->getN(); ++$i){
             for ($j = 0; $j <  $this->nHiddenPerceptrons; ++$j){
-                $this->hiddenPerceptrons[$j]->setInput($this->input->getRow($i));
+                $this->hiddenPerceptrons[$j]->setInput($this->input->getColumn($i));
                 $h[$i][$j] = $this->hiddenPerceptrons[$j]->calculate();
             }
         }
@@ -202,13 +184,12 @@ class ExtremeLearningMachine {
         }
 
         $b = new Matrix($b);
-        //till here: nice
 
+        $outputWeights = $this->expectedOutput->transpose();
 
-        $outputWeights =
-            $this->output
-            ->transpose()
-            ->multiply($b->inverse()->multiply($h));
+        $bh = $b->inverse();
+        $bh = $bh->multiply($h);
+        $outputWeights = $outputWeights->multiply($bh);
 
         $this->outputPerceptron = new Perceptron();
         $this->outputPerceptron->setWeights($outputWeights->getRow(0));
@@ -222,7 +203,7 @@ class ExtremeLearningMachine {
      * @return Matrix
      */
     public function classify(Matrix $input){
-        $input = $input->transpose();
+        //$input = $input->transpose();
         $output = [];
 
         for ($j = 0; $j < $input->getN(); ++$j) {
@@ -239,5 +220,31 @@ class ExtremeLearningMachine {
         }
 
         return new Matrix([$output]);
+    }
+
+    function serialize($file)
+    {
+        $input = $this->input;
+        $expectedOutput = $this->expectedOutput;
+
+        unset($this->input);
+        unset($this->expectedOutput);
+
+        $s = serialize($this);
+        file_put_contents($file, $s);
+
+
+        $this->input = $input;
+        $this->expectedOutput = $expectedOutput;
+    }
+
+    function unserialize($file)
+    {
+        $s = file_get_contents($file);
+        $object = unserialize($s);
+
+        $this->hiddenPerceptrons = $object->getHiddenPerceptrons();
+        $this->outputPerceptron = $object->getOutputPerceptron();
+        $this->nHiddenPerceptrons = $object->getNHiddenPerceptrons();
     }
 }
