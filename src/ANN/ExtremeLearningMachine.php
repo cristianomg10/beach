@@ -12,6 +12,7 @@ use App\ActivationFunctions\SigmoidalFunction;
 use App\ActivationFunctions\StepFunction;
 use App\DataHandler\ISerializable;
 use App\Utils\Math;
+use App\Utils\MatrixHelpers;
 use \MathPHP\LinearAlgebra\Matrix;
 use App\ActivationFunctions\IActivationFunction;
 use App\ActivationFunctions\RoundFunction;
@@ -178,21 +179,17 @@ class ExtremeLearningMachine implements  ISerializable {
         // Add regularization factor
         $h = new Matrix($h);
         $b = $h->multiply($h->transpose())->getMatrix();
-
         for ($i = 0; $i < count($b); ++$i){
             $b[$i][$i] += 1.0 / $this->c;
         }
-
         $b = new Matrix($b);
-
         $outputWeights = $this->expectedOutput->transpose();
-
         $bh = $b->inverse();
         $bh = $bh->multiply($h);
         $outputWeights = $outputWeights->multiply($bh);
 
         $this->outputPerceptron = new Perceptron();
-        $this->outputPerceptron->setWeights($outputWeights->getRow(0));
+        $this->outputPerceptron->setWeights($outputWeights[0]);
         $this->outputPerceptron->setBias(0);
         $this->outputPerceptron->setActivationFunction(new RoundFunction());
     }

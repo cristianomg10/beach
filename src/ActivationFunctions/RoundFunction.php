@@ -14,6 +14,8 @@ class RoundFunction implements  IActivationFunction
 
     public function compute($value)
     {
+        if ($value < 0) return 0;
+
         return round($value);
     }
 

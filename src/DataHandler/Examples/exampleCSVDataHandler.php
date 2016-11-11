@@ -25,7 +25,7 @@ $label = $data->getLabelForTraining();
 
 $elm = new ExtremeLearningMachine(250, 30, new SigmoidalFunction());
 $elm->setInput($unlabeled);
-$elm->setOutput($label);
+$elm->setExpectedOutput($label);
 $elm->learn();
 
 $test = new Matrix([
@@ -52,7 +52,7 @@ $label = $data->getLabelForTraining();
 
 $elm = new ExtremeLearningMachine(120, 30, new SigmoidalFunction());
 $elm->setInput($unlabeled);
-$elm->setOutput($label);
+$elm->setExpectedOutput($label);
 $elm->learn();
 
 $test = new Matrix([

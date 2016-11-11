@@ -70,6 +70,19 @@ class Perceptron {
         return $this->output;
 	}
 
+	public function calculateWithoutActivation(){
+        //setting value as as 0
+        $this->output = 0;
+
+        for ($i = 0; $i < count($this->input); ++$i){
+            $this->output += $this->weights[$i] * $this->input[$i];
+        }
+
+        $this->output += $this->bias;
+
+        return $this->output;
+    }
+
     /**
      * Set activation function
      * @param IActivationFunction $function [description]
