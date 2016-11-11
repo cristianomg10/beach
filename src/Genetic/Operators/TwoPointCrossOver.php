@@ -10,6 +10,7 @@ namespace App\Genetic\Operators;
 
 
 use App\Exceptions\IllegalArgumentException;
+use App\Genetic\Chromosome;
 
 class TwoPointCrossOver implements ICrossOver
 {
@@ -24,29 +25,34 @@ class TwoPointCrossOver implements ICrossOver
 
     public function crossOver($individual1, $individual2)
     {
+
+        if (!is_a($individual1, Chromosome::class) || !is_a($individual2, Chromosome::class)){
+            throw new IllegalArgumentException("Individuals are not Chromosomes.");
+        }
+
         if (
             ($this->point2 <= $this->point1 and $this->point1 != 0) ||
-            ($this->point1 > count($individual1) - 1 || $this->point2 > count($individual1) - 1)
+            ($this->point1 > $individual1->getLength() - 1 || $this->point2 > $individual1->getLength() - 1)
         ){
             throw new IllegalArgumentException("Second point bigger than the First point of cut.");
         }
 
         if (!$this->point1)
-            $point1 = rand(1, round(count($individual1) / 2));
+            $point1 = rand(1, round($individual1->getLength() / 2));
 
         if (!$this->point2)
-            $point2 = rand($point1 + 1, count($individual1) - 1);
+            $point2 = rand($point1 + 1, $individual1->getLength() - 1);
 
-        $newIndividual1 = [];
-        $newIndividual2 = [];
+        $newIndividual1 = new Chromosome();
+        $newIndividual2 = new Chromosome();
 
-        for ($i = 0; $i < count($individual1); ++$i){
+        for ($i = 0; $i < $individual1->getLength(); ++$i){
             if ($i < $point1 || $i >= $point2){
-                $newIndividual1[] = $individual1[$i];
-                $newIndividual2[] = $individual2[$i];
+                $newIndividual1->updateGenes($i, $individual1->getGene($i));
+                $newIndividual2->updateGenes($i, $individual2->getGene($i));
             } else {
-                $newIndividual1[] = $individual2[$i];
-                $newIndividual2[] = $individual1[$i];
+                $newIndividual1->updateGenes($i, $individual2->getGene($i));
+                $newIndividual2->updateGenes($i, $individual1->getGene($i));;
             }
         }
 

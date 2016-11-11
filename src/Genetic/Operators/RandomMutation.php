@@ -9,15 +9,22 @@
 namespace App\Genetic\Operators;
 
 
+use App\Exceptions\IllegalArgumentException;
+use App\Genetic\Chromosome;
+
 class RandomMutation implements IMutation
 {
 
     public function mutate($individual)
     {
-        $point = rand(0, count($individual) - 1);
+        if (!is_a($individual, Chromosome::class)){
+            throw new IllegalArgumentException("Individual is not a Chromosome.");
+        }
+
+        $point = rand(0, $individual->getLength() - 1);
 
         $new = $individual;
-        $new[$point] = ($individual[$point] == 0 ? 1 : 0);
+        $new->updateGenes($point, $individual->getGene($point) == 0 ? 1 : 0);
 
         return $new;
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Genetic\Chromosome;
 use App\Genetic\Operators\BitByBitMutation;
 use App\Genetic\Operators\RandomMutation;
 use App\Genetic\Operators\SinglePointCrossOver;
@@ -14,27 +15,33 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 $k = new SinglePointCrossOver();
 $newOnes = $k->crossOver(
-    [0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1]
+    new Chromosome([0,0,0,0,0,0,0,0,0,0]),
+    new Chromosome([1,1,1,1,1,1,1,1,1,1])
 ); //working fine
 var_dump($newOnes);
 
 $k = new TwoPointCrossOver();
 $newOnes = $k->crossOver(
-    [0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1]
+    new Chromosome([0,0,0,0,0,0,0,0,0,0]),
+    new Chromosome([1,1,1,1,1,1,1,1,1,1])
 );
 var_dump($newOnes);
 
 $k = new UniformCrossOver();
 $newOnes = $k->crossOver(
-    [0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1]
+    new Chromosome([0,0,0,0,0,0,0,0,0,0]),
+    new Chromosome([1,1,1,1,1,1,1,1,1,1])
 );
 var_dump($newOnes);
 
 $k = new BitByBitMutation();
-var_dump($k->mutate([0,0,0,0,0,0,0,0,0,0]));
+var_dump($k->mutate(new Chromosome([0,0,0,0,0,0,0,0,0,0])));
 
 $k = new RandomMutation();
-var_dump($k->mutate([0,0,0,0,0,0,0,0,0,0]));
+var_dump($k->mutate(new Chromosome([0,0,0,0,0,0,0,0,0,0])));
+
+$z = new Chromosome([0,0,0,0,0,0,0,0,0,0]);
+$y = new Chromosome([1,1,1,1,1,1,1,1,1,1]);
+
+$k = new TwoPointCrossOver();
+var_dump($k->crossOver($z, $y));
