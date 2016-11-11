@@ -363,6 +363,7 @@ class Matrix implements \ArrayAccess, \JsonSerializable
                 $VB        = new Vector($B->getColumn($j));
                 $R[$i][$j] = $VA->dotProduct($VB);
             }
+            //echo "$i\n";
         }
 
         return MatrixFactory::create($R);

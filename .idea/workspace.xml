@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Exceptions/IllegalArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/ICrossOver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/ISelection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/LUDecomposition.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DataHandler/Datasets/small-wine-dataset.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DataHandler/Datasets/train-test-2011-20152.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/ELM" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Perceptron.php" afterPath="$PROJECT_DIR$/src/ANN/Perceptron.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/README.md" afterPath="$PROJECT_DIR$/src/ANN/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" afterPath="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php" afterPath="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php" afterPath="$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Math.php" afterPath="$PROJECT_DIR$/src/Utils/Math.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php" afterPath="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,61 +52,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSVDataHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
+      <file leaf-file-name="Genetic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
-              <folding>
-                <element signature="e#121#140#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iris.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exampleDataHandler.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php">
+      <file leaf-file-name="exampleGenetic.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+            <state relative-caret-position="316">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding>
-                <element signature="e#43#89#0#PHP" expanded="true" />
+                <element signature="e#7#50#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
+      <file leaf-file-name="TwoPointCrossOver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            <state relative-caret-position="331">
+              <caret line="50" column="9" selection-start-line="42" selection-start-column="0" selection-end-line="50" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UniformCrossOver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitByBitMutation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomMutation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Math.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
               <folding>
-                <element signature="e#129#175#0#PHP" expanded="true" />
+                <element signature="e#28#113#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exampleELM.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISelection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/ISelection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IMutation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/IMutation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,30 +174,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rna/README.md" />
-        <option value="$PROJECT_DIR$/rna/Perceptron.class.php" />
-        <option value="$PROJECT_DIR$/rna/SingleLayerPerceptron.php" />
-        <option value="$PROJECT_DIR$/rna/ELM.class.php" />
-        <option value="$PROJECT_DIR$/rna/ILoggable.php" />
-        <option value="$PROJECT_DIR$/rna/ScreenWriter.php" />
-        <option value="$PROJECT_DIR$/rna/indexSLP.php" />
-        <option value="$PROJECT_DIR$/rna/ScreenWriterLoggable.php" />
-        <option value="$PROJECT_DIR$/rna/PerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/autoload.php" />
-        <option value="$PROJECT_DIR$/rna/indexPerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/rna/Perceptron.class.php" />
-        <option value="$PROJECT_DIR$/src/rna/indexPerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/RNA/PerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/RNA/indexPerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/RNA/ILoggable.php" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/StepFunctions.php" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunctions.php" />
-        <option value="$PROJECT_DIR$/src/Loggable/ScreenWriterLoggable.php" />
-        <option value="$PROJECT_DIR$/src/ANN/indexPerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/README.md" />
-        <option value="$PROJECT_DIR$/src/utils/Math.php" />
         <option value="$PROJECT_DIR$/src/ANN/Tests/PerceptronTest.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/ANN/index.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php" />
@@ -138,24 +184,47 @@
         <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/SingleLayerPerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/PerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
-        <option value="$PROJECT_DIR$/src/ANN/README.md" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/IDataset.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/wine-dataset.csv" />
         <option value="$PROJECT_DIR$/src/DataHandler/small-wine-dataset.csv" />
-        <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php" />
-        <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
         <option value="$PROJECT_DIR$/src/ActivationFunctions/SigmoidalFunction.php" />
-        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
-        <option value="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Datasets/train-test-2011-20152.csv" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Datasets/small-train-test-2011-20152.csv" />
         <option value="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Utils/Object.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Objectify.php" />
+        <option value="$PROJECT_DIR$/src/Utils/ISerializable.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/ISerializable.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php" />
+        <option value="$PROJECT_DIR$/src/DataHandler/Datasets/train-test-2011-20152INT.csv" />
+        <option value="$PROJECT_DIR$/src/Utils/Math.php" />
+        <option value="$PROJECT_DIR$/src/Utils/LUDecomposition.php" />
+        <option value="$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php" />
+        <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
         <option value="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/Utils/MatrixHelpers.php" />
+        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
+        <option value="$PROJECT_DIR$/src/ANN/README.md" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Genetic.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/ICrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Exceptions/IllegalArgumentException.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/IMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/BitABitMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
       </list>
     </option>
   </component>
@@ -231,22 +300,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataHandler" />
+              <option name="myItemId" value="Utils" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,70 +318,66 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataHandler" />
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operators" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Genetic" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Examples" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataHandler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Datasets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ANN" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beach" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActivationFunctions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,27 +515,38 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/bin/php5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DataHandler/Datasets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DataHandler" />
       <recent name="$PROJECT_DIR$/src/DataHandler/Datasets" />
       <recent name="$PROJECT_DIR$/src/ANN/Examples" />
       <recent name="$PROJECT_DIR$/src/Loggable" />
       <recent name="$PROJECT_DIR$/src/ActivationFunctions" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.SingleLayerPerceptron.php">
-    <configuration default="false" name="PerceptronTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="App\ANN\Tests\PerceptronTest" file="$PROJECT_DIR$/src/ANN/Tests/PerceptronTest.php" scope="Class" />
+  <component name="RunManager" selected="JavaScript Debug.exampleGenetic.php">
+    <configuration default="false" name="SingleLayerPerceptron.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/beach/src/ANN/SingleLayerPerceptron.php">
       <method />
     </configuration>
-    <configuration default="false" name="SingleLayerPerceptron.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/beach/src/ANN/SingleLayerPerceptron.php">
+    <configuration default="false" name="exampleDataHandler.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="exampleSerializable.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="Genetic.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Genetic/Genetic.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="exampleGenetic.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/beach/Genetic/Examples/exampleGenetic.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -533,14 +595,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.PerceptronTest" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleDataHandler.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleSerializable.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.Genetic.php" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.exampleGenetic.php" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.PerceptronTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.exampleGenetic.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.Genetic.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleDataHandler.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleSerializable.php" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.SingleLayerPerceptron.php" />
       </list>
     </recent_temporary>
   </component>
@@ -583,36 +651,45 @@
       <workItem from="1478569203126" duration="5805000" />
       <workItem from="1478631041422" duration="53000" />
       <workItem from="1478631189072" duration="614000" />
-      <workItem from="1478644004832" duration="15460000" />
+      <workItem from="1478644004832" duration="16182000" />
+      <workItem from="1478692253711" duration="3154000" />
+      <workItem from="1478696010277" duration="19394000" />
+      <workItem from="1478740866843" duration="3978000" />
+      <workItem from="1478778704631" duration="5591000" />
+      <workItem from="1478790979498" duration="123000" />
+      <workItem from="1478824770503" duration="8204000" />
+      <workItem from="1478861912525" duration="3950000" />
+      <workItem from="1478876724899" duration="9060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179521000" />
+    <option name="totallyTimeSpent" value="234957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2313605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29515758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.715625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37967116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26287472" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21823618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -632,169 +709,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php</url>
+          <line>1591</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Genetic/Genetic.php</url>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_9.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Vector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Finance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Sequence/Advanced.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/Algebra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Loggable/ILoggable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -803,13 +733,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Tests/PerceptronTest.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -866,9 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#150#183#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,38 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="138" column="17" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="17" />
-          <folding>
-            <element signature="e#28#113#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="56" />
-          <folding>
-            <element signature="e#238#284#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -915,30 +803,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/wine-dataset.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/small-train-test-2011-20152.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="549">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/MatrixFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Vector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/train-test-2011-20152.csv" />
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="149" column="17" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/ISerializable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php">
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="675">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#90#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+          <folding>
+            <element signature="e#121#140#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/train-test-2011-20152INT.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="6715" column="14" selection-start-line="6715" selection-start-column="14" selection-end-line="6715" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/LUDecomposition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4410">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -959,85 +949,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundedSigmoidalFunction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="215" column="73" selection-start-line="215" selection-start-column="73" selection-end-line="215" selection-end-column="73" />
-          <folding>
-            <element signature="e#112#165#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/RoundFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActivationFunctions/IActivationFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/MatrixHelpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="67" column="62" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
+        <state relative-caret-position="105">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/wine-dataset.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/ANN/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="265" selection-start-line="16" selection-start-column="265" selection-end-line="16" selection-end-column="265" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/IDataHandler.php">
+    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="-489">
+          <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
           <folding>
-            <element signature="e#129#175#0#PHP" expanded="true" />
+            <element signature="e#112#165#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv">
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/ICrossOver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php">
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
+        <state relative-caret-position="331">
+          <caret line="38" column="9" selection-start-line="24" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/ISelection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/IllegalArgumentException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="50" column="9" selection-start-line="42" selection-start-column="0" selection-end-line="50" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
           <folding>
-            <element signature="e#121#140#0#PHP" expanded="true" />
+            <element signature="e#28#113#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+        <state relative-caret-position="60">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/IMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding>
-            <element signature="e#43#89#0#PHP" expanded="true" />
+            <element signature="e#7#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

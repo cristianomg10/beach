@@ -152,4 +152,9 @@ class Math
     static function getRandomValue($coefficient = 1.0){
         return (mt_rand() / mt_getrandmax()) * ($coefficient);
     }
+
+    static function min($i, $j){
+        if ($i < $j) return $i;
+        return $j;
+    }
 }
