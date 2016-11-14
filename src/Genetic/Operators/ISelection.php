@@ -11,5 +11,5 @@ namespace App\Genetic\Operators;
 
 interface ISelection
 {
-
+    public function select($fitnesses);
 }

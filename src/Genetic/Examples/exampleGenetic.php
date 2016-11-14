@@ -1,8 +1,11 @@
 <?php
 
 use App\Genetic\Chromosome;
+use App\Genetic\Genetic;
+use App\Genetic\ObjectiveFunctions\ArbitraryFunction;
 use App\Genetic\Operators\BitByBitMutation;
 use App\Genetic\Operators\RandomMutation;
+use App\Genetic\Operators\RouletteWheelSelection;
 use App\Genetic\Operators\SinglePointCrossOver;
 use App\Genetic\Operators\TwoPointCrossOver;
 use App\Genetic\Operators\UniformCrossOver;
@@ -45,3 +48,10 @@ $y = new Chromosome([1,1,1,1,1,1,1,1,1,1]);
 
 $k = new TwoPointCrossOver();
 var_dump($k->crossOver($z, $y));
+
+echo (new ArbitraryFunction())->compute(new Chromosome([0,0,0,1,1,1,1,1]));
+
+$g = new Genetic(40, 10, 0.85, 0.4, new ArbitraryFunction(), new RouletteWheelSelection(), new SinglePointCrossOver(), new BitByBitMutation());
+$result = $g->run();
+
+var_dump($result);
