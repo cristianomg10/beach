@@ -6,7 +6,7 @@
  * Time: 11:17 PM
  */
 
-namespace App\ActivationFunctions;
+namespace App\ANN\ActivationFunctions;
 
 
 class RoundFunction implements  IActivationFunction

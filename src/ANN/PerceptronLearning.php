@@ -6,7 +6,7 @@ use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 use App\ANN\Perceptron;
 use App\Loggable\ILoggable;
-use App\ActivationFunctions\IActivationFunction;
+use App\ANN\ActivationFunctions\IActivationFunction;
 
 /**
  * Created by PhpStorm.

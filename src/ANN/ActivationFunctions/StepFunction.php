@@ -1,7 +1,5 @@
 <?php
-namespace App\ActivationFunctions;
-
-use App\ActivationFunctions\IActivationFunction;
+namespace App\ANN\ActivationFunctions;
 
 /**
  * Created by PhpStorm.

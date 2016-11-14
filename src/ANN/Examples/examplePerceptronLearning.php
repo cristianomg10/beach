@@ -11,7 +11,7 @@ use MathPHP\LinearAlgebra\Vector;
 
 use App\ANN\Perceptron;
 use App\ANN\PerceptronLearning;
-use App\ActivationFunctions\StepFunction;
+use App\ANN\ActivationFunctions\StepFunction;
 use App\Loggable\ScreenWriterLoggable;
 
 $input			= new Matrix([

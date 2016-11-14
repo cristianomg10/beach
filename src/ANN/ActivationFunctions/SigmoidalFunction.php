@@ -1,7 +1,6 @@
 <?php
-namespace App\ActivationFunctions;
+namespace App\ANN\ActivationFunctions;
 
-use App\ActivationFunctions\IActivationFunction;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 

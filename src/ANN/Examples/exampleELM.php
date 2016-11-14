@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
-use App\ActivationFunctions\SigmoidalFunction;
+use App\ANN\ActivationFunctions\SigmoidalFunction;
 use App\ANN\ExtremeLearningMachine;
 use MathPHP\LinearAlgebra\Matrix;
 
