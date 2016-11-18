@@ -107,7 +107,25 @@ class Genetic {
         }
 
         $this->population = $population;
+        $this->bestIndiv = $bestIndividual;
+        $this->bestFitness = $bestFitness;
 
         return ["individual" => $bestIndividual, "fitness" => $bestFitness];
+    }
+
+    /**
+     * @return int
+     */
+    public function getBestFitness()
+    {
+        return $this->bestFitness;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBestIndiv()
+    {
+        return $this->bestIndiv;
     }
 }

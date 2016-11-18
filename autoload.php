@@ -8,7 +8,7 @@
 
 function __autoload($class){
     $class = str_replace('App\\', '', $class);
-    $class = str_replace('\\', '/', $class) . ".php";
+    $class = str_replace('\\', '/', $class) . "exampleDE.php";
 
     echo "$class <--";
     require_once($class);
