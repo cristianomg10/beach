@@ -8,7 +8,7 @@
 
 namespace App\DifferentialEvolution;
 
-use App\DifferentialEvolution\ObjectiveFunctions\IObjectiveFunction;
+use App\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\DifferentialEvolution\Strategies\IStrategy;
 use App\Utils\Math;
 

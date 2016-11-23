@@ -9,8 +9,6 @@
 namespace App\ParticleSwarmOptimization;
 
 
-use MathPHP\Probability\Distribution\Continuous\ParetoTest;
-
 class Particle
 {
     private $location;

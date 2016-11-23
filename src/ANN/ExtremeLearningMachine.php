@@ -7,15 +7,15 @@ namespace App\ANN;
  * Time: 9:56 PM
  */
 
-use App\ANN\ActivationFunctions\RoundedSigmoidalFunction;
-use App\ANN\ActivationFunctions\SigmoidalFunction;
-use App\ANN\ActivationFunctions\StepFunction;
+use App\Functions\ActivationFunctions\RoundedSigmoidalFunction;
+use App\Functions\ActivationFunctions\SigmoidalFunction;
+use App\Functions\ActivationFunctions\StepFunction;
 use App\DataHandler\ISerializable;
 use App\Utils\Math;
 use App\Utils\MatrixHelpers;
-use \MathPHP\LinearAlgebra\Matrix;
-use App\ANN\ActivationFunctions\IActivationFunction;
-use App\ANN\ActivationFunctions\RoundFunction;
+use MathPHP\LinearAlgebra\Matrix;
+use App\Functions\ActivationFunctions\IActivationFunction;
+use App\Functions\ActivationFunctions\RoundFunction;
 
 class ExtremeLearningMachine implements  ISerializable {
     private $nHiddenPerceptrons;

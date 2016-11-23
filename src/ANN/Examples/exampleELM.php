@@ -13,8 +13,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
-use App\ANN\ActivationFunctions\SigmoidalFunction;
 use App\ANN\ExtremeLearningMachine;
+use App\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 
 $elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());

@@ -12,12 +12,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
-use App\ANN\ActivationFunctions\RoundedSigmoidalFunction;
+use App\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
-
-use App\ANN\ActivationFunctions\SigmoidalFunction;
-use App\ANN\ActivationFunctions\StepFunction;
 use App\ANN\SingleLayerPerceptron;
 
 $slp = new SingleLayerPerceptron(3, new SigmoidalFunction(), new SigmoidalFunction(), 01.2, 0.8, 2, 1, 200);

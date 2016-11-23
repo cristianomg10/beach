@@ -1,7 +1,7 @@
 <?php
 namespace App\ANN;
 
-use App\ANN\ActivationFunctions\IActivationFunction;
+use App\Functions\ActivationFunctions\IActivationFunction;
 
 class Perceptron {
 	private $weights;

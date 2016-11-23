@@ -6,14 +6,15 @@
  * Time: 11:38 AM
  */
 
-namespace App\Genetic\ObjectiveFunctions;
 
+namespace App\Functions\ObjectiveFunctions;
 
+//For Genetic
 use App\Genetic\Chromosome;
 
 class ArbitraryFunction implements IObjectiveFunction
 {
-    public function compute(Chromosome $individual)
+    public function compute($individual)
     {
         $genes = $individual->getGenes();
         $x = bindec(implode("", array_slice($genes, 0, 4)));

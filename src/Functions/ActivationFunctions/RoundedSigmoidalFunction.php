@@ -6,7 +6,8 @@
  * Time: 11:24 AM
  */
 
-namespace App\ANN\ActivationFunctions;
+
+namespace App\Functions\ActivationFunctions;
 
 
 class RoundedSigmoidalFunction implements IActivationFunction

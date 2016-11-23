@@ -6,9 +6,10 @@
  * Time: 10:33 PM
  */
 
-namespace App\DifferentialEvolution\ObjectiveFunctions;
+namespace App\Functions\ObjectiveFunctions;
 
 
+// For DE
 class TestFunction implements IObjectiveFunction
 {
 

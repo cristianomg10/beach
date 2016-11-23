@@ -8,7 +8,8 @@
 
 namespace App\ParticleSwarmOptimization;
 
-use App\ParticleSwarmOptimization\ObjectiveFunctions\IObjectiveFunction;
+use App\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Loggable\ILoggable;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 
@@ -28,8 +29,9 @@ class ParticleSwarmOptimization
     private $min;
     private $max;
     private $wDamp;
+    private $loggable;
 
-    function __construct($nParticles, $nIterations, $c1, $c2, $nDimensions, IObjectiveFunction $objectiveFunction, $w, $wDamp, $min, $max)
+    function __construct($nParticles, $nIterations, $c1, $c2, $nDimensions, IObjectiveFunction $objectiveFunction, $w, $wDamp, $min, $max, ILoggable $loggable)
     {
         $this->c1 = $c1;
         $this->c2 = $c2;
@@ -41,6 +43,7 @@ class ParticleSwarmOptimization
         $this->wDamp = $wDamp;
         $this->min = $min;
         $this->max = $max;
+        $this->loggable = $loggable;
     }
 
     private function initialize(){
@@ -112,7 +115,7 @@ class ParticleSwarmOptimization
                 );
             }
 
-            echo "Melhor fitness: " . $this->best . "\n";
+            $this->loggable->write("Iteration: $i: Best fitness: {$this->best}");
             $this->w = $this->w * $this->wDamp;
         }
     }

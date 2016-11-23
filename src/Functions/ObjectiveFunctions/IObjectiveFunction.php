@@ -6,12 +6,9 @@
  * Time: 11:37 AM
  */
 
-namespace App\Genetic\ObjectiveFunctions;
-
-
-use App\Genetic\Chromosome;
+namespace App\Functions\ObjectiveFunctions;
 
 interface IObjectiveFunction
 {
-    public function compute(Chromosome $individual);
+    public function compute($individual);
 }

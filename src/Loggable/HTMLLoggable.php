@@ -9,7 +9,7 @@ use App\Loggable\ILoggable;
  * Date: 10/27/16
  * Time: 11:59 PM
  */
-class ScreenWriterLoggable implements ILoggable
+class HTMLLoggable implements ILoggable
 {
     /**
      * @param $text

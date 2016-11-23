@@ -2,7 +2,7 @@
 
 use App\Genetic\Chromosome;
 use App\Genetic\Genetic;
-use App\Genetic\ObjectiveFunctions\ArbitraryFunction;
+use App\Functions\ObjectiveFunctions\ArbitraryFunction;
 use App\Genetic\Operators\BitByBitMutation;
 use App\Genetic\Operators\RandomMutation;
 use App\Genetic\Operators\RouletteWheelSelection;

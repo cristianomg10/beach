@@ -9,7 +9,7 @@
 
 namespace App\ANN;
 
-use App\ANN\ActivationFunctions\StepFunction;
+use App\Functions\ActivationFunctions\StepFunction;
 use App\ANN\Perceptron;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;

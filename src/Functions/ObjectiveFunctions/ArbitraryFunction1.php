@@ -6,10 +6,10 @@
  * Time: 11:03 PM
  */
 
-namespace App\DifferentialEvolution\ObjectiveFunctions;
+namespace App\Functions\ObjectiveFunctions;
 
-
-class ArbitraryFunction implements  IObjectiveFunction
+//For DE and PSO
+class ArbitraryFunction1 implements  IObjectiveFunction
 {
 
     public function compute($x)

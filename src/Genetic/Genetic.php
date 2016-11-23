@@ -9,7 +9,7 @@
 namespace App\Genetic;
 
 
-use App\Genetic\ObjectiveFunctions\IObjectiveFunction;
+use App\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Genetic\Operators\ICrossOver;
 use App\Genetic\Operators\IMutation;
 use App\Genetic\Operators\ISelection;

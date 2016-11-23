@@ -9,7 +9,7 @@
 namespace App\DifferentialEvolution\Strategies;
 
 
-use App\DifferentialEvolution\ObjectiveFunctions\IObjectiveFunction;
+use App\Functions\ObjectiveFunctions\IObjectiveFunction;
 
 interface IStrategy
 {

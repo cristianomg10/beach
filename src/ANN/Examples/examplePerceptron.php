@@ -8,7 +8,7 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 use App\ANN\Perceptron;
-use App\ANN\ActivationFunctions\StepFunction;
+use App\Functions\ActivationFunctions\StepFunction;
 
 # set values
 $expectedOutput = new Vector([0, 0, 0, 1]);
