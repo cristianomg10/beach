@@ -28,11 +28,12 @@ class Genetic {
     private $mutation;
     private $elitism;
     private $bestIndiv;
-    private $bestFitness = 0;
+    private $bestFitness;
+    private $optimization; // Maximization or minimization
 
     function __construct($populationSize, $generations, $probabilityCrossOver, $probabilityMutation,
                          IObjectiveFunction $objFunction, ISelection $selection, ICrossOver $crossOver,
-                         IMutation $mutation, $elitism = 1)
+                         IMutation $mutation, $elitism = 1, $optimization = 'MAX')
     {
         $this->populationSize = $populationSize;
         $this->probabilityCrossOver = $probabilityCrossOver;
@@ -43,6 +44,31 @@ class Genetic {
         $this->mutation = $mutation;
         $this->generations = $generations;
         $this->elitism = $elitism;
+        $this->optimization = $optimization;
+
+        switch ($this->optimization){
+            case "MIN":
+                $this->bestFitness = INF;
+                break;
+            case "MAX":
+                $this->bestFitness = 0;
+                break;
+        }
+    }
+
+    private function compare($current, $best){
+        switch ($this->optimization){
+            case 'MAX': {
+                if ($current > $best) return true;
+                break;
+            }
+            case 'MIN': {
+                if ($current < $best) return true;
+                break;
+            }
+        }
+
+        return false;
     }
 
     function run(){
@@ -89,11 +115,17 @@ class Genetic {
 
                 array_multisort($fitnesses, $population);
 
-                $bestIndividual = $population[$this->populationSize - 1];
-                $bestFitness = $fitnesses[$this->populationSize - 1];
+                $index = ($this->optimization == 'MAX' ?
+                    $this->populationSize - 1: // get the biggest value
+                    0   // get the smallest value
+                );
+
+                $bestIndividual = $population[$index];
+                $bestFitness = $fitnesses[$index];
 
                 if ($this->elitism){
-                    if ($bestFitness > $this->bestFitness){
+                    if ($this->compare($bestFitness, $this->bestFitness)){
+                    //if ($bestFitness > $this->bestFitness){
                         $this->bestFitness = $bestFitness;
                         $this->bestIndiv = $bestIndividual;
                     } else {

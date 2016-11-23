@@ -1,5 +1,7 @@
 <?php
 
+use App\Functions\ObjectiveFunctions\EasomFunction;
+use App\Functions\ObjectiveFunctions\RastriginFunction;
 use App\Genetic\Chromosome;
 use App\Genetic\Genetic;
 use App\Functions\ObjectiveFunctions\ArbitraryFunction;
@@ -51,7 +53,7 @@ var_dump($k->crossOver($z, $y));
 
 echo (new ArbitraryFunction())->compute(new Chromosome([0,0,0,1,1,1,1,1]));
 
-$g = new Genetic(40, 10, 0.85, 0.4, new ArbitraryFunction(), new RouletteWheelSelection(), new SinglePointCrossOver(), new BitByBitMutation());
+$g = new Genetic(40, 10, 0.85, 0.4, new EasomFunction(), new RouletteWheelSelection(), new SinglePointCrossOver(), new BitByBitMutation(), 1, 'MIN');
 $result = $g->run();
 
 var_dump($result);
