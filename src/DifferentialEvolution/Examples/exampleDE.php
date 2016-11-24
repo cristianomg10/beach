@@ -2,6 +2,7 @@
 
 use App\DifferentialEvolution\DifferentialEvolution;
 use App\Functions\ObjectiveFunctions\ArbitraryFunction1;
+use App\Functions\ObjectiveFunctions\SphereFunction;
 use App\Functions\ObjectiveFunctions\TestFunction;
 use App\DifferentialEvolution\Strategies\DEBest2Strategy;
 use App\DifferentialEvolution\Strategies\DECurrent2Best1Strategy;
@@ -17,7 +18,7 @@ ini_set('max_execution_time', -1);
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 // For minimization
-$de = new DifferentialEvolution(new ArbitraryFunction1(), new DECurrent2Best1Strategy(), 2, 100, 50, 1, 0.9, 2, 1.1);
+$de = new DifferentialEvolution(new SphereFunction(), new DECurrent2Best1Strategy(), 10, 50, 100, 1, 0.9, 0.5, 1.1);
 $de->run();
 var_dump("Best individual:", $de->getBest());
-var_dump("Best fitness: ", (new ArbitraryFunction1())->compute($de->getBest()->getData()));
+var_dump("Best fitness: ", (new SphereFunction())->compute($de->getBest()->getData()));

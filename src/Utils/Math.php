@@ -150,6 +150,7 @@ class Math
      * @return float|int
      */
     static function getRandomValue($coefficient = 1.0){
+        srand(7);
         return (mt_rand() / mt_getrandmax()) * ($coefficient);
     }
 
