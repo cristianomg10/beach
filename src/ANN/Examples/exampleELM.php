@@ -14,6 +14,7 @@ ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 use App\ANN\ExtremeLearningMachine;
+use App\DataHandler\CSVDataHandler;
 use App\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 
@@ -23,16 +24,24 @@ $elm->setExpectedOutput(new Matrix([[0,1,1,0]]));
 $elm->setActivationFunction(new SigmoidalFunction());
 $elm->learn();
 
-$inputForTest = new Matrix([[0, 1], [1, 1], [0, 0], [1, 0], [0, 0]]);
+$inputForTest = new Matrix(
+    [[0, 1, 0, 1, 0],
+    [1, 1, 0, 0, 0]]
+);
 $values = $elm->classify($inputForTest);
-echo $values . "<BR>";
+echo $values . "\n";
+
+$csv = new CSVDataHandler();
+$csv->open('../../DataHandler/Datasets/iris.csv');
+$csv->setAttrIndex(4);
+$csv->setValidationRate(30);
 
 $elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());
-$elm->setInput(new Matrix([[0,0,1,1],[0,1,0,1]]));
-$elm->setExpectedOutput(new Matrix([[0,1,1,0]]));
+$elm->setInput($csv->getUnlabeledDataForTraining());
+$elm->setExpectedOutput($csv->getLabelForTraining());
 $elm->setActivationFunction(new SigmoidalFunction());
 $elm->learn();
 
-$inputForTest = new Matrix([[0, 1], [1, 1], [0, 0], [1, 0], [0, 0]]);
-$values = $elm->classify($inputForTest);
-echo $values;
+$values = $elm->classify($csv->getUnlabeledDataForValidation());
+echo $values . "\n";
+echo $csv->getLabelForValidation();

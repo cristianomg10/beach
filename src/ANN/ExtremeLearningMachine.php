@@ -156,11 +156,7 @@ class ExtremeLearningMachine implements  ISerializable {
             $p = new Perceptron();
             $p->setBias(Math::getRandomValue());
 
-            $v = Math::generateRandomVector($this->input->getM(), 2);
-
-            for ($j = 0; $j < count($v); ++$j){
-                $v[$j] -= 1;
-            }
+            $v = Math::sumNumberToMatrix(Math::generateRandomVector($this->input->getN(), 2), -1);
 
             $p->setWeights($v);
             $p->setActivationFunction($this->activationFunction);
@@ -169,9 +165,9 @@ class ExtremeLearningMachine implements  ISerializable {
 
         // Run perceptrons3
         $h = [];
-        for ($i = 0; $i < $this->input->getN(); ++$i){
+        for ($i = 0; $i < $this->input->getM(); ++$i){
             for ($j = 0; $j <  $this->nHiddenPerceptrons; ++$j){
-                $this->hiddenPerceptrons[$j]->setInput($this->input->getColumn($i));
+                $this->hiddenPerceptrons[$j]->setInput($this->input->getRow($i));
                 $h[$i][$j] = $this->hiddenPerceptrons[$j]->calculate();
             }
         }
@@ -179,6 +175,7 @@ class ExtremeLearningMachine implements  ISerializable {
         // Add regularization factor
         $h = new Matrix($h);
         $b = $h->multiply($h->transpose())->getMatrix();
+
         for ($i = 0; $i < count($b); ++$i){
             $b[$i][$i] += 1.0 / $this->c;
         }
