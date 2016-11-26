@@ -8,18 +8,19 @@
 
 namespace App\DataHandler\Examples;
 
-use App\ActivationFunctions\SigmoidalFunction;
+
+use App\Functions\ActivationFunctions\SigmoidalFunction;
 use App\ANN\ExtremeLearningMachine;
-use App\DataHandler\CSVDataHandler;
+use App\Utils\DataHandler\CSVDataHandler;
 use MathPHP\LinearAlgebra\Matrix;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
-require_once(__DIR__ . '/../../../vendor/autoload.php');
+require_once(__DIR__ . '/../../../../vendor/autoload.php');
 
 $data = new CSVDataHandler(0);
 $data->open('../Datasets/wine-dataset.csv');
-$data->setAttrIndex(0);
+/*$data->setAttrIndex(0);
 $unlabeled = $data->getUnlabeledDataForTraining()->transpose();
 $label = $data->getLabelForTraining();
 
@@ -69,4 +70,4 @@ $test = new Matrix([
 ]);
 
 echo "<br><br><b>Iris dataset</b><br>Should be:<br>[2, 3, 1, 2, 1, 2, 2, 2, 2, 3]<br> We've gotten:<br>";
-echo $elm->classify($test);
+echo $elm->classify($test);*/

@@ -14,7 +14,7 @@ ini_set('display_errors', 'On');
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 use App\ANN\ExtremeLearningMachine;
-use App\DataHandler\CSVDataHandler;
+use App\Utils\DataHandler\CSVDataHandler;
 use App\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 
@@ -32,7 +32,7 @@ $values = $elm->classify($inputForTest);
 echo $values . "\n";
 
 $csv = new CSVDataHandler();
-$csv->open('../../DataHandler/Datasets/iris.csv');
+$csv->open('../../Utils/DataHandler/Datasets/iris.csv');
 $csv->setAttrIndex(4);
 $csv->setValidationRate(30);
 

@@ -6,7 +6,7 @@
  * Time: 9:13 PM
  */
 
-namespace App\DataHandler;
+namespace App\Utils\DataHandler;
 
 
 use App\Utils\Math;

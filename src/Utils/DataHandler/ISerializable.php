@@ -6,7 +6,7 @@
  * Time: 5:58 PM
  */
 
-namespace App\DataHandler;
+namespace App\Utils\DataHandler;
 
 
 interface ISerializable

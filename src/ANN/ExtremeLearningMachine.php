@@ -10,14 +10,15 @@ namespace App\ANN;
 use App\Functions\ActivationFunctions\RoundedSigmoidalFunction;
 use App\Functions\ActivationFunctions\SigmoidalFunction;
 use App\Functions\ActivationFunctions\StepFunction;
-use App\DataHandler\ISerializable;
+use App\Utils\DataHandler\ISerializable;
+use App\Utils\Interfaces\IClassifier;
 use App\Utils\Math;
 use App\Utils\MatrixHelpers;
 use MathPHP\LinearAlgebra\Matrix;
 use App\Functions\ActivationFunctions\IActivationFunction;
 use App\Functions\ActivationFunctions\RoundFunction;
 
-class ExtremeLearningMachine implements  ISerializable {
+class ExtremeLearningMachine implements ISerializable, IClassifier  {
     private $nHiddenPerceptrons;
     private $hiddenPerceptrons;
     private $activationFunction;

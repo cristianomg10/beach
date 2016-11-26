@@ -6,7 +6,7 @@
  * Time: 9:06 PM
  */
 
-namespace App\DataHandler;
+namespace App\Utils\DataHandler;
 
 
 interface IDataHandler
@@ -17,7 +17,7 @@ interface IDataHandler
     public function getUnlabeledDataForValidation();
     public function getLabelForValidation();
     public function open($source = '');
-    public function setAttrIndex($attrIndex);
-    public function setValidationRate($rate);
-    public function shuffle();
+    //public function setAttrIndex($attrIndex);
+    //public function setValidationRate($rate);
+    //public function shuffle();
 }
