@@ -21,4 +21,5 @@ $data->open('../../DataHandler/Datasets/iris.csv');
 $ho = new HoldoutValidation($data->getDataAsMatrix()->transpose(), 4);
 $ho->setClassifier(new ExtremeLearningMachine(20, 3, new SigmoidalFunction()));
 $ho->validate();
-echo $ho->getConfusionMatrix();
+echo $ho->getConfusionMatrix() . "\n";
+echo $ho->getPrecision() . "%";

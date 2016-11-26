@@ -103,7 +103,15 @@ class HoldoutValidation implements IValidation
 
     public function getPrecision()
     {
+        $predicted = $this->lastClassified->getRow(0);
+        $labeled = $this->labelForValidation->getRow(0);
 
+        $count = 0;
+        for ($i = 0; $i < count($predicted); ++$i){
+            if ($predicted[$i] == $labeled[$i]) ++$count;
+        }
+
+        return $count / count($predicted) * 100;
     }
 
     public function getConfusionMatrix()
