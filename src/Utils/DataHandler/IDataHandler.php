@@ -12,12 +12,5 @@ namespace App\Utils\DataHandler;
 interface IDataHandler
 {
     public function getDataAsMatrix();
-    public function getUnlabeledDataForTraining();
-    public function getLabelForTraining();
-    public function getUnlabeledDataForValidation();
-    public function getLabelForValidation();
     public function open($source = '');
-    //public function setAttrIndex($attrIndex);
-    //public function setValidationRate($rate);
-    //public function shuffle();
 }

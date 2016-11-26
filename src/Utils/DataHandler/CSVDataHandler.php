@@ -51,82 +51,11 @@ class CSVDataHandler implements IDataHandler
         $this->attributesQty = $num;
     }
 
-    public function setAttrIndex($attrIndex)
-    {
-        $this->attrIndex = $attrIndex;
-    }
-
-    public function shuffle()
-    {
-        $order = range(0, $this->length - 1);
-        shuffle($order);
-
-        $newArray = [];
-        for ($i = 0; $i < $this->length; ++$i){
-            $newArray[$i] = $this->data[$order[$i]];
-        }
-
-        $this->data = $newArray;
-    }
-
-    public function getUnlabeledDataForTraining()
-    {
-        $this->shuffle();
-        $data = array_slice($this->data, 0, $this->qtyForTraining, true);
-        $dataLabel = [];
-
-        for ($i = 0; $i < $this->qtyForTraining; ++$i){
-            $dataLabel[$i] = $data[$i][$this->attrIndex];
-            unset($data[$i][$this->attrIndex]);
-            $data[$i] = array_values($data[$i]);
-        }
-
-        $this->label = new Matrix([$dataLabel]);
-
-        return (new Matrix($data))->transpose();
-    }
-
-    public function getLabelForTraining(){
-        return $this->label;
-    }
-
     public function getDataAsMatrix()
     {
         if (!$this->data) throw new \Exception("The object has no data to retrieve.");
         if (is_array($this->data) && !is_array($this->data)) return (new Matrix([$this->data]))->transpose();
 
         return (new Matrix($this->data))->transpose();
-    }
-
-    public function getUnlabeledDataForValidation()
-    {
-        $this->shuffle();
-        $data = array_slice($this->data, 0, $this->qtyForValidation, true);
-        $dataLabel = [];
-
-        for ($i = 0; $i < $this->qtyForValidation; ++$i){
-            $dataLabel[$i] = $data[$i][$this->attrIndex];
-            unset($data[$i][$this->attrIndex]);
-            $data[$i] = array_values($data[$i]);
-        }
-
-        $this->labelForValidation = new Matrix([$dataLabel]);
-
-        return (new Matrix($data))->transpose();
-    }
-
-    public function getLabelForValidation()
-    {
-        return $this->labelForValidation;
-    }
-
-    /**
-     * @param $rate in %
-     */
-    public function setValidationRate($rate)
-    {
-        $this->validationRate = $rate;
-        $this->qtyForTraining = round($this->length * (100 - $rate)/100);
-        $this->qtyForValidation = $this->length - $this->qtyForTraining;
     }
 }

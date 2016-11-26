@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Interfaces/IClassifier.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Interfaces/IOptimizer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/IValidation.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/CSVDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/Datasets/iris.csv" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/Datasets/iris.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/Datasets/wine-dataset.csv" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/Datasets/wine-dataset.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleCSVDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleDataHandler.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/Examples/exampleSerializable.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleSerializable.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/IDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/DataHandler/ISerializable.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/ISerializable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" afterPath="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +52,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exampleCSVDataHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+            <state relative-caret-position="10">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+              <folding>
+                <element signature="e#130#186#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVDataHandler.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="e#127#146#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDataHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +150,11 @@
         <option value="$PROJECT_DIR$/src/Utils/Validations/Holdout.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/IValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Interfaces/IClassifier.php" />
-        <option value="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" />
-        <option value="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" />
+        <option value="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
       </list>
     </option>
   </component>
@@ -552,7 +563,7 @@
       <recent name="$PROJECT_DIR$/src/ANN" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.exampleCSVDataHandler.php">
+  <component name="RunManager" selected="PHP Script.examplesHoldoutValidation.php">
     <configuration default="false" name="exampleDE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DifferentialEvolution/Examples/exampleDE.php">
       <method />
     </configuration>
@@ -623,8 +634,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleCSVDataHandler.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.examplesHoldoutValidation.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.examplesHoldoutValidation.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleCSVDataHandler.php" />
         <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleELM.php" />
         <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
         <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
@@ -693,12 +704,12 @@
       <workItem from="1480023037145" duration="2498000" />
       <workItem from="1480036268776" duration="2976000" />
       <workItem from="1480091113547" duration="6391000" />
-      <workItem from="1480161889763" duration="9693000" />
+      <workItem from="1480161889763" duration="10190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325424000" />
+    <option name="totallyTimeSpent" value="325921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -1046,29 +1057,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#127#146#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,6 +1093,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding>
+            <element signature="e#130#186#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1110,11 +1121,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php">
+    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="246">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#127#146#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
