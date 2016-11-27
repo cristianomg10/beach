@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Math.php" afterPath="$PROJECT_DIR$/src/Utils/Math.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,20 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="examplesHoldoutValidation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php">
+      <file leaf-file-name="examplesValidation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrossValidation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrossValidation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="-637">
               <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="e#128#165#0#PHP" expanded="true" />
@@ -82,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Functions/ActivationFunctions/IActivationFunction.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/Perceptron.php" />
@@ -130,9 +126,10 @@
         <option value="$PROJECT_DIR$/src/Utils/DataHandler/IDataHandler.php" />
         <option value="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
       </list>
     </option>
   </component>
@@ -467,7 +464,7 @@
       <recent name="$PROJECT_DIR$/src/ANN" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.examplesHoldoutValidation.php">
+  <component name="RunManager" selected="PHP Script.examplesValidation.php">
     <configuration default="false" name="exampleDE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DifferentialEvolution/Examples/exampleDE.php">
       <method />
     </configuration>
@@ -477,7 +474,7 @@
     <configuration default="false" name="exampleELM.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
       <method />
     </configuration>
-    <configuration default="false" name="examplesHoldoutValidation.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php">
+    <configuration default="false" name="examplesValidation.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
       <method />
     </configuration>
     <configuration default="false" name="exampleCSVDataHandler.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/DataHandler/Examples/exampleCSVDataHandler.php">
@@ -533,12 +530,12 @@
       <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
       <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
       <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleELM.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplesHoldoutValidation.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
       <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleCSVDataHandler.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.examplesHoldoutValidation.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
         <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleCSVDataHandler.php" />
         <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleELM.php" />
         <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
@@ -610,16 +607,16 @@
       <workItem from="1480091113547" duration="6391000" />
       <workItem from="1480161889763" duration="10870000" />
       <workItem from="1480197749866" duration="7137000" />
-      <workItem from="1480251861397" duration="13432000" />
+      <workItem from="1480251861397" duration="14506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347170000" />
+    <option name="totallyTimeSpent" value="348244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29823214" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -630,7 +627,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43647236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43647236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -983,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1019,11 +1008,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="-637">
           <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#128#165#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -19,8 +19,16 @@ require_once(__DIR__ . '/../../../../vendor/autoload.php');
 $data = new CSVDataHandler(0);
 $data->open('../../DataHandler/Datasets/iris.csv');
 
+$elm = new ExtremeLearningMachine(30, 3, new SigmoidalFunction());
+
+$ho = new HoldoutValidation($data->getDataAsMatrix()->transpose(), 4, 30);
+$ho->setClassifier($elm);
+$ho->validate();
+echo $ho->getConfusionMatrix() . "\n";
+echo $ho->getPrecision() . "%\n";
+
 $ho = new CrossValidation($data->getDataAsMatrix()->transpose(), 4, 10);
-$ho->setClassifier(new ExtremeLearningMachine(30, 3, new SigmoidalFunction()));
+$ho->setClassifier($elm);
 $ho->validate();
 echo $ho->getConfusionMatrix() . "\n";
 echo $ho->getPrecision() . "%";
