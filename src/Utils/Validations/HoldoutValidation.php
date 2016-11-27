@@ -145,7 +145,5 @@ class HoldoutValidation implements IValidation
         $this->classifier->learn();
 
         $this->lastClassified = $this->classifier->classify($this->getUnlabeledDataForValidation());
-        /*echo "Classified : {$this->lastClassified}\n";
-        echo "Correc Lab : {$this->labelForValidation}\n";*/
     }
 }

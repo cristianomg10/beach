@@ -9,6 +9,7 @@
 use App\ANN\ExtremeLearningMachine;
 use App\Functions\ActivationFunctions\SigmoidalFunction;
 use App\Utils\DataHandler\CSVDataHandler;
+use App\Utils\Validations\CrossValidation;
 use App\Utils\Validations\HoldoutValidation;
 
 error_reporting(E_ALL);
@@ -18,8 +19,8 @@ require_once(__DIR__ . '/../../../../vendor/autoload.php');
 $data = new CSVDataHandler(0);
 $data->open('../../DataHandler/Datasets/iris.csv');
 
-$ho = new HoldoutValidation($data->getDataAsMatrix()->transpose(), 4);
-$ho->setClassifier(new ExtremeLearningMachine(20, 3, new SigmoidalFunction()));
+$ho = new CrossValidation($data->getDataAsMatrix()->transpose(), 4, 10);
+$ho->setClassifier(new ExtremeLearningMachine(30, 3, new SigmoidalFunction()));
 $ho->validate();
 echo $ho->getConfusionMatrix() . "\n";
 echo $ho->getPrecision() . "%";
