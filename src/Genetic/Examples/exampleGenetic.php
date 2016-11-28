@@ -2,7 +2,7 @@
 
 use App\Utils\Functions\ObjectiveFunctions\EasomFunction;
 use App\Utils\Functions\ObjectiveFunctions\RastriginFunction;
-use App\Genetic\BinaryChromosome;
+use App\Genetic\Operators\BinaryChromosome;
 use App\Genetic\Genetic;
 use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction;
 use App\Genetic\Operators\BitByBitMutation;

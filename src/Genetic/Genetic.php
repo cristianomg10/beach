@@ -9,6 +9,7 @@
 namespace App\Genetic;
 
 
+use App\Genetic\Operators\BinaryChromosome;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Genetic\Operators\ICrossOver;
 use App\Genetic\Operators\IMutation;
