@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Genetic/Chromosome.php" afterPath="$PROJECT_DIR$/src/Genetic/BinaryChromosome.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/GeneticTSP.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" afterPath="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Genetic.php" afterPath="$PROJECT_DIR$/src/Genetic/Genetic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,12 +28,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BinaryChromosome.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Genetic/BinaryChromosome.php">
+      <file leaf-file-name="GeneticTSP.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/GeneticTSP.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TournamentSelection.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Genetic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="36" column="81" selection-start-line="34" selection-start-column="25" selection-end-line="36" selection-end-column="81" />
+              <folding>
+                <element signature="e#118#180#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
@@ -115,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/ArtificialBeeColony/ArtificialBeeColony.php" />
         <option value="$PROJECT_DIR$/src/Genetic/Chromosome.php" />
         <option value="$PROJECT_DIR$/src/Genetic/BinaryChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/GeneticTSP.php" />
       </list>
     </option>
   </component>
@@ -206,6 +220,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Operators" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,18 +542,18 @@
       <workItem from="1480197749866" duration="7137000" />
       <workItem from="1480251861397" duration="14506000" />
       <workItem from="1480294087942" duration="809000" />
-      <workItem from="1480333527086" duration="6786000" />
+      <workItem from="1480333527086" duration="7262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355839000" />
+    <option name="totallyTimeSpent" value="356315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -568,22 +604,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Utils/Loggable/HTMLLoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Loggable/ILoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -880,14 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DifferentialEvolution/DifferentialEvolution.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -982,8 +994,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Genetic/BinaryChromosome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="36" column="81" selection-start-line="34" selection-start-column="25" selection-end-line="36" selection-end-column="81" />
+          <folding>
+            <element signature="e#118#180#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/GeneticTSP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
