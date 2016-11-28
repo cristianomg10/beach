@@ -10,7 +10,7 @@ namespace App\Genetic\Operators;
 
 
 use App\Utils\Exceptions\IllegalArgumentException;
-use App\Genetic\Chromosome;
+use App\Genetic\BinaryChromosome;
 
 class TwoPointCrossOver implements ICrossOver
 {
@@ -26,7 +26,7 @@ class TwoPointCrossOver implements ICrossOver
     public function crossOver($individual1, $individual2)
     {
 
-        if (!is_a($individual1, Chromosome::class) || !is_a($individual2, Chromosome::class)){
+        if (!is_a($individual1, BinaryChromosome::class) || !is_a($individual2, BinaryChromosome::class)){
             throw new IllegalArgumentException("Individuals are not Chromosomes.");
         }
 
@@ -43,8 +43,8 @@ class TwoPointCrossOver implements ICrossOver
         if (!$this->point2)
             $point2 = rand($point1 + 1, $individual1->getLength() - 1);
 
-        $newIndividual1 = new Chromosome();
-        $newIndividual2 = new Chromosome();
+        $newIndividual1 = new BinaryChromosome();
+        $newIndividual2 = new BinaryChromosome();
 
         for ($i = 0; $i < $individual1->getLength(); ++$i){
             if ($i < $point1 || $i >= $point2){

@@ -76,7 +76,7 @@ class Genetic implements IOptimizer {
         $population = [];
 
         for ($i = 0; $i < $this->populationSize; ++$i){
-            $c = new Chromosome();
+            $c = new BinaryChromosome();
             $c->initialize(8);
             $population[] = $c;
         }

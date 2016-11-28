@@ -9,7 +9,7 @@
 namespace App\Genetic\Operators;
 
 
-use App\Genetic\Chromosome;
+use App\Genetic\BinaryChromosome;
 use App\Utils\Math;
 
 class BitByBitMutation implements IMutation
@@ -22,11 +22,11 @@ class BitByBitMutation implements IMutation
 
     public function mutate($individual)
     {
-        if (!is_a($individual, Chromosome::class)){
+        if (!is_a($individual, BinaryChromosome::class)){
             throw new IllegalArgumentException("Individual is not a Chromosome.");
         }
 
-        $new = new Chromosome();
+        $new = new BinaryChromosome();
         for ($i = 0; $i < $individual->getLength(); ++$i){
             if (Math::getRandomValue() < $this->rate){
                 $new->updateGenes($i, ($individual->getGene($i) == 1 ? 0 : 1));

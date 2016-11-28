@@ -8,7 +8,7 @@
 
 namespace App\Genetic\Operators;
 
-use App\Genetic\Chromosome;
+use App\Genetic\BinaryChromosome;
 use App\Utils\Math;
 
 
@@ -17,7 +17,7 @@ class UniformCrossOver implements ICrossOver
 
     public function crossOver($individual1, $individual2)
     {
-        if (!is_a($individual1, Chromosome::class) || !is_a($individual2, Chromosome::class)){
+        if (!is_a($individual1, BinaryChromosome::class) || !is_a($individual2, BinaryChromosome::class)){
             throw new IllegalArgumentException("Individuals are not Chromosomes.");
         }
 
@@ -26,8 +26,8 @@ class UniformCrossOver implements ICrossOver
             $uniformArray[] = round(Math::getRandomValue());
         }
 
-        $newIndividual1 = new Chromosome();
-        $newIndividual2 = new Chromosome();
+        $newIndividual1 = new BinaryChromosome();
+        $newIndividual2 = new BinaryChromosome();
 
         for ($i = 0; $i < $individual1->getLength(); ++$i){
             if ($uniformArray[$i] == 0){

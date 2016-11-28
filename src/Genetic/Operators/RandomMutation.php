@@ -10,14 +10,14 @@ namespace App\Genetic\Operators;
 
 
 use App\Utils\Exceptions\IllegalArgumentException;
-use App\Genetic\Chromosome;
+use App\Genetic\BinaryChromosome;
 
 class RandomMutation implements IMutation
 {
 
     public function mutate($individual)
     {
-        if (!is_a($individual, Chromosome::class)){
+        if (!is_a($individual, BinaryChromosome::class)){
             throw new IllegalArgumentException("Individual is not a Chromosome.");
         }
 

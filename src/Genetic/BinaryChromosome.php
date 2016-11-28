@@ -10,7 +10,7 @@ namespace App\Genetic;
 
 use App\Utils\Math;
 
-class Chromosome
+class BinaryChromosome
 {
     private $genes = [];
     private $length;
@@ -28,11 +28,12 @@ class Chromosome
 
     /**
      * Initialize randomly
+     * @param $length
      */
-    function initialize($lenght){
+    function initialize($length){
         $genes = [];
 
-        for ($i = 0; $i < $lenght; ++$i){
+        for ($i = 0; $i < $length; ++$i){
             $genes[$i] = round(Math::getRandomValue());
         }
 

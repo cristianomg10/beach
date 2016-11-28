@@ -10,7 +10,7 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 //For Genetic
-use App\Genetic\Chromosome;
+use App\Genetic\BinaryChromosome;
 
 class ArbitraryFunction implements IObjectiveFunction
 {
