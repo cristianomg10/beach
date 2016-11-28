@@ -10,7 +10,7 @@ namespace App\DifferentialEvolution\Strategies;
 
 
 use App\DifferentialEvolution\Individual;
-use App\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Utils\Math;
 
 class DEBest2Strategy implements IStrategy

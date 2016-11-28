@@ -6,7 +6,7 @@
  * Time: 3:21 PM
  */
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 
 class SphereFunction implements IObjectiveFunction

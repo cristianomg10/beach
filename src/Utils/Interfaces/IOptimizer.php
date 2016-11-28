@@ -11,5 +11,6 @@ namespace App\Utils\Interfaces;
 
 interface IOptimizer
 {
-
+    public function getBest();
+    public function run();
 }

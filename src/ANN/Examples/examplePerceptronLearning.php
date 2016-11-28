@@ -8,11 +8,10 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
-
 use App\ANN\Perceptron;
 use App\ANN\PerceptronLearning;
-use App\Functions\ActivationFunctions\StepFunction;
-use App\Loggable\TerminalLoggable;
+use App\Utils\Functions\ActivationFunctions\StepFunction;
+use App\Utils\Loggable\TerminalLoggable;
 
 $input			= new Matrix([
     [0, 0, 1, 1],
@@ -21,42 +20,42 @@ $input			= new Matrix([
 
 # AND Logic
 
-echo "________________________________________________________________________________<br>";
-echo "** AND LOGIC ** <br>";
-$expectedOutput = new Vector([0, 0, 0, 1]);
+echo "________________________________________________________________________________\n";
+echo "** AND LOGIC ** \n";
+$expectedOutput = new Matrix([[0, 0, 0, 1]]);
 
 $pl = new PerceptronLearning(100, new StepFunction(), $expectedOutput);
 $pl->setInput($input);
 $pl->setLearningRate(0.5);
 $pl->setMomentumRate(0.3);
 $pl->setLoggable(new TerminalLoggable());
-$pl->train();
+$pl->learn();
 
 # verify
 $pl->setInput($input);
 $ret = $pl->run();
 
-echo "Input test: {$input->transpose()}<br>";
-echo "Respective output: {$ret->asColumnMatrix()} <br>";
+echo "Input test: {$input->transpose()}\n";
+echo "Respective output: {$ret->asColumnMatrix()} \n";
 
-echo "________________________________________________________________________________<br>";
-echo "** OR LOGIC ** <br>";
+echo "________________________________________________________________________________\n";
+echo "** OR LOGIC ** \n";
 # OR Logic
-echo "Input test: {$input->transpose()}<br>";
-echo "Respective output: {$ret->asColumnMatrix()} <br>";
+echo "Input test: \n{$input->transpose()}\n";
+echo "Respective output: \n{$ret->asColumnMatrix()} \n";
 
-$expectedOutput = new Vector([0, 1, 1, 1]);
+$expectedOutput = new Matrix([[0, 1, 1, 1]]);
 
 $pl = new PerceptronLearning(100, new StepFunction(), $expectedOutput);
 $pl->setInput($input);
 $pl->setLearningRate(0.5);
 $pl->setMomentumRate(0.3);
 $pl->setLoggable(new TerminalLoggable());
-$pl->train();
+$pl->learn();
 
 # verify
 $pl->setInput($input);
 $ret = $pl->run();
 
-echo "Input test: {$input->transpose()}<br>";
-echo "Respective output: {$ret->asColumnMatrix()} <br>";
+echo "Input test: \n{$input->transpose()}\n";
+echo "Respective output: \n{$ret->asColumnMatrix()} \n";

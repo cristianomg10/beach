@@ -1,9 +1,9 @@
 <?php
 
 use App\DifferentialEvolution\DifferentialEvolution;
-use App\Functions\ObjectiveFunctions\ArbitraryFunction1;
-use App\Functions\ObjectiveFunctions\SphereFunction;
-use App\Functions\ObjectiveFunctions\TestFunction;
+use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction1;
+use App\Utils\Functions\ObjectiveFunctions\SphereFunction;
+use App\Utils\Functions\ObjectiveFunctions\TestFunction;
 use App\DifferentialEvolution\Strategies\DEBest2Strategy;
 use App\DifferentialEvolution\Strategies\DECurrent2Best1Strategy;
 use App\DifferentialEvolution\Strategies\DERand1Strategy;

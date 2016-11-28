@@ -8,11 +8,12 @@
 
 namespace App\DifferentialEvolution;
 
-use App\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\DifferentialEvolution\Strategies\IStrategy;
+use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
 
-class DifferentialEvolution
+class DifferentialEvolution implements IOptimizer
 {
     private $objectiveFunction;
     private $populationSize;

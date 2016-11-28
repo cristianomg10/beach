@@ -1,12 +1,13 @@
 <?php
 namespace App\ANN;
 
+use App\Utils\Interfaces\IClassifier;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 use MathPHP\LinearAlgebra\Vector;
 use App\ANN\Perceptron;
-use App\Loggable\ILoggable;
-use App\Functions\ActivationFunctions\IActivationFunction;
+use App\Utils\Loggable\ILoggable;
+use App\Utils\Functions\ActivationFunctions\IActivationFunction;
 
 /**
  * Created by PhpStorm.
@@ -14,7 +15,7 @@ use App\Functions\ActivationFunctions\IActivationFunction;
  * Date: 10/26/16
  * Time: 5:09 PM
  */
-class PerceptronLearning
+class PerceptronLearning implements IClassifier
 {
     private $expectedOutput;
     private $input;
@@ -78,7 +79,7 @@ class PerceptronLearning
      * Set expected output for respective inputs.
      * @param $expectedOutput (Matrix or Vector)
      */
-    private function setExpectedOutput($expectedOutput){
+    public function setExpectedOutput(Matrix $expectedOutput){
         $this->expectedOutput = $expectedOutput;
 
         if (get_class($expectedOutput) == Matrix::class){
@@ -108,7 +109,7 @@ class PerceptronLearning
     }
 
     /**
-     * Classify using the SLP.
+     * Classify using the Perceptron.
      */
     public function run(){
 
@@ -130,7 +131,7 @@ class PerceptronLearning
     /**
      * Train the perceptrons :)
      */
-    public function train()
+    public function learn()
     {
         $this->initialize();
         $err = 1000;
@@ -144,11 +145,11 @@ class PerceptronLearning
 
                 $p = $this->perceptron;
                 $p->setInput($columnInput);
-                $p->setExpectedOutput($this->expectedOutput->get($i));
+                $p->setExpectedOutput($this->expectedOutput->get(0, $i));
                 $p->calculate();
 
                 $this->write("Input: " . new Vector($this->input->getColumn($i)));
-                $this->write("Expected output: " . $this->expectedOutput->get($i));
+                $this->write("Expected output: " . $this->expectedOutput->get(0, $i));
                 $this->write("Returned output: " . $p->getOutput());
 
                 $err += $p->getSquareError();
@@ -182,5 +183,22 @@ class PerceptronLearning
             $this->write("****** FINISHING EPOCH: $epoch. ERROR: $err");
             ++$epoch;
         }
+    }
+
+    public function classify(Matrix $input)
+    {
+        $output = [];
+
+        for ($i = 0; $i < $input->getN(); ++$i){
+            $columnInput = $input->getColumn($i);
+
+            $p = $this->perceptron;
+            $p->setInput($columnInput);
+            $p->calculate();
+            $output[] = $p->getOutput();
+
+        }
+        return new Matrix([$output]);
+
     }
 }

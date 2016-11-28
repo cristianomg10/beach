@@ -6,7 +6,7 @@
  * Time: 3:14 PM
  */
 
-namespace App\Exceptions;
+namespace App\Utils\Exceptions;
 
 
 class IllegalArgumentException extends \Exception

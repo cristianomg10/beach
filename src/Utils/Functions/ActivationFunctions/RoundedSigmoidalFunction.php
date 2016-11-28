@@ -7,7 +7,7 @@
  */
 
 
-namespace App\Functions\ActivationFunctions;
+namespace App\Utils\Functions\ActivationFunctions;
 
 
 class RoundedSigmoidalFunction implements IActivationFunction

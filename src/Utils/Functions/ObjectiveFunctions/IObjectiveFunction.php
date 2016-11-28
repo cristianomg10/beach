@@ -6,7 +6,7 @@
  * Time: 11:37 AM
  */
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 interface IObjectiveFunction
 {

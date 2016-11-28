@@ -7,7 +7,7 @@
  */
 
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 //For Genetic
 use App\Genetic\Chromosome;

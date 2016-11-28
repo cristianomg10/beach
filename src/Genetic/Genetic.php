@@ -9,13 +9,14 @@
 namespace App\Genetic;
 
 
-use App\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Genetic\Operators\ICrossOver;
 use App\Genetic\Operators\IMutation;
 use App\Genetic\Operators\ISelection;
+use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
 
-class Genetic {
+class Genetic implements IOptimizer {
 
     private $populationSize;
     private $population;
@@ -156,7 +157,7 @@ class Genetic {
     /**
      * @return mixed
      */
-    public function getBestIndiv()
+    public function getBest()
     {
         return $this->bestIndiv;
     }

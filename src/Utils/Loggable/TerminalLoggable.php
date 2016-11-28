@@ -6,7 +6,7 @@
  * Time: 11:10 AM
  */
 
-namespace App\Loggable;
+namespace App\Utils\Loggable;
 
 
 class TerminalLoggable implements ILoggable

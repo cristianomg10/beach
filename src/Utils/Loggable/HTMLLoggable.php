@@ -1,5 +1,5 @@
 <?php
-namespace App\Loggable;
+namespace App\Utils\Loggable;
 
 use App\Loggable\ILoggable;
 

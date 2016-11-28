@@ -6,7 +6,7 @@
  * Time: 3:00 PM
  */
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 
 use App\Genetic\Chromosome;

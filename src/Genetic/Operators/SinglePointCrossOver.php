@@ -9,7 +9,7 @@
 namespace App\Genetic\Operators;
 
 
-use App\Exceptions\IllegalArgumentException;
+use App\Utils\Exceptions\IllegalArgumentException;
 use App\Genetic\Chromosome;
 
 class SinglePointCrossOver implements ICrossOver

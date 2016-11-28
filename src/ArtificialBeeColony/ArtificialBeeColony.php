@@ -10,12 +10,13 @@ namespace App\ArtificialBeeColony;
 
 
 use App\ArtificialBeeColony\Operators\ISelection;
-use App\Functions\ObjectiveFunctions\IObjectiveFunction;
-use App\Loggable\ILoggable;
+use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Utils\Loggable\ILoggable;
+use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 
-class ArtificialBeeColony
+class ArtificialBeeColony implements IOptimizer 
 {
     private $nBees;
     private $nIterations;
@@ -177,7 +178,7 @@ class ArtificialBeeColony
         }
     }
 
-    function getBestBee(){
+    function getBest(){
         return $this->bestBee;
     }
 }

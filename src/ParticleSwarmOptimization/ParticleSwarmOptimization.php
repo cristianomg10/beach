@@ -8,12 +8,13 @@
 
 namespace App\ParticleSwarmOptimization;
 
-use App\Functions\ObjectiveFunctions\IObjectiveFunction;
-use App\Loggable\ILoggable;
+use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
+use App\Utils\Loggable\ILoggable;
+use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 
-class ParticleSwarmOptimization
+class ParticleSwarmOptimization implements IOptimizer
 {
     private $nParticles;
     private $nIterations;
@@ -123,7 +124,7 @@ class ParticleSwarmOptimization
     /**
      * @return mixed
      */
-    public function getBestParticle()
+    public function getBest()
     {
         return $this->bestParticle;
     }

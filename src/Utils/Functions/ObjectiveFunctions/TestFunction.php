@@ -6,7 +6,7 @@
  * Time: 10:33 PM
  */
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 
 // For DE

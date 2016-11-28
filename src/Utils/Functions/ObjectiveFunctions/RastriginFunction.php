@@ -6,7 +6,7 @@
  * Time: 1:23 PM
  */
 
-namespace App\Functions\ObjectiveFunctions;
+namespace App\Utils\Functions\ObjectiveFunctions;
 
 // For Genetic
 class RastriginFunction implements IObjectiveFunction

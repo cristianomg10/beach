@@ -1,10 +1,10 @@
 <?php
 
-use App\Functions\ObjectiveFunctions\EasomFunction;
-use App\Functions\ObjectiveFunctions\RastriginFunction;
+use App\Utils\Functions\ObjectiveFunctions\EasomFunction;
+use App\Utils\Functions\ObjectiveFunctions\RastriginFunction;
 use App\Genetic\Chromosome;
 use App\Genetic\Genetic;
-use App\Functions\ObjectiveFunctions\ArbitraryFunction;
+use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction;
 use App\Genetic\Operators\BitByBitMutation;
 use App\Genetic\Operators\RandomMutation;
 use App\Genetic\Operators\RouletteWheelSelection;

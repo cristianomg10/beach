@@ -15,7 +15,7 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 use App\ANN\ExtremeLearningMachine;
 use App\Utils\DataHandler\CSVDataHandler;
-use App\Functions\ActivationFunctions\SigmoidalFunction;
+use App\Utils\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 
 $elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());
