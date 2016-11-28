@@ -9,7 +9,12 @@
 namespace App\Genetic\Operators;
 
 
-class TournamentSelection
+class TournamentSelection implements ISelection
 {
+    public function select($fitnesses)
+    {
+        $count = count($fitnesses);
 
+        return rand(0, $count - 1);
+    }
 }
