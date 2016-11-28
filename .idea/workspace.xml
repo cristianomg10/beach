@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Genetic/Chromosome.php" afterPath="$PROJECT_DIR$/src/Genetic/BinaryChromosome.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/IChromosome.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/PermutationChromosome.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Genetic/Operators/SwapMutation.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Genetic/BinaryChromosome.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/BinaryChromosome.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" afterPath="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Genetic.php" afterPath="$PROJECT_DIR$/src/Genetic/Genetic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/GeneticTSP.php" afterPath="$PROJECT_DIR$/src/Genetic/GeneticTSP.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
@@ -16,6 +21,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" afterPath="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php" />
     </list>
     <ignored path="beach.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,12 +43,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BinaryChromosome.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Genetic/BinaryChromosome.php">
+      <file leaf-file-name="exampleGeneticTSP.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneticTSP.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Genetic/GeneticTSP.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#118#154#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,17 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Math.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesHoldoutValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Interfaces/IOptimizer.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Loggable/TerminalLoggable.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Loggable/HTMLLoggable.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Loggable/ILoggable.php" />
-        <option value="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php" />
         <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
@@ -88,11 +96,6 @@
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/Strategies/DERand1Strategy.php" />
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/Strategies/DERand2Best1Strategy.php" />
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/Strategies/DERand2Strategy.php" />
-        <option value="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
-        <option value="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
-        <option value="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
-        <option value="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" />
-        <option value="$PROJECT_DIR$/src/Genetic/Genetic.php" />
         <option value="$PROJECT_DIR$/src/ParticleSwarmOptimization/Examples/examplePSO.php" />
         <option value="$PROJECT_DIR$/src/ParticleSwarmOptimization/ParticleSwarmOptimization.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ActivationFunctions/IActivationFunction.php" />
@@ -100,11 +103,7 @@
         <option value="$PROJECT_DIR$/src/Utils/Functions/ActivationFunctions/RoundFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ActivationFunctions/SigmoidalFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ActivationFunctions/StepFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction1.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/TestFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Exceptions/IllegalArgumentException.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php" />
@@ -115,6 +114,26 @@
         <option value="$PROJECT_DIR$/src/ArtificialBeeColony/ArtificialBeeColony.php" />
         <option value="$PROJECT_DIR$/src/Genetic/Chromosome.php" />
         <option value="$PROJECT_DIR$/src/Genetic/BinaryChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/README.md" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/PermutationChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Genetic.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/IChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/BinaryChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/PermutationChromosome.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Operators/SwapMutation.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php" />
+        <option value="$PROJECT_DIR$/src/Genetic/GeneticTSP.php" />
       </list>
     </option>
   </component>
@@ -190,6 +209,46 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Functions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -206,6 +265,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Genetic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Examples" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,21 +432,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Genetic/Operators" />
+      <recent name="$PROJECT_DIR$/src/Genetic/Examples" />
       <recent name="$PROJECT_DIR$/src/Utils" />
       <recent name="$PROJECT_DIR$/src/Functions/ObjectiveFunctions" />
       <recent name="$PROJECT_DIR$/src/Functions" />
-      <recent name="$PROJECT_DIR$/src/Functions/ActivationFunctions" />
-      <recent name="$PROJECT_DIR$/src/ANN" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/DataHandler/Datasets" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.exampleGenetic.php">
+  <component name="RunManager" selected="PHP Script.exampleGeneticTSP.php">
     <configuration default="false" name="exampleABC.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ArtificialBeeColony/Examples/exampleABC.php">
-      <method />
-    </configuration>
-    <configuration default="false" name="examplePerceptronLearning.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php">
       <method />
     </configuration>
     <configuration default="false" name="exampleDE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DifferentialEvolution/Examples/exampleDE.php">
@@ -375,6 +453,9 @@
       <method />
     </configuration>
     <configuration default="false" name="examplePSO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ParticleSwarmOptimization/Examples/examplePSO.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="exampleGeneticTSP.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -425,18 +506,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.examplePSO.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplePSO.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleGeneticTSP.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.examplePSO.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleGeneticTSP.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleABC.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.examplePSO.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleDE.php" />
       </list>
     </recent_temporary>
   </component>
@@ -506,18 +587,18 @@
       <workItem from="1480197749866" duration="7137000" />
       <workItem from="1480251861397" duration="14506000" />
       <workItem from="1480294087942" duration="809000" />
-      <workItem from="1480333527086" duration="6786000" />
+      <workItem from="1480333527086" duration="10740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355839000" />
+    <option name="totallyTimeSpent" value="359793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -563,67 +644,11 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="188" />
+      <option name="time" value="190" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Utils/Loggable/HTMLLoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Loggable/ILoggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleSingleLayerPerceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Perceptron.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -666,71 +691,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/ICrossOver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#127#160#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RouletteWheelSelection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#161#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,46 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/TestFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -848,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/IObjectiveFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -876,14 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -980,11 +889,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/BinaryChromosome.php">
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RouletteWheelSelection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/SinglePointCrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+          <folding>
+            <element signature="e#118#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/TestFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/PermutationChromosome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BinaryChromosome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-742">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/RandomMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#128#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/IChromosome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/SwapMutation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/GeneticTSP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#118#154#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

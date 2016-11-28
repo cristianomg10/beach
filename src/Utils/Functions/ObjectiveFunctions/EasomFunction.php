@@ -9,7 +9,7 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 
-use App\Genetic\BinaryChromosome;
+use App\Genetic\Operators\BinaryChromosome;
 
 class EasomFunction implements IObjectiveFunction
 {

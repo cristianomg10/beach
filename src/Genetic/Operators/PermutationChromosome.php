@@ -2,15 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: cristiano
- * Date: 11/11/16
- * Time: 5:14 PM
+ * Date: 11/28/16
+ * Time: 3:28 PM
  */
 
-namespace App\Genetic;
+namespace App\Genetic\Operators;
 
-use App\Utils\Math;
 
-class BinaryChromosome
+class PermutationChromosome implements IChromosome
 {
     private $genes = [];
     private $length;
@@ -31,11 +30,9 @@ class BinaryChromosome
      * @param $length
      */
     function initialize($length){
-        $genes = [];
 
-        for ($i = 0; $i < $length; ++$i){
-            $genes[$i] = round(Math::getRandomValue());
-        }
+        $genes = range(0, $length);
+        shuffle($genes);
 
         $this->length = count($genes);
         $this->genes = $genes;

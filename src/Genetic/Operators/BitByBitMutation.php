@@ -9,7 +9,7 @@
 namespace App\Genetic\Operators;
 
 
-use App\Genetic\BinaryChromosome;
+use App\Genetic\Operators\BinaryChromosome;
 use App\Utils\Math;
 
 class BitByBitMutation implements IMutation

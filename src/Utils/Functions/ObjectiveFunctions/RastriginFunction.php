@@ -13,9 +13,14 @@ class RastriginFunction implements IObjectiveFunction
 {
     public function compute($individual)
     {
-        $genes = $individual->getGenes();
-        $x[0] = bindec(implode("", array_slice($genes, 0, 4)));
-        $x[1] = bindec(implode("", array_slice($genes, 4, 4)));
+        if (is_a($individual, BinaryChromosome::class)) {
+            $genes = $individual->getGenes();
+            $x[0] = bindec(implode("", array_slice($genes, 0, 4)));
+            $x[1] = bindec(implode("", array_slice($genes, 4, 4)));
+        } else {
+            $x = $individual;
+        }
+
         $A = 10;
         $f = $A * 2;
 

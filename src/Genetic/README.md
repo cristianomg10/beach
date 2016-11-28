@@ -7,7 +7,8 @@ They can be found at Genetic/Examples.
 ##Genetic Operators available
 
 ###Selection
-- Roulette Wheel Selection.
+- Roulette Wheel Selection;
+- Tournament Selection.
 
 ###Mutation
 - BitByBit Mutation;
