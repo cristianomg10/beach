@@ -9,7 +9,7 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 //For DE and PSO
-class ArbitraryFunction1 implements  IObjectiveFunction
+class Arbitrary1Function implements  IObjectiveFunction
 {
 
     public function compute($x)

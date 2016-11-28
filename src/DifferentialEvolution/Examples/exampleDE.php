@@ -1,7 +1,7 @@
 <?php
 
 use App\DifferentialEvolution\DifferentialEvolution;
-use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction1;
+use App\Utils\Functions\ObjectiveFunctions\Arbitrary1Function;
 use App\Utils\Functions\ObjectiveFunctions\SphereFunction;
 use App\Utils\Functions\ObjectiveFunctions\TestFunction;
 use App\DifferentialEvolution\Strategies\DEBest2Strategy;

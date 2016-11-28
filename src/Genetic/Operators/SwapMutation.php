@@ -9,6 +9,8 @@
 namespace App\Genetic\Operators;
 
 
+use App\Utils\Exceptions\IllegalArgumentException;
+
 class SwapMutation implements IMutation
 {
     public function mutate($individual)
@@ -25,5 +27,7 @@ class SwapMutation implements IMutation
         $value1 = $individual->getGene($position1);
         $individual->updateGenes($position1, $individual->getGene($position2));
         $individual->updateGenes($position2, $value1);
+
+        return $individual;
     }
 }

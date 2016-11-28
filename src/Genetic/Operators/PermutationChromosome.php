@@ -31,7 +31,7 @@ class PermutationChromosome implements IChromosome
      */
     function initialize($length){
 
-        $genes = range(0, $length);
+        $genes = range(0, $length - 1);
         shuffle($genes);
 
         $this->length = count($genes);

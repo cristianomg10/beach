@@ -1,6 +1,6 @@
 <?php
 
-use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction1;
+use App\Utils\Functions\ObjectiveFunctions\Arbitrary1Function;
 use App\Utils\Functions\ObjectiveFunctions\EasomFunction;
 use App\Utils\Functions\ObjectiveFunctions\SphereFunction;
 use App\Utils\Loggable\TerminalLoggable;
