@@ -17,4 +17,5 @@ interface IChromosome
     function getGenes();
     function updateGenes($index, $value);
     function getGene($index);
+    function setGenes($genes);
 }

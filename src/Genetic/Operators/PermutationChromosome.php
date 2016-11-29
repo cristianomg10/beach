@@ -72,4 +72,10 @@ class PermutationChromosome implements IChromosome
         return $this->genes[$index];
         $this->length = count($this->genes);
     }
+
+    function setGenes($genes)
+    {
+        $this->genes = $genes;
+        $this->length = count($genes);
+    }
 }

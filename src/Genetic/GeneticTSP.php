@@ -9,11 +9,14 @@
 namespace App\Genetic;
 
 
+use App\Genetic\Operators\ICrossOver;
 use App\Genetic\Operators\IMutation;
+use App\Genetic\Operators\ISelection;
 use App\Genetic\Operators\PermutationChromosome;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
+use MathPHP\LinearAlgebra\Matrix;
 
 class GeneticTSP implements IOptimizer
 {
@@ -29,6 +32,10 @@ class GeneticTSP implements IOptimizer
     private $bestFitness;
     private $bestIndiv;
     private $individualSize;
+    private $crossOver;
+    private $probabilityCrossOver;
+    private $fitnesses;
+    private $averageFitness;
 
     /**
      * GeneticTSP constructor.
@@ -36,15 +43,18 @@ class GeneticTSP implements IOptimizer
      * @param $populationSize
      * @param $generations
      * @param $probabilityMutation
+     * @param $probabilityCrossOver
      * @param IObjectiveFunction $objFunction
      * @param IMutation $mutation
+     * @param ISelection $selection
+     * @param ICrossOver $crossOver
      * @param int $elitism
      * @param string $optimization
      * @internal param ISelection $selection
      */
-    function __construct($individualSize, $populationSize, $generations, $probabilityMutation,
+    function __construct($individualSize, $populationSize, $generations, $probabilityMutation, $probabilityCrossOver,
                             IObjectiveFunction $objFunction,
-                            IMutation $mutation, $elitism = 1, $optimization = 'MIN'){
+                            IMutation $mutation, ISelection $selection, ICrossOver $crossOver, $elitism = 1, $optimization = 'MIN'){
         $this->individualSize = $individualSize;
         $this->populationSize = $populationSize;
         $this->generations = $generations;
@@ -53,6 +63,9 @@ class GeneticTSP implements IOptimizer
         $this->optimization = $optimization;
         $this->mutation = $mutation;
         $this->probabilityMutation = $probabilityMutation;
+        $this->probabilityCrossOver = $probabilityCrossOver;
+        $this->crossOver = $crossOver;
+        $this->selection = $selection;
 
         switch ($this->optimization){
             case "MIN":
@@ -101,24 +114,26 @@ class GeneticTSP implements IOptimizer
         for ($i = 0; $i < $this->generations; ++$i){
             for ($j = 0; $j < $this->populationSize; ++$j) {
 
+                if (Math::getRandomValue() < $this->probabilityCrossOver){
+                    $index1 = $this->selection->select($this->fitnesses);
+                    $index2 = $this->selection->select($this->fitnesses);
+
+                    $newIndivs = $this->crossOver->crossOver($this->population[$index1], $this->population[$index2]);
+                    $this->population[$index1] = $newIndivs[0];
+                    $this->population[$index2] = $newIndivs[1];
+                }
+
                 if (Math::getRandomValue() < $this->probabilityMutation) {
                     $this->population[$j] = $this->mutation->mutate($this->population[$j]);
                 }
-
-                array_multisort($this->fitnesses, $this->population);
 
                 $index = ($this->optimization == 'MAX' ?
                     $this->populationSize - 1 : // get the biggest value
                     0   // get the smallest value
                 );
 
-
-                /*$bestIndividual = $this->population[$index];
-                $bestFitness = $this->fitnesses[$index];
-                    */
                 if ($this->elitism) {
                     if ($this->compare($this->fitnesses[$index], $this->bestFitness)) {
-                        //if ($bestFitness > $this->bestFitness){
                         $this->bestFitness = $this->fitnesses[$index];
                         $this->bestIndiv = $this->population[$index];
                     } else {
@@ -127,8 +142,22 @@ class GeneticTSP implements IOptimizer
                     }
                 }
             }
+
+            $this->updateFitness();
+            $this->averageFitness[$i] = array_sum($this->fitnesses) / $this->populationSize;
+            array_multisort($this->fitnesses, $this->population);
         }
 
         return ["individual" => $this->bestIndiv, "fitness" => $this->bestFitness];
+    }
+
+    private function updateFitness(){
+        for ($i = 0; $i < $this->populationSize; ++$i){
+            $this->fitnesses[$i] = $this->objectiveFunction->compute($this->population[$i]);
+        }
+    }
+
+    public function getAverageFitnessPerGeneration(){
+        return new Matrix([$this->averageFitness]);
     }
 }

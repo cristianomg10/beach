@@ -2,7 +2,11 @@
 
 
 use App\Genetic\GeneticTSP;
+use App\Genetic\Operators\OrderBasedCrossOver;
 use App\Genetic\Operators\PermutationChromosome;
+use App\Genetic\Operators\RouletteWheelSelection;
+use App\Genetic\Operators\SublistReversionMutation;
+use App\Genetic\Operators\SublistShuffleMutation;
 use App\Genetic\Operators\SwapMutation;
 use App\Utils\Functions\ObjectiveFunctions\Function4TSProblemFunction;
 use MathPHP\LinearAlgebra\Matrix;
@@ -13,8 +17,20 @@ ini_set('display_errors', 'On');
 ini_set('max_execution_time', -1);
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
-$pc = new PermutationChromosome();
+/*$pc = new PermutationChromosome();
 $pc->initialize(8);
+echo $pc . "\n";
+$pc = (new SublistReversionMutation())->mutate($pc);
+echo $pc;
+
+$pc1 = new PermutationChromosome();
+$pc1->initialize(8);
+
+echo "PC: $pc, PC1: $pc1\n";
+
+$cross = new OrderBasedCrossOver();
+$ret = $cross->crossOver($pc, $pc1);
+echo "Res1: {$ret[0]}, Res2: {$ret[1]}";*/
 
 $cities = new Matrix([
     [0   , 85.5, 18.8, 29.6, 153 , 138  , 112  ],
@@ -27,7 +43,9 @@ $cities = new Matrix([
 ]);
 
 $f = new Function4TSProblemFunction($cities);
-$tsp = new GeneticTSP(7, 50, 1000, 0.85, $f, new SwapMutation());
+$tsp = new GeneticTSP(7, 100, 100, 0.3, 0.95, $f, new SublistReversionMutation(), new RouletteWheelSelection(), new OrderBasedCrossOver());
 $tsp->run();
 echo $tsp->getBest() . "\n";
+//echo $tsp->getAverageFitnessPerGeneration() . "\n";
 echo $f->compute($tsp->getBest());
+
