@@ -11,7 +11,7 @@ namespace App\Utils\Functions\ObjectiveFunctions;
 
 use MathPHP\LinearAlgebra\Matrix;
 
-class Function4TSProblemFunction implements IObjectiveFunction
+class TSProblemFunction implements IObjectiveFunction
 {
     private $cities;
 

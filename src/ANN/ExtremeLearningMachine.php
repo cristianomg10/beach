@@ -228,7 +228,6 @@ class ExtremeLearningMachine implements ISerializable, IClassifier  {
         $s = serialize($this);
         file_put_contents($file, $s);
 
-
         $this->input = $input;
         $this->expectedOutput = $expectedOutput;
     }
