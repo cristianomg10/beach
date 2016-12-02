@@ -9,6 +9,7 @@
 namespace App\LeastSquares\Examples;
 
 use App\LeastSquares\DeterministicLeastSquares;
+use App\LeastSquares\StochasticLeastSquares;
 use MathPHP\LinearAlgebra\Matrix;
 
 error_reporting(E_ALL);
@@ -36,5 +37,16 @@ $dls->learn();
 
 // if bigger than 0, then 1, else -1
 echo $dls->classify(new Matrix([
+    [0.3, 0.3]
+]));
+
+//Stochastic
+$sls = new StochasticLeastSquares(100, 0, 1);
+$sls->setInput(new Matrix($input));
+$sls->setExpectedOutput(new Matrix([$output]));
+$sls->learn();
+
+// if bigger than 0, then 1, else -1
+echo $sls->classify(new Matrix([
     [0.3, 0.3]
 ]));
