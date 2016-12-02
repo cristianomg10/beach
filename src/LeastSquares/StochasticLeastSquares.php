@@ -36,7 +36,7 @@ class StochasticLeastSquares implements IClassifier
 
     public function setInput(Matrix $input)
     {
-        $this->input = $this->addBias2Input($input);
+        $this->input = $input;//$this->addBias2Input($input);
     }
 
     public function setExpectedOutput(Matrix $expectedOutput)
@@ -50,25 +50,25 @@ class StochasticLeastSquares implements IClassifier
         $this->weights = [];
         $currentWeights = [];
 
-        $nextWeights = [Math::generateRandomVector($this->input->getN())];
+        $nextWeights = [Math::generateRandomVector($this->input->getM())];
         $errorPerEpoch = [];
         $i = 0;
 
         while ($i < $this->maxEpochs){
             $e2 = 0;
-            for ($j = 0; $j < $this->input->getM(); ++$j){
+            for ($j = 0; $j < $this->input->getN(); ++$j){
                 $currentWeights = $nextWeights[0];
 
                 $matrixCW   = new Matrix([$currentWeights]);
-                $row        = new Matrix([$this->input->getRow($j)]);
+                $row        = new Matrix([$this->input->getColumn($j)]);
                 $expOut     = new Matrix([$this->expectedOutput->getColumn($j)]);
                 $value      = $matrixCW->multiply($row->transpose())->get(0,0);
 
                 $error      = $expOut->get(0,0) - $value;
-                $error      = $row->scalarMultiply($error);
+                $errorC     = $row->scalarMultiply($error);
 
-                $e2         += Math::sum($error->getMatrix()) ** 2;
-                $value      = $error->scalarMultiply($this->learningRate)->add($error->scalarMultiply($this->momentumRate));
+                $e2         += $error ** 2;
+                $value      = $errorC->scalarMultiply($this->learningRate)->add($errorC->scalarMultiply($this->momentumRate));
 
                 $nextWeights = $matrixCW->add($value)->getMatrix();
             }
@@ -82,11 +82,10 @@ class StochasticLeastSquares implements IClassifier
 
     public function classify(Matrix $input)
     {
-        $input = $this->addBias2Input($input);
+        //$input = $input;
 
-        $weights = (new Matrix($this->weights))->transpose();
-        $this->output = $input->multiply($weights);
-
+        $weights = (new Matrix($this->weights));
+        $this->output = $weights->multiply($input);
         return $this->output;
     }
 

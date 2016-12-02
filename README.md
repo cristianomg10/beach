@@ -8,7 +8,7 @@ to code, mostly in PHP, and here I'll have my tests.
 ## What have I developed so far?
 ### For Classification:
 - Perceptron;
-- Least Squares;
+- (Determinist and Stochastic) Least Squares;
 - Extreme Learning Machine.
 
 ### For Optimisation:

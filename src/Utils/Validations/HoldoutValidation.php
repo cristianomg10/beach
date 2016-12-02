@@ -119,6 +119,7 @@ class HoldoutValidation implements IValidation
         $predicted = $this->lastClassified->getRow(0);
         $labeled = $this->labelForValidation->getRow(0);
 
+        //use max
         $biggest = count(array_unique($predicted)) > count(array_unique($labeled)) ?
             count(array_unique($predicted)) : count(array_unique($labeled));
 

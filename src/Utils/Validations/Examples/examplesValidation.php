@@ -7,8 +7,8 @@
  */
 
 use App\ANN\ExtremeLearningMachine;
-use App\Functions\ActivationFunctions\SigmoidalFunction;
 use App\Utils\DataHandler\CSVDataHandler;
+use App\Utils\Functions\ActivationFunctions\SigmoidalFunction;
 use App\Utils\Validations\CrossValidation;
 use App\Utils\Validations\HoldoutValidation;
 
@@ -26,6 +26,7 @@ $ho->setClassifier($elm);
 $ho->validate();
 echo $ho->getConfusionMatrix() . "\n";
 echo $ho->getPrecision() . "%\n";
+die();
 
 $ho = new CrossValidation($data->getDataAsMatrix()->transpose(), 4, 10);
 $ho->setClassifier($elm);

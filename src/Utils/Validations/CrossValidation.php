@@ -91,7 +91,7 @@ class CrossValidation implements IValidation
         $predicted = $this->joinedPredicted;
         $labeled = $this->joinedLabeled;
         for ($i = 0; $i < count($predicted); ++$i){
-            $confusionMatrix[$predicted[$i]][$labeled[$i]]++;
+            $confusionMatrix["{$predicted[$i]}"]["{$labeled[$i]}"]++;
         }
 
         return new Matrix($confusionMatrix);
