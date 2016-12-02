@@ -167,4 +167,18 @@ class Math
         return sqrt(array_sum(array_map("self::sdSquare", $array, array_fill(0,count($array), (array_sum($array) / count($array)) ) ) ) / (count($array)-1) );
     }
 
+    static function sum($array){
+        $sum = 0;
+
+        for ($i=0; $i < count($array); ++$i) {
+            if (is_array($array[$i])){
+                $sum += self::sum($array[$i]);
+            }else{
+                $sum += $array[$i];
+            }
+        }
+
+        return $sum;
+
+    }
 }

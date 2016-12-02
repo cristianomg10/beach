@@ -37,16 +37,16 @@ $dls->learn();
 
 // if bigger than 0, then 1, else -1
 echo $dls->classify(new Matrix([
-    [0.3, 0.3]
+    [0.4, 0.6]
 ]));
 
 //Stochastic
-$sls = new StochasticLeastSquares(100, 0, 1);
+$sls = new StochasticLeastSquares(1000, 0, 0.9, 0.1);
 $sls->setInput(new Matrix($input));
 $sls->setExpectedOutput(new Matrix([$output]));
 $sls->learn();
 
 // if bigger than 0, then 1, else -1
 echo $sls->classify(new Matrix([
-    [0.3, 0.3]
+    [0.4, 0.5]
 ]));

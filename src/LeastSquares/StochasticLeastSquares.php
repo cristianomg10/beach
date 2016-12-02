@@ -56,7 +56,7 @@ class StochasticLeastSquares implements IClassifier
 
         while ($i < $this->maxEpochs){
             $e2 = 0;
-            for ($j = 0; $j < $this->input->getN(); ++$j){
+            for ($j = 0; $j < $this->input->getM(); ++$j){
                 $currentWeights = $nextWeights[0];
 
                 $matrixCW   = new Matrix([$currentWeights]);
@@ -65,10 +65,12 @@ class StochasticLeastSquares implements IClassifier
                 $value      = $matrixCW->multiply($row->transpose())->get(0,0);
 
                 $error      = $expOut->get(0,0) - $value;
-                $e2         += $error ** 2;
-                $value      = $error * $this->learningRate + $error * $this->momentumRate;
+                $error      = $row->scalarMultiply($error);
 
-                $nextWeights = Math::sumNumberToMatrix($matrixCW->getMatrix(), $value);
+                $e2         += Math::sum($error->getMatrix()) ** 2;
+                $value      = $error->scalarMultiply($this->learningRate)->add($error->scalarMultiply($this->momentumRate));
+
+                $nextWeights = $matrixCW->add($value)->getMatrix();
             }
 
             $errorPerEpoch[$i] = $e2;
