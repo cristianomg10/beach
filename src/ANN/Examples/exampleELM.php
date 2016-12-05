@@ -19,19 +19,36 @@ use App\Utils\Functions\ActivationFunctions\SigmoidalFunction;
 use MathPHP\LinearAlgebra\Matrix;
 
 $elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());
-$elm->setInput(new Matrix([[0,0,1,1],[0,1,0,1]]));
-$elm->setExpectedOutput(new Matrix([[0,1,1,0]]));
+$elm->setInput(
+    new Matrix(
+        [
+            [0,0,1,1],
+            [0,1,0,1]
+        ])
+);
+
+$elm->setExpectedOutput(
+    new Matrix(
+        [
+            [0,1,1,0],
+            [1,0,0,1]
+        ]
+    )
+);
 $elm->setActivationFunction(new SigmoidalFunction());
 $elm->learn();
 
 $inputForTest = new Matrix(
-    [[0, 1, 0, 1, 0],
-    [1, 1, 0, 0, 0]]
+    [
+        [0, 1, 0, 1, 0],
+        [1, 1, 0, 0, 0]
+    ]
 );
+
 $values = $elm->classify($inputForTest);
 echo $values . "\n";
 
-$csv = new CSVDataHandler();
+/*$csv = new CSVDataHandler();
 $csv->open('../../Utils/DataHandler/Datasets/iris.csv');
 $csv->setAttrIndex(4);
 $csv->setValidationRate(30);
@@ -44,4 +61,4 @@ $elm->learn();
 
 $values = $elm->classify($csv->getUnlabeledDataForValidation());
 echo $values . "\n";
-echo $csv->getLabelForValidation();
+echo $csv->getLabelForValidation();*/

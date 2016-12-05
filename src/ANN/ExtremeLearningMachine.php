@@ -186,10 +186,12 @@ class ExtremeLearningMachine implements ISerializable, IClassifier  {
         $bh = $bh->multiply($h);
         $outputWeights = $outputWeights->multiply($bh);
 
-        $this->outputPerceptron = new Perceptron();
-        $this->outputPerceptron->setWeights($outputWeights[0]);
-        $this->outputPerceptron->setBias(0);
-        $this->outputPerceptron->setActivationFunction(new RoundFunction());
+        for ($i = 0; $i < $outputWeights->getM(); ++$i){
+            $this->outputPerceptron[$i] = new Perceptron();
+            $this->outputPerceptron[$i]->setWeights($outputWeights[$i]);
+            $this->outputPerceptron[$i]->setBias(0);
+            $this->outputPerceptron[$i]->setActivationFunction(new RoundFunction());
+        }
     }
 
     /**
@@ -210,11 +212,15 @@ class ExtremeLearningMachine implements ISerializable, IClassifier  {
                 $inputForOutput[] = $p->calculate();
             }
 
-            $this->outputPerceptron->setInput($inputForOutput);
-            $output[] = $this->outputPerceptron->calculate();
+            //echo $input;
+            for ($k = 0; $k < count($this->outputPerceptron); ++$k){
+                $this->outputPerceptron[$k]->setInput($inputForOutput);
+                $output[$k][] = $this->outputPerceptron[$k]->calculate();
+            }
+
         }
 
-        return new Matrix([$output]);
+        return new Matrix($output);
     }
 
     function serialize($file)

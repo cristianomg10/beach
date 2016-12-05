@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Loggable/NotLoggable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/MultiClassFunctions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" afterPath="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" afterPath="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" afterPath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" afterPath="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" afterPath="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
     </list>
     <ignored path="beach.iws" />
@@ -33,14 +32,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="benchmarkClassifiers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
+      <file leaf-file-name="HoldoutValidation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="390">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
               <folding>
-                <element signature="e#125#160#0#PHP" expanded="true" />
+                <element signature="e#128#178#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrossValidation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiClassFunctions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/MultiClassFunctions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+              <folding>
+                <element signature="e#127#146#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtremeLearningMachine.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-413">
+              <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+              <folding>
+                <element signature="e#112#181#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exampleELM.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="examplesValidation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassLoader.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,21 +111,9 @@
       <file leaf-file-name="CSVDataHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="202">
               <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HoldoutValidation.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-              <folding>
-                <element signature="e#128#178#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DifferentialEvolution/DifferentialEvolution.php" />
-        <option value="$PROJECT_DIR$/src/DifferentialEvolution/Strategies/IStrategy.php" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/src/ArtificialBeeColony/ArtificialBeeColony.php" />
         <option value="$PROJECT_DIR$/src/Genetic/Chromosome.php" />
@@ -120,22 +169,24 @@
         <option value="$PROJECT_DIR$/src/LeastSquares/LeastSquares.php" />
         <option value="$PROJECT_DIR$/src/Utils/Exceptions/InvalidDataException.php" />
         <option value="$PROJECT_DIR$/src/LeastSquares/DeterministicLeastSquares.php" />
-        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
         <option value="$PROJECT_DIR$/src/Utils/Math.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/LeastSquares/StochasticLeastSquares.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/README.md" />
         <option value="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
         <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
         <option value="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
         <option value="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" />
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" />
         <option value="$PROJECT_DIR$/src/Utils/Loggable/NotLoggable.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php" />
+        <option value="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php" />
+        <option value="$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Validations/MultiClassFunctions.php" />
       </list>
     </option>
   </component>
@@ -256,11 +307,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Functions" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectiveFunctions" />
+              <option name="myItemId" value="Validations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,7 +329,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Functions" />
+              <option name="myItemId" value="Validations" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Examples" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beach" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +365,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ParticleSwarmOptimization" />
+              <option name="myItemId" value="ANN" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,6 +380,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ANN" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Examples" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,20 +543,20 @@
       <recent name="$PROJECT_DIR$/src/DataHandler/Datasets" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.benchmarkOptimizers.php">
-    <configuration default="false" name="exampleLS.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="PHP Script.examplesValidation.php">
     <configuration default="false" name="examplesValidation.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
       <method />
     </configuration>
     <configuration default="false" name="benchmarkClassifiers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
       <method />
     </configuration>
-    <configuration default="false" name="examplePerceptronLearning.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php">
+    <configuration default="false" name="benchmarkOptimizers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php">
       <method />
     </configuration>
-    <configuration default="false" name="benchmarkOptimizers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php">
+    <configuration default="false" name="exampleELM.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="HoldoutValidation.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -533,19 +606,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleELM.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.HoldoutValidation.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.HoldoutValidation.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleELM.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
       </list>
     </recent_temporary>
   </component>
@@ -621,12 +694,12 @@
       <workItem from="1480512540623" duration="3942000" />
       <workItem from="1480600267369" duration="10094000" />
       <workItem from="1480681307896" duration="15536000" />
-      <workItem from="1480936192759" duration="8528000" />
+      <workItem from="1480936192759" duration="19600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="413215000" />
+    <option name="totallyTimeSpent" value="424287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -641,7 +714,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88340807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43796712" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -678,18 +751,11 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="231" />
+      <option name="time" value="256" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/TestFunction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -809,6 +875,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
           <caret line="142" column="17" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
+          <folding>
+            <element signature="e#118#155#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -844,6 +913,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -854,13 +924,6 @@
           <folding>
             <element signature="e#123#173#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -881,14 +944,6 @@
             <caret line="10" column="204" selection-start-line="10" selection-start-column="204" selection-end-line="10" selection-end-column="204" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,58 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="1930" column="0" selection-start-line="1930" selection-start-column="0" selection-end-line="1930" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1038,7 +1045,7 @@
         <state relative-caret-position="2019">
           <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
           <folding>
-            <element signature="e#118#161#0#PHP" expanded="true" />
+            <element signature="e#118#161#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1048,17 +1055,17 @@
         <state relative-caret-position="390">
           <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
           <folding>
-            <element signature="e#126#174#0#PHP" expanded="true" />
+            <element signature="e#126#174#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="150">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="25" selection-end-column="56" />
           <folding>
-            <element signature="e#125#160#0#PHP" expanded="true" />
+            <element signature="e#125#160#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1071,12 +1078,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Math.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="1928" column="0" selection-start-line="1928" selection-start-column="0" selection-end-line="1928" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-413">
+          <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding>
+            <element signature="e#112#181#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding>
             <element signature="e#128#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Validations/MultiClassFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="e#127#146#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

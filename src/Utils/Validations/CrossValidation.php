@@ -29,6 +29,8 @@ class CrossValidation implements IValidation
     private $labeled;
     private $joinedLabeled;
 
+    use MultiClassFunctions;
+
     function __construct(Matrix $data, $labelIndex, $k = 10)
     {
         $this->data = $data;

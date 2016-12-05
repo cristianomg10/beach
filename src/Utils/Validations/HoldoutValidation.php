@@ -27,6 +27,9 @@ class HoldoutValidation implements IValidation
     private $length;
     private $label;
     private $lastClassified;
+    private $multiClassPredicted;
+
+    use MultiClassFunctions;
 
     function __construct(Matrix $data, $labelIndex, $percentValidation = 30){
         $this->data = $data;
@@ -103,7 +106,7 @@ class HoldoutValidation implements IValidation
 
     public function getPrecision()
     {
-        $predicted = $this->lastClassified->getRow(0);
+        $predicted = $this->multiClassPredicted->getRow(0);
         $labeled = $this->labelForValidation->getRow(0);
 
         $count = 0;
@@ -116,7 +119,8 @@ class HoldoutValidation implements IValidation
 
     public function getConfusionMatrix()
     {
-        $predicted = $this->lastClassified->getRow(0);
+        $this->multiClassPredicted = $this->againstOther2Class($this->lastClassified);
+        $predicted = $this->multiClassPredicted->getRow(0);
         $labeled = $this->labelForValidation->getRow(0);
 
         //use max
@@ -142,10 +146,12 @@ class HoldoutValidation implements IValidation
         if (is_null($this->classifier)) throw new IllegalArgumentException("Classifier not set.");
 
         $this->classifier->setInput($this->getUnlabeledDataForTraining());
-        $this->classifier->setExpectedOutput($this->getLabelForTraining());
+        $classAgainstOthers = $this->classAgainstOthers($this->getLabelForTraining());
+        $this->classifier->setExpectedOutput($classAgainstOthers);
 
         $this->classifier->learn();
 
         $this->lastClassified = $this->classifier->classify($this->getUnlabeledDataForValidation());
     }
+
 }
