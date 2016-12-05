@@ -9,6 +9,8 @@
 namespace App\DifferentialEvolution;
 
 
+use MathPHP\LinearAlgebra\Matrix;
+
 class Individual
 {
     private $data;
@@ -27,5 +29,10 @@ class Individual
 
     public function set($index, $value){
         $this->data[$index] = $value;
+    }
+
+    function __toString(): string
+    {
+        return "Individual: " . new Matrix([$this->data]) . "\n";
     }
 }

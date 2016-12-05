@@ -9,6 +9,8 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 // For Genetic
+use App\Genetic\Operators\BinaryChromosome;
+
 class RastriginFunction implements IObjectiveFunction
 {
     public function compute($individual)

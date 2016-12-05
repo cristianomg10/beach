@@ -9,6 +9,8 @@
 namespace App\ArtificialBeeColony;
 
 
+use MathPHP\LinearAlgebra\Matrix;
+
 class Bee
 {
     private $position;
@@ -49,5 +51,10 @@ class Bee
     function __construct($position)
     {
         $this->position = $position;
+    }
+
+    function __toString(): string
+    {
+        return "Bee { Position: " . new Matrix([$this->position]) . ", Fitness: {$this->fitness}}\n";
     }
 }

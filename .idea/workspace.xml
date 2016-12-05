@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b46bedc8-1948-4e25-b024-cb009f393269" name="Default" comment="Use of Autoloading and organising into folders.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Validations/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/Loggable/NotLoggable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php" afterPath="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LeastSquares/StochasticLeastSquares.php" afterPath="$PROJECT_DIR$/src/LeastSquares/StochasticLeastSquares.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/CrossValidation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" afterPath="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" afterPath="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" afterPath="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" afterPath="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" afterPath="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
     </list>
     <ignored path="beach.iws" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="benchmarkClassifiers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+            <state relative-caret-position="135">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="25" selection-end-column="56" />
               <folding>
                 <element signature="e#125#160#0#PHP" expanded="true" />
               </folding>
@@ -46,21 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtremeLearningMachine.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
+      <file leaf-file-name="CSVDataHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-557">
-              <caret line="147" column="14" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="examplesValidation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,9 +58,11 @@
       <file leaf-file-name="HoldoutValidation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding>
+                <element signature="e#128#178#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,11 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ActivationFunctions/StepFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/TestFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Exceptions/IllegalArgumentException.php" />
-        <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/IObjectiveFunction.php" />
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/DifferentialEvolution.php" />
         <option value="$PROJECT_DIR$/src/DifferentialEvolution/Strategies/IStrategy.php" />
         <option value="$PROJECT_DIR$/LICENSE" />
@@ -116,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/Genetic/Genetic.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/EasomFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/SphereFunction.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/ArbitraryFunction1.php" />
         <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/Arbitrary1Function.php" />
@@ -143,8 +128,14 @@
         <option value="$PROJECT_DIR$/src/Utils/Validations/README.md" />
         <option value="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/Examples/examplesValidation.php" />
-        <option value="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
+        <option value="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php" />
         <option value="$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php" />
+        <option value="$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php" />
+        <option value="$PROJECT_DIR$/src/DifferentialEvolution/Individual.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Loggable/NotLoggable.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php" />
+        <option value="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php" />
       </list>
     </option>
   </component>
@@ -163,6 +154,28 @@
     <option name="y" value="-4" />
     <option name="width" value="1303" />
     <option name="height" value="773" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Probable bugsPHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpToStringReturnInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -243,7 +256,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Validations" />
+              <option name="myItemId" value="Functions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ObjectiveFunctions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,7 +282,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DataHandler" />
+              <option name="myItemId" value="Functions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,15 +300,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Utils" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataHandler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Examples" />
+              <option name="myItemId" value="ParticleSwarmOptimization" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,6 +319,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
@@ -437,9 +449,6 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,13 +470,7 @@
       <recent name="$PROJECT_DIR$/src/DataHandler/Datasets" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.benchmarkClassifiers.php">
-    <configuration default="false" name="exampleGenetic.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Genetic/Examples/exampleGenetic.php">
-      <method />
-    </configuration>
-    <configuration default="false" name="exampleGeneticTSP.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Genetic/Examples/exampleGeneticTSP.php">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="PHP Script.benchmarkOptimizers.php">
     <configuration default="false" name="exampleLS.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/LeastSquares/Examples/exampleLS.php">
       <method />
     </configuration>
@@ -475,6 +478,12 @@
       <method />
     </configuration>
     <configuration default="false" name="benchmarkClassifiers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="examplePerceptronLearning.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="benchmarkOptimizers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -524,19 +533,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.exampleGeneticTSP.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.exampleGeneticTSP.php" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleGenetic.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.benchmarkOptimizers.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.benchmarkClassifiers.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.examplePerceptronLearning.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.examplesValidation.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.exampleLS.php" />
       </list>
     </recent_temporary>
   </component>
@@ -612,11 +621,12 @@
       <workItem from="1480512540623" duration="3942000" />
       <workItem from="1480600267369" duration="10094000" />
       <workItem from="1480681307896" duration="15536000" />
+      <workItem from="1480936192759" duration="8528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404687000" />
+    <option name="totallyTimeSpent" value="413215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -631,7 +641,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45590433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88340807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -668,71 +678,11 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="217" />
+      <option name="time" value="231" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PhpLocalRunConfigurationType">
-        <watch expression="$this-&gt;expectedOutput" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DifferentialEvolution/Strategies/DERand2Strategy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DifferentialEvolution/Strategies/IStrategy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArtificialBeeColony/ArtificialBeeColony.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArtificialBeeColony/Examples/exampleABC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TournamentSelection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/TwoPointCrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/UniformCrossOver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/BitByBitMutation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -751,13 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -817,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/IChromosome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/PermutationChromosome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -873,9 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
           <caret line="142" column="17" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
-          <folding>
-            <element signature="e#118#155#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,9 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding>
-            <element signature="e#8#35#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -908,15 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,15 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,25 +869,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="150">
             <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -986,7 +879,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="150">
             <caret line="10" column="204" selection-start-line="10" selection-start-column="204" selection-end-line="10" selection-end-column="204" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1004,9 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding>
-            <element signature="e#131#178#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1014,15 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,9 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#122#168#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,29 +929,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/exampleELM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/Examples/examplePerceptronLearning.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ANN/ExtremeLearningMachine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-557">
-          <caret line="147" column="14" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
+        <state relative-caret-position="126">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/DataHandler/CSVDataHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markrogoyski/math-php/src/LinearAlgebra/Matrix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="1930" column="0" selection-start-line="1930" selection-start-column="0" selection-end-line="1930" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Loggable/NotLoggable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Operators/IChromosome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Functions/ObjectiveFunctions/RastriginFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ParticleSwarmOptimization/Particle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-834">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DifferentialEvolution/Individual.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DifferentialEvolution/DifferentialEvolution.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArtificialBeeColony/Bee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genetic/Genetic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2019">
+          <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
+          <folding>
+            <element signature="e#118#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkOptimizers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+          <folding>
+            <element signature="e#126#174#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Benchmarks/benchmarkClassifiers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+        <state relative-caret-position="135">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="25" selection-end-column="56" />
           <folding>
             <element signature="e#125#160#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ANN/PerceptronLearning.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/Validations/HoldoutValidation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="510">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="e#128#178#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

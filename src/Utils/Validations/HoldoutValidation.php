@@ -9,7 +9,7 @@
 namespace App\Utils\Validations;
 
 
-use App\Exceptions\IllegalArgumentException;
+use App\Utils\Exceptions\IllegalArgumentException;
 use App\Utils\Interfaces\IClassifier;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
@@ -120,8 +120,8 @@ class HoldoutValidation implements IValidation
         $labeled = $this->labelForValidation->getRow(0);
 
         //use max
-        $biggest = count(array_unique($predicted)) > count(array_unique($labeled)) ?
-            count(array_unique($predicted)) : count(array_unique($labeled));
+        $biggest = (max(array_unique($predicted)) > max(array_unique($labeled)) ?
+            max(array_unique($predicted)) : max(array_unique($labeled))) + 1;
 
         $confusionMatrix = Math::generateRandomMatrix($biggest, $biggest, 0);
 
@@ -140,6 +140,7 @@ class HoldoutValidation implements IValidation
     public function validate()
     {
         if (is_null($this->classifier)) throw new IllegalArgumentException("Classifier not set.");
+
         $this->classifier->setInput($this->getUnlabeledDataForTraining());
         $this->classifier->setExpectedOutput($this->getLabelForTraining());
 

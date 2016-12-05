@@ -26,7 +26,7 @@ ini_set('max_execution_time', -1);
 require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 $elm = new ExtremeLearningMachine(30, 3, new SigmoidalFunction());
-$pcptron = new PerceptronLearning(1000, new RoundFunction());
+$pcptron = new PerceptronLearning(100, new RoundFunction());
 $dls = new DeterministicLeastSquares();
 
 $data = new CSVDataHandler(0);
