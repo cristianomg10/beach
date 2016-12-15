@@ -6,10 +6,10 @@
  * Time: 3:33 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Mutators;
 
-
-use App\Genetic\Operators\BinaryChromosome;
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Mutators\IMutation;
 use App\Utils\Math;
 
 class BitByBitMutation implements IMutation

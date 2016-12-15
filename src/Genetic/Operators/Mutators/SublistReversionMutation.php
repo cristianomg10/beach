@@ -6,8 +6,10 @@
  * Time: 5:55 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Mutators;
 
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Elements\PermutationChromosome;
 
 class SublistReversionMutation implements IMutation
 {

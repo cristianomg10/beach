@@ -6,7 +6,7 @@
  * Time: 2:15 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\CrossOvers;
 
 
 interface ICrossOver

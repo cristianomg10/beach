@@ -6,8 +6,10 @@
  * Time: 3:55 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\CrossOvers;
 
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Elements\PermutationChromosome;
 use App\Utils\Exceptions\IllegalArgumentException;
 use App\Utils\Math;
 

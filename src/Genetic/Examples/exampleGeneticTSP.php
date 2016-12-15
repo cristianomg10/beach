@@ -2,12 +2,9 @@
 
 
 use App\Genetic\GeneticTSP;
-use App\Genetic\Operators\OrderBasedCrossOver;
-use App\Genetic\Operators\PermutationChromosome;
-use App\Genetic\Operators\RouletteWheelSelection;
-use App\Genetic\Operators\SublistReversionMutation;
-use App\Genetic\Operators\SublistShuffleMutation;
-use App\Genetic\Operators\SwapMutation;
+use App\Genetic\Operators\CrossOvers\OrderBasedCrossOver;
+use App\Genetic\Operators\Mutators\SublistReversionMutation;
+use App\Genetic\Operators\Selectors\RouletteWheelSelection;
 use App\Utils\Functions\ObjectiveFunctions\TSProblemFunction;
 use MathPHP\LinearAlgebra\Matrix;
 

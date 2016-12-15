@@ -3,17 +3,25 @@
  * Created by PhpStorm.
  * User: cristiano
  * Date: 11/11/16
- * Time: 3:20 PM
+ * Time: 2:18 PM
  */
 
-namespace App\Genetic\Operators;
-
-use App\Genetic\Operators\BinaryChromosome;
-use App\Utils\Math;
+namespace App\Genetic\Operators\CrossOvers;
 
 
-class UniformCrossOver implements ICrossOver
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Utils\Exceptions\IllegalArgumentException;
+
+class SinglePointCrossOver implements ICrossOver
 {
+    private $point;
+    /**
+     * SinglePointCrossOver constructor. If point = 0, the the point will be random.
+     * @param int $point
+     */
+    function __construct($point = 0){
+        $this->point = $point;
+    }
 
     public function crossOver($individual1, $individual2)
     {
@@ -21,19 +29,17 @@ class UniformCrossOver implements ICrossOver
             throw new IllegalArgumentException("Individuals are not Chromosomes.");
         }
 
-        $uniformArray = [];
-        for ($i = 0; $i < $individual1->getLength(); ++$i){
-            $uniformArray[] = round(Math::getRandomValue());
-        }
+        if (!$this->point)
+            $point = rand(1, $individual1->getLength() - 1);
 
         $newIndividual1 = new BinaryChromosome();
         $newIndividual2 = new BinaryChromosome();
 
         for ($i = 0; $i < $individual1->getLength(); ++$i){
-            if ($uniformArray[$i] == 0){
+            if ($i < $point){
                 $newIndividual1->updateGenes($i, $individual1->getGene($i));
                 $newIndividual2->updateGenes($i, $individual2->getGene($i));
-            } else {
+            }else{
                 $newIndividual1->updateGenes($i, $individual2->getGene($i));
                 $newIndividual2->updateGenes($i, $individual1->getGene($i));
             }

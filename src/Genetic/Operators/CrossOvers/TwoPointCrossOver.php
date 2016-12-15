@@ -6,11 +6,10 @@
  * Time: 2:36 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\CrossOvers;
 
-
+use App\Genetic\Operators\Elements\BinaryChromosome;
 use App\Utils\Exceptions\IllegalArgumentException;
-use App\Genetic\Operators\BinaryChromosome;
 
 class TwoPointCrossOver implements ICrossOver
 {

@@ -6,11 +6,10 @@
  * Time: 4:27 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Mutators;
 
-
+use App\Genetic\Operators\Elements\BinaryChromosome;
 use App\Utils\Exceptions\IllegalArgumentException;
-use App\Genetic\Operators\BinaryChromosome;
 
 class RandomMutation implements IMutation
 {

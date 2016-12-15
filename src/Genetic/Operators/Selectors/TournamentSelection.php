@@ -6,7 +6,7 @@
  * Time: 3:08 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Selectors;
 
 
 class TournamentSelection implements ISelection

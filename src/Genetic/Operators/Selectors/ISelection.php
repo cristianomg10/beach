@@ -6,7 +6,7 @@
  * Time: 2:17 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Selectors;
 
 
 interface ISelection
