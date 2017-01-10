@@ -48,7 +48,7 @@ class HoldoutValidation implements IValidation
         $this->qtyForValidation = $this->length - $this->qtyForTraining;
     }
 
-    private function getUnlabeledDataForTraining()
+    public function getUnlabeledDataForTraining()
     {
         $this->shuffle();
         $data = array_slice($this->data, 0, $this->qtyForTraining, true);
@@ -65,11 +65,11 @@ class HoldoutValidation implements IValidation
         return (new Matrix($data))->transpose();
     }
 
-    private function getLabelForTraining(){
+    public function getLabelForTraining(){
         return $this->label;
     }
 
-    private function getUnlabeledDataForValidation()
+    public function getUnlabeledDataForValidation()
     {
         $this->shuffle();
         $data = array_slice($this->data, 0, $this->qtyForValidation, true);
@@ -99,7 +99,7 @@ class HoldoutValidation implements IValidation
         $this->data = $newArray;
     }
 
-    private function getLabelForValidation()
+    public function getLabelForValidation()
     {
         return $this->labelForValidation;
     }
@@ -119,7 +119,15 @@ class HoldoutValidation implements IValidation
 
     public function getConfusionMatrix()
     {
-        $this->multiClassPredicted = $this->againstOther2Class($this->lastClassified);
+        if (is_array($this->lastClassified)){
+            if (count($this->lastClassified) > 1){
+                $this->multiClassPredicted = $this->againstOther2Class(new Matrix($this->lastClassified));
+            } else {
+                $this->multiClassPredicted = new Matrix($this->lastClassified);
+            }
+        } else if (is_a(Matrix::class, $this->lastClassified)){
+            $this->multiClassPredicted = $this->againstOther2Class($this->lastClassified);
+        }
         $predicted = $this->multiClassPredicted->getRow(0);
         $labeled = $this->labelForValidation->getRow(0);
 
@@ -130,7 +138,7 @@ class HoldoutValidation implements IValidation
         $confusionMatrix = Math::generateRandomMatrix($biggest, $biggest, 0);
 
         for ($i = 0; $i < count($labeled); ++$i){
-            $confusionMatrix[$predicted[$i]][$labeled[$i]]++;
+            $confusionMatrix["{$predicted[$i]}"]["{$labeled[$i]}"]++;
         }
 
         return new Matrix($confusionMatrix);

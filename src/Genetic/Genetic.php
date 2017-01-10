@@ -157,8 +157,8 @@ class Genetic implements IOptimizer {
     /**
      * @return mixed
      */
-    public function getBest()
+    public function getBest() : array
     {
-        return $this->bestIndiv;
+        return $this->bestIndiv->getGenes();
     }
 }

@@ -9,7 +9,9 @@
 namespace App\Utils\DataHandler;
 
 
+use App\Utils\Exceptions\IllegalArgumentException;
 use App\Utils\Math;
+use App\Utils\Normalization\INormalization;
 use MathPHP\LinearAlgebra\Matrix;
 
 class CSVDataHandler implements IDataHandler
@@ -24,9 +26,24 @@ class CSVDataHandler implements IDataHandler
     private $validationRate;
     private $qtyForTraining;
     private $qtyForValidation;
+    private $normalization;
 
     function __construct($firstLineAsAttrName = 0){
         $this->firstLineAsAttrName = $firstLineAsAttrName;
+    }
+
+    public function setNormalization(INormalization $normalization){
+        $this->normalization = $normalization;
+    }
+
+    public function normalize( $index){
+        if (!isset($this->data)) throw new IllegalArgumentException("Empty data.");
+        if (!isset($this->normalization)) throw new IllegalArgumentException("Normalization method not set.");
+
+        $this->normalization->setIndex($index);
+        for ($i = 0; $i < count($this->data); ++$i){
+            $this->data[$i][$index] = $this->normalization->compute($this->data[$i][$index]);
+        }
     }
 
     public function open($source = '')

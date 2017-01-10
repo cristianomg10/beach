@@ -1,10 +1,12 @@
 <?php
 
 use App\Genetic\Genetic;
+use App\Genetic\Operators\CrossOvers\FlatCrossOver;
 use App\Genetic\Operators\CrossOvers\SinglePointCrossOver;
 use App\Genetic\Operators\CrossOvers\TwoPointCrossOver;
 use App\Genetic\Operators\CrossOvers\UniformCrossOver;
 use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Elements\FloatChromosome;
 use App\Genetic\Operators\Mutators\BitByBitMutation;
 use App\Genetic\Operators\Mutators\RandomMutation;
 use App\Genetic\Operators\Selectors\RouletteWheelSelection;
@@ -56,3 +58,13 @@ $g = new Genetic(40, 10, 0.85, 0.4, new EasomFunction(), new RouletteWheelSelect
 $result = $g->run();
 
 var_dump($result);
+
+$k = new FloatChromosome();
+$k->initialize(8);
+echo "$k\n";
+$j = new FloatChromosome();
+$j->initialize(8);
+echo "$j\n";
+$s = (new FlatCrossOver())->crossOver($k, $j);
+echo $s[0] . "\n";
+echo $s[1] . "\n";
