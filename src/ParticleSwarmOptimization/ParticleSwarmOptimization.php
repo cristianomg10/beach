@@ -124,9 +124,9 @@ class ParticleSwarmOptimization implements IOptimizer
     /**
      * @return mixed
      */
-    public function getBest()
+    public function getBest() : array
     {
-        return $this->bestParticle;
+        return $this->bestParticle->getLocation();
     }
 
 }

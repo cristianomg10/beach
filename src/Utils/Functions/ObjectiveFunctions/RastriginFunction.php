@@ -9,7 +9,9 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 // For Genetic
-use App\Genetic\Operators\BinaryChromosome;
+
+
+use App\Genetic\Operators\Elements\BinaryChromosome;
 
 class RastriginFunction implements IObjectiveFunction
 {

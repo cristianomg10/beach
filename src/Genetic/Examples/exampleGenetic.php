@@ -1,16 +1,17 @@
 <?php
 
-use App\Utils\Functions\ObjectiveFunctions\EasomFunction;
-use App\Utils\Functions\ObjectiveFunctions\RastriginFunction;
-use App\Genetic\Operators\BinaryChromosome;
 use App\Genetic\Genetic;
+use App\Genetic\Operators\CrossOvers\FlatCrossOver;
+use App\Genetic\Operators\CrossOvers\SinglePointCrossOver;
+use App\Genetic\Operators\CrossOvers\TwoPointCrossOver;
+use App\Genetic\Operators\CrossOvers\UniformCrossOver;
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Elements\FloatChromosome;
+use App\Genetic\Operators\Mutators\BitByBitMutation;
+use App\Genetic\Operators\Mutators\RandomMutation;
+use App\Genetic\Operators\Selectors\RouletteWheelSelection;
 use App\Utils\Functions\ObjectiveFunctions\ArbitraryFunction;
-use App\Genetic\Operators\BitByBitMutation;
-use App\Genetic\Operators\RandomMutation;
-use App\Genetic\Operators\RouletteWheelSelection;
-use App\Genetic\Operators\SinglePointCrossOver;
-use App\Genetic\Operators\TwoPointCrossOver;
-use App\Genetic\Operators\UniformCrossOver;
+use App\Utils\Functions\ObjectiveFunctions\EasomFunction;
 
 error_reporting(E_ALL);
 ini_set('memory_limit', '4096M');
@@ -57,3 +58,13 @@ $g = new Genetic(40, 10, 0.85, 0.4, new EasomFunction(), new RouletteWheelSelect
 $result = $g->run();
 
 var_dump($result);
+
+$k = new FloatChromosome();
+$k->initialize(8);
+echo "$k\n";
+$j = new FloatChromosome();
+$j->initialize(8);
+echo "$j\n";
+$s = (new FlatCrossOver())->crossOver($k, $j);
+echo $s[0] . "\n";
+echo $s[1] . "\n";

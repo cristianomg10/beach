@@ -6,7 +6,7 @@
  * Time: 3:40 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Elements;
 
 
 interface IChromosome

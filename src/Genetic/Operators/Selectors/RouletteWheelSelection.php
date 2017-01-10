@@ -6,7 +6,7 @@
  * Time: 1:39 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Selectors;
 
 
 class RouletteWheelSelection implements ISelection

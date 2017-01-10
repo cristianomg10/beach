@@ -6,8 +6,12 @@
  * Time: 5:41 PM
  */
 
-namespace App\Genetic\Operators;
+namespace App\Genetic\Operators\Mutators;
 
+
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Elements\PermutationChromosome;
+use App\Utils\Exceptions\IllegalArgumentException;
 
 class SublistShuffleMutation implements IMutation
 {

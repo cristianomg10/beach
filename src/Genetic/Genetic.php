@@ -8,12 +8,11 @@
 
 namespace App\Genetic;
 
-
-use App\Genetic\Operators\BinaryChromosome;
+use App\Genetic\Operators\CrossOvers\ICrossOver;
+use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Genetic\Operators\Mutators\IMutation;
+use App\Genetic\Operators\Selectors\ISelection;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
-use App\Genetic\Operators\ICrossOver;
-use App\Genetic\Operators\IMutation;
-use App\Genetic\Operators\ISelection;
 use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;
 
@@ -158,8 +157,8 @@ class Genetic implements IOptimizer {
     /**
      * @return mixed
      */
-    public function getBest()
+    public function getBest() : array
     {
-        return $this->bestIndiv;
+        return $this->bestIndiv->getGenes();
     }
 }

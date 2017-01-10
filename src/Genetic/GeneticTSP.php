@@ -9,10 +9,10 @@
 namespace App\Genetic;
 
 
-use App\Genetic\Operators\ICrossOver;
-use App\Genetic\Operators\IMutation;
-use App\Genetic\Operators\ISelection;
-use App\Genetic\Operators\PermutationChromosome;
+use App\Genetic\Operators\CrossOvers\ICrossOver;
+use App\Genetic\Operators\Elements\PermutationChromosome;
+use App\Genetic\Operators\Mutators\IMutation;
+use App\Genetic\Operators\Selectors\ISelection;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Utils\Interfaces\IOptimizer;
 use App\Utils\Math;

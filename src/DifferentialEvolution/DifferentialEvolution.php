@@ -50,8 +50,8 @@ class DifferentialEvolution implements IOptimizer
         }
     }
 
-    function getBest(){
-        return $this->best;
+    function getBest() : array{
+        return $this->best->getData();
     }
 
     function run(){

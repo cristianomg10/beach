@@ -47,10 +47,10 @@ $inputForTest = new Matrix(
 
 $values = $elm->classify($inputForTest);
 echo $values . "\n";
-
-/*$csv = new CSVDataHandler();
-$csv->open('../../Utils/DataHandler/Datasets/iris.csv');
-$csv->setAttrIndex(4);
+/*
+$csv = new CSVDataHandler();
+$csv->open('../../Utils/DataHandler/Datasets/wine-dataset.csv');
+$csv->setAttrIndex(0);
 $csv->setValidationRate(30);
 
 $elm = new ExtremeLearningMachine(20, 3, new SigmoidalFunction());

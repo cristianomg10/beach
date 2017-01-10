@@ -143,7 +143,7 @@ class ArtificialBeeColony implements IOptimizer
         }
     }
 
-    function getBest(){
-        return $this->bestBee;
+    function getBest() : array{
+        return $this->bestBee->getPosition();
     }
 }
