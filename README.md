@@ -8,10 +8,11 @@ to code, mostly in PHP, and here I'll have my tests.
 ## What have I developed so far?
 ### For Classification:
 - Perceptron;
+- kNN;
 - (Determinist and Stochastic) Least Squares;
 - Extreme Learning Machine.
 
-### For Optimisation:
+### For Optimization:
 - Artificial Bee Colony;
 - Differential Evolution;
 - Genetic Algorithms:
