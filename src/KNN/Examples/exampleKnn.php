@@ -6,7 +6,7 @@
  * Time: 3:50 PM
  */
 
-use App\kNN\KNN;
+use App\KNN\KNN;
 use App\Utils\DataHandler\CSVDataHandler;
 use App\Utils\Normalization\Normalization;
 use App\Utils\Validations\HoldoutValidation;

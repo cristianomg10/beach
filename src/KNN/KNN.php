@@ -6,7 +6,7 @@
  * Time: 3:13 PM
  */
 
-namespace App\kNN;
+namespace App\KNN;
 
 
 use App\Utils\Interfaces\IClassifier;
