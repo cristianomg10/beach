@@ -19,12 +19,13 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 $data = new CSVDataHandler(0);
 $data->open('../../Utils/DataHandler/Datasets/iris.csv');
+
 $n  = new Normalization($data->getDataAsMatrix(), -1, 1);
 
 $d = $data->getDataAsMatrix()->transpose();
-$ho = new HoldoutValidation($data->getDataAsMatrix()->transpose(), 4, 10);
+$ho = new HoldoutValidation($data->getDataAsMatrix()->transpose(), 2, 10);
 
-$k = new KNN(3);
+$k = new KNN(9);
 $k->setInput($ho->getUnlabeledDataForTraining());
 $k->setExpectedOutput($ho->getLabelForTraining());
 $k->learn();
