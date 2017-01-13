@@ -37,7 +37,7 @@ class KNN implements IClassifier
 
     public function learn()
     {
-        $m = Math::generateRandomMatrix($this->input->getN(), $this->input->getN(), 0);
+        /*$m = Math::generateRandomMatrix($this->input->getN(), $this->input->getN(), 0);
         $m = Math::sumNumberToMatrix($m, 9999);
 
         for ($i = 0; $i < $this->input->getN(); ++$i){
@@ -55,7 +55,7 @@ class KNN implements IClassifier
             }
         }
 
-        $this->distanceMatrix = new Matrix($m);
+        $this->distanceMatrix = new Matrix($m);*/
     }
 
     public function classify(Matrix $input)
@@ -65,7 +65,7 @@ class KNN implements IClassifier
 
         for ($i = 0; $i < $input->getN(); ++$i){
             for ($j = 0; $j < $this->input->getN(); ++$j){
-                if ($i == $j) continue;
+                //if ($i == $j) continue;
 
                 $distance = 0;
                 for ($k = 0; $k < $this->input->getM(); ++$k){
@@ -74,7 +74,6 @@ class KNN implements IClassifier
 
                 $distance = sqrt($distance);
                 $m[$i][$j] = $distance;
-                //$m[$j][$i] = $distance;
             }
         }
 

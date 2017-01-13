@@ -19,6 +19,7 @@ require_once(__DIR__ . '/../../../vendor/autoload.php');
 
 $data = new CSVDataHandler(0);
 $data->open('../../Utils/DataHandler/Datasets/iris.csv');
+
 $n  = new Normalization($data->getDataAsMatrix(), -1, 1);
 
 $d = $data->getDataAsMatrix()->transpose();
@@ -28,6 +29,6 @@ $k = new KNN(3);
 $k->setInput($ho->getUnlabeledDataForTraining());
 $k->setExpectedOutput($ho->getLabelForTraining());
 $k->learn();
-echo $k->classify($ho->getUnlabeledDataForValidation());
+echo "Classified: " . $k->classify($ho->getUnlabeledDataForValidation());
 echo "\n";
-echo $ho->getLabelForValidation();
+echo "Correct cl: " . $ho->getLabelForValidation();

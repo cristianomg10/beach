@@ -36,6 +36,21 @@ class CSVDataHandler implements IDataHandler
         $this->normalization = $normalization;
     }
 
+    public function removeColumn(array $columnIndex){
+        if (!isset($this->data)) throw new IllegalArgumentException("Empty data.");
+
+        for ($j = 0; $j < count($columnIndex); ++$j)
+        {
+            for ($i = 0; $i < count($this->data); ++$i){
+                unset($this->data[$i][$columnIndex[$j]]);
+            }
+        }
+
+        for ($i = 0; $i < count($this->data); ++$i){
+            $this->data[$i] = array_values($this->data[$i]);
+        }
+    }
+
     public function normalize( $index){
         if (!isset($this->data)) throw new IllegalArgumentException("Empty data.");
         if (!isset($this->normalization)) throw new IllegalArgumentException("Normalization method not set.");
@@ -72,6 +87,10 @@ class CSVDataHandler implements IDataHandler
     {
         if (!$this->data) throw new \Exception("The object has no data to retrieve.");
         if (is_array($this->data) && !is_array($this->data)) return (new Matrix([$this->data]))->transpose();
+
+        if ($this->firstLineAsAttrName) unset($this->data[0]);
+
+        $this->data = array_values($this->data);
 
         return (new Matrix($this->data))->transpose();
     }

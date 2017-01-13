@@ -1,8 +1,8 @@
 # Beach
 
 ## What is it?
-One of the most commom places you go when you have fun is to... beach! 
-And here, I have some codes I developed while I was working/having fun. I like 
+One of the most common places you go when you have fun is to... beach! 
+And here, I have some codes I developed/studied while I was working/having fun. I like 
 to code, mostly in PHP, and here I'll have my tests. 
 
 ## What have I developed so far?
