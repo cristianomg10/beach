@@ -16,7 +16,7 @@ class ArbitraryFunction implements IObjectiveFunction
 {
     public function compute($individual)
     {
-        if (is_a($individual, BinaryChromosome::class)) {
+        if ($individual instanceof BinaryChromosome) {
             $genes = $individual->getGenes();
             $x = bindec(implode("", array_slice($genes, 0, 4)));
             $y = bindec(implode("", array_slice($genes, 4, 4)));

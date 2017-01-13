@@ -8,14 +8,14 @@
 
 namespace App\Utils\Functions\ObjectiveFunctions;
 
-use App\Genetic\Operators\Elements\BinaryChromosome;
+use App\Optimizers\Genetic\Operators\Elements\BinaryChromosome;
 
 class SphereFunction implements IObjectiveFunction
 {
 
     public function compute($individual)
     {
-        if (is_a($individual, BinaryChromosome::class)) {
+        if ($individual instanceof BinaryChromosome) {
             $genes = $individual->getGenes();
             $x[0] = bindec(implode("", array_slice($genes, 0, 4)));
             $x[1] = bindec(implode("", array_slice($genes, 4, 4)));
