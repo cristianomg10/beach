@@ -9,6 +9,7 @@
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 
+use App\Optimizers\Genetic\Operators\Elements\PermutationChromosome;
 use MathPHP\LinearAlgebra\Matrix;
 
 class TSProblemFunction implements IObjectiveFunction
