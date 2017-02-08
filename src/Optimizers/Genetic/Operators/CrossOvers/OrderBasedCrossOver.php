@@ -18,7 +18,7 @@ class OrderBasedCrossOver implements ICrossOver
 
     public function crossOver($individual1, $individual2)
     {
-        if (!is_a($individual1, PermutationChromosome::class) || !is_a($individual2, PermutationChromosome::class)){
+        if (!$individual1 instanceof PermutationChromosome || !$individual2 instanceof PermutationChromosome){
             throw new IllegalArgumentException("Individuals are not Chromosomes.");
         }
 

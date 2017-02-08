@@ -137,6 +137,11 @@ class GeneticTSP implements IOptimizer
                         $this->bestFitness = $this->fitnesses[$index];
                         $this->bestIndiv = $this->population[$index];
                     } else {
+                        if ($this->bestFitness == INF){
+                            $this->bestIndiv = $this->population[$index];
+                            $this->bestFitness = $this->fitnesses[$index];
+                        }
+
                         $this->population[$index] = $this->bestIndiv;
                         $this->fitnesses[$index] = $this->bestFitness;
                     }
