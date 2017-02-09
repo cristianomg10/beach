@@ -21,7 +21,7 @@ class RouletteWheelSelection implements ISelection
             $initialValue += $fitnesses[$i];
         }
 
-        $target = rand($fitnesses[0], $fitnesses[$i - 1]);
+        $target = rand((int)$fitnesses[0], (int)$fitnesses[$i - 1]);
 
         for ($i = 0; $i < count($fitnesses); ++$i){
             if ($target < $chances[$i]){
