@@ -132,16 +132,16 @@ class GeneticTSP implements IOptimizer
                     0   // get the smallest value
                 );
 
+                if ($this->bestFitness == INF or $this->bestIndiv == null){
+                    $this->bestIndiv = $this->population[$index];
+                    $this->bestFitness = $this->fitnesses[$index];
+                }
+
                 if ($this->elitism) {
                     if ($this->compare($this->fitnesses[$index], $this->bestFitness)) {
                         $this->bestFitness = $this->fitnesses[$index];
                         $this->bestIndiv = $this->population[$index];
                     } else {
-                        if ($this->bestFitness == INF){
-                            $this->bestIndiv = $this->population[$index];
-                            $this->bestFitness = $this->fitnesses[$index];
-                        }
-
                         $this->population[$index] = $this->bestIndiv;
                         $this->fitnesses[$index] = $this->bestFitness;
                     }
