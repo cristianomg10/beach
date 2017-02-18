@@ -9,6 +9,7 @@
 
 namespace App\Classifiers\ANN;
 
+use App\Utils\Exceptions\IllegalArgumentException;
 use App\Utils\Functions\ActivationFunctions\StepFunction;
 use App\Classifiers\ANN\Perceptron;
 use App\Utils\Math;
@@ -113,6 +114,52 @@ class SingleLayerPerceptron
         }
     }
 
+    public function getWeights(){
+        $weights = [];
+
+        foreach ($this->hiddenPerceptrons as $h){
+            $weights += $h->getWeights();
+            $weights[] = $h->getBias();
+        }
+
+        foreach ($this->outputPerceptrons as $h){
+            $weights += $h->getWeights();
+            $weights[] = $h->getBias();
+        }
+
+        return $weights;
+    }
+
+    public function getWeightSize(){
+        $qty = $this->nHiddenPerceptrons * $this->inputLayerSize + $this->nHiddenPerceptrons * $this->nOutputPerceptrons;
+        $qty += ($this->nHiddenPerceptrons + $this->nOutputPerceptrons); // biases
+
+        return $qty;
+    }
+
+    public function setWeights($weights){
+        $count = count($weights);
+        $qty = $this->nHiddenPerceptrons * $this->inputLayerSize + $this->nHiddenPerceptrons * $this->nOutputPerceptrons;
+        $qty += ($this->nHiddenPerceptrons + $this->nOutputPerceptrons); // biases
+
+        if ($count != $qty){
+            throw new IllegalArgumentException("Weights of different size. It's needed $qty weights. $count were provided.");
+        }
+
+        $place = 0;
+        foreach ($this->hiddenPerceptrons as $h){
+            $h->setWeights(array_slice($weights, $place, $this->inputLayerSize));
+            $place += $this->inputLayerSize;
+            $h->setBias($weights[$place++]);
+        }
+
+        foreach ($this->outputPerceptrons as $h){
+            $h->setWeights(array_slice($weights, $place, $this->nHiddenPerceptrons));
+            $place += $this->nHiddenPerceptrons;
+            $h->setBias($weights[$place++]);
+        }
+    }
+
     public function setInput(Matrix $input){
         $this->input = $input;
     }
@@ -125,9 +172,9 @@ class SingleLayerPerceptron
 
         $epoch = 1;
         /* Run the epochs (batch training) */
-        while ($epoch < $this->maxEpochs){
-            /*
-             *
+        /*while ($epoch < $this->maxEpochs){
+
+             /*
             X	$$X$$	Input Data, each row in an example	(numExamples, inputLayerSize) OK
             y	$$y$$	target data	(numExamples, outputLayerSize)  OK
             W1	$$W^{(1)}$$	Layer 1 weights	(inputLayerSize, hiddenLayerSize)
@@ -143,7 +190,7 @@ class SingleLayerPerceptron
             delta2	$$\delta^{(2)}$$	Backpropagating Error 2	(numExamples,hiddenLayerSize)
             delta3	$$\delta^{(3)}$$	Backpropagating Error 1	(numExamples,outputLayerSize)
              */
-
+            /*
             $z3 = [];
             $z2 = [];
             $hiddenOutputs = []; // z3
@@ -244,7 +291,24 @@ class SingleLayerPerceptron
             echo "Epoca $epoch: <br>";
             echo $this;
             ++$epoch;
+        }*/
+    }
+
+    public function run($input, $expectedOutput = ''){
+        $columnInput = $input;
+        $outputPerceptron = $this->outputPerceptrons[0];
+
+        $inputForOutputLayer = [];
+        for ($j = 0; $j < $this->nHiddenPerceptrons; ++$j){
+            $this->hiddenPerceptrons[$j]->setInput($columnInput);
+            $inputForOutputLayer[] = $this->hiddenPerceptrons[$j]->calculate();
         }
+
+        $outputPerceptron->setInput($inputForOutputLayer);
+
+        $yHat = $outputPerceptron->calculate();
+
+        return $yHat;
     }
 
     private function costFunction($y, $yHat){

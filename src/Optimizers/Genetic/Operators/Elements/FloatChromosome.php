@@ -26,7 +26,7 @@ class FloatChromosome implements IChromosome
         $genes = [];
 
         for ($i = 0; $i < $length; ++$i){
-            $genes[$i] = Math::getRandomValue();
+            $genes[$i] = Math::getRandomValue() * 2 - 1;
         }
 
         $this->length = count($genes);

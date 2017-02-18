@@ -9,6 +9,7 @@
 namespace App\Optimizers\Genetic\Operators\Mutators;
 
 use App\Optimizers\Genetic\Operators\Elements\BinaryChromosome;
+use App\Optimizers\Genetic\Operators\Elements\FloatChromosome;
 use App\Optimizers\Genetic\Operators\Elements\PermutationChromosome;
 use App\Utils\Exceptions\IllegalArgumentException;
 
@@ -16,7 +17,8 @@ class SwapMutation implements IMutation
 {
     public function mutate($individual)
     {
-        if (!is_a($individual, BinaryChromosome::class) && !is_a($individual, PermutationChromosome::class)){
+        if (!is_a($individual, BinaryChromosome::class) && !is_a($individual, PermutationChromosome::class)
+        && !is_a($individual, FloatChromosome::class)){
             throw new IllegalArgumentException("Individual is not a Chromosome.");
         }
 
