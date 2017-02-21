@@ -15,6 +15,7 @@ use App\Optimizers\Genetic\Operators\Mutators\IMutation;
 use App\Optimizers\Genetic\Operators\Selectors\ISelection;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Utils\Interfaces\IOptimizer;
+use App\Utils\Loggable\ILoggable;
 use App\Utils\Math;
 use MathPHP\LinearAlgebra\Matrix;
 
@@ -37,10 +38,11 @@ class GeneticANNTrain implements IOptimizer
     private $trainData;
     private $trainLabel;
     private $nWeights;
+    private $logger;
 
     function __construct($populationSize, $generations, $probabilityCrossOver, $probabilityMutation,
                          IObjectiveFunction $objFunction, ISelection $selection, ICrossOver $crossOver,
-                         IMutation $mutation, Matrix $trainData, Matrix $trainLabel, $nWeights, $elitism = 1, $optimization = 'MAX')
+                         IMutation $mutation, ILoggable $logger, $nWeights, $elitism = 1, $optimization = 'MAX')
     {
         $this->populationSize = $populationSize;
         $this->probabilityCrossOver = $probabilityCrossOver;
@@ -52,9 +54,8 @@ class GeneticANNTrain implements IOptimizer
         $this->generations = $generations;
         $this->elitism = $elitism;
         $this->optimization = $optimization;
-        $this->trainLabel = $trainLabel;
-        $this->trainData = $trainData;
         $this->nWeights = $nWeights;
+        $this->logger = $logger;
 
         switch ($this->optimization){
             case "MIN":
@@ -83,7 +84,7 @@ class GeneticANNTrain implements IOptimizer
 
     public function getBest() : array
     {
-        // TODO: Implement getBest() method.
+        return $this->bestIndiv->getGenes();
     }
 
     public function run()
@@ -151,6 +152,7 @@ class GeneticANNTrain implements IOptimizer
                 }
             }
 
+            $this->logger->write("Generation $generation: Best fitness -> {$this->bestFitness} ({$this->bestIndiv})");
             ++$generation;
         }
 

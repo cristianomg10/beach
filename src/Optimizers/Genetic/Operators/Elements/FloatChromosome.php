@@ -66,4 +66,11 @@ class FloatChromosome implements IChromosome
         $this->genes = $genes;
         $this->length = count($genes);
     }
+
+    function __construct($genes = []){
+        if ($genes != []){
+            $this->genes = $genes;
+            $this->length = count($genes);
+        }
+    }
 }
