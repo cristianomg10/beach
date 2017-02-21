@@ -16,6 +16,7 @@ to code, mostly in PHP, and here I'll have my tests.
 - Artificial Bee Colony;
 - Differential Evolution;
 - Genetic Algorithms:
+    - Artificial SLP training;
     - Regular optimization;
     - Traveler Salesman Problem solved.
 - Particle Swarm Optimization;    

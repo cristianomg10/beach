@@ -10,6 +10,7 @@ namespace App\Optimizers\Genetic\Operators\CrossOvers;
 
 
 use App\Optimizers\Genetic\Operators\Elements\BinaryChromosome;
+use App\Optimizers\Genetic\Operators\Elements\FloatChromosome;
 use App\Utils\Exceptions\IllegalArgumentException;
 
 class SinglePointCrossOver implements ICrossOver
@@ -25,15 +26,17 @@ class SinglePointCrossOver implements ICrossOver
 
     public function crossOver($individual1, $individual2)
     {
-        if (!is_a($individual1, BinaryChromosome::class) || !is_a($individual2, BinaryChromosome::class)){
+        if (!is_a($individual1, BinaryChromosome::class) && !is_a($individual2, BinaryChromosome::class)
+        && !is_a($individual1, FloatChromosome::class) && !is_a($individual2, FloatChromosome::class)){
             throw new IllegalArgumentException("Individuals are not Chromosomes.");
         }
 
         if (!$this->point)
             $point = rand(1, $individual1->getLength() - 1);
 
-        $newIndividual1 = new BinaryChromosome();
-        $newIndividual2 = new BinaryChromosome();
+        $class = get_class($individual1);
+        $newIndividual1 = new $class();
+        $newIndividual2 = new $class();
 
         for ($i = 0; $i < $individual1->getLength(); ++$i){
             if ($i < $point){

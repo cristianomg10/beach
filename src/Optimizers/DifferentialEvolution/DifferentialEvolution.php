@@ -11,6 +11,7 @@ namespace App\Optimizers\DifferentialEvolution;
 use App\Utils\Functions\ObjectiveFunctions\IObjectiveFunction;
 use App\Optimizers\DifferentialEvolution\Strategies\IStrategy;
 use App\Utils\Interfaces\IOptimizer;
+use App\Utils\Loggable\ILoggable;
 use App\Utils\Math;
 
 class DifferentialEvolution implements IOptimizer
@@ -26,8 +27,13 @@ class DifferentialEvolution implements IOptimizer
     private $individuals;
     private $individualSize;
     private $probCrossOver;
+    private $logger;
+    private $max;
+    private $min;
 
-    function __construct(IObjectiveFunction $objectiveFunction, IStrategy $strategy, $individualSize, $populationSize, $generations, $initFactor, $probCrossOver, $F1, $F2 = 0){
+    function __construct(IObjectiveFunction $objectiveFunction, IStrategy $strategy,
+                         $individualSize, $populationSize, $generations, $initFactor, $probCrossOver,
+                         ILoggable $logger, $min, $max, $F1, $F2 = 0){
         $this->populationSize = $populationSize;
         $this->objectiveFunction = $objectiveFunction;
         $this->generations = $generations;
@@ -37,14 +43,19 @@ class DifferentialEvolution implements IOptimizer
         $this->probCrossOver = $probCrossOver;
         $this->individualSize = $individualSize;
         $this->strategy = $strategy;
+        $this->logger = $logger;
+        $this->min = $min;
+        $this->max = $max;
     }
 
     private function initialize(){
         for ($i = 0; $i < $this->populationSize; ++$i){
-            $individualContent = [];
+            /*$individualContent = [];
             for ($j = 0; $j < $this->individualSize; ++$j){
                 $individualContent[$j] = Math::getRandomValue() * $this->initFactor;
-            }
+            }*/
+
+            $individualContent = Math::sumNumberToMatrix(Math::generateRandomVector($this->individualSize, $this->max * 2), - abs($this->min));
 
             $this->individuals[$i] = new Individual($individualContent);
         }
@@ -66,6 +77,10 @@ class DifferentialEvolution implements IOptimizer
                 $this->F1,
                 $this->F2
             );
+
+
+            array_multisort($fitness, $this->individuals);
+            $this->logger->write("Iteration $i: Best Fitness: {$this->objectiveFunction->compute($this->individuals[0]->getData())}");
         }
 
         array_multisort($fitness, $this->individuals);
