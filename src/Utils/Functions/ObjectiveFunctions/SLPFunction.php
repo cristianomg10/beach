@@ -12,6 +12,7 @@ namespace App\Utils\Functions\ObjectiveFunctions;
 namespace App\Utils\Functions\ObjectiveFunctions;
 
 use App\Classifiers\ANN\SingleLayerPerceptron;
+use MathPHP\LinearAlgebra\Matrix;
 
 class SLPFunction implements IObjectiveFunction
 {
@@ -21,21 +22,25 @@ class SLPFunction implements IObjectiveFunction
 
     public function compute($individual)
     {
-        if (is_array($individual)){
-            $this->slp->setWeights()    ;
+        $result = [];
+
+        if (is_array($individual)) {
+            $this->slp->setWeights($individual);
         } else {
             $this->slp->setWeights($individual->getGenes());
         }
 
-        return $this->slp->run($this->input);
+        for ($i = 0; $i < $this->input->getN(); ++$i) {
+            $result[] = abs($this->expectedOutput->get(0, $i) - $this->slp->run($this->input->getColumn($i)));
+        }
+
+        return array_sum($result);
     }
 
-    public function setInput($input){
-        $this->input = $input;
-    }
-
-    public function __construct(SingleLayerPerceptron $slp)
+    public function __construct(SingleLayerPerceptron $slp, Matrix $input, Matrix $expectedOutput)
     {
         $this->slp = $slp;
+        $this->input = $input;
+        $this->expectedOutput = $expectedOutput;
     }
 }

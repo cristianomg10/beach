@@ -14,7 +14,7 @@ use App\Optimizers\Genetic\Operators\CrossOvers\FlatCrossOver;
 use App\Optimizers\Genetic\Operators\CrossOvers\SinglePointCrossOver;
 use App\Optimizers\Genetic\Operators\Elements\FloatChromosome;
 use App\Optimizers\Genetic\Operators\Mutators\BiasedMutation;
-use App\Optimizers\Genetic\Operators\Mutators\InputNodeMutation;
+use App\Optimizers\Genetic\Operators\Mutators\HiddenNodeMutation;
 use App\Optimizers\Genetic\Operators\Mutators\SwapMutation;
 use App\Optimizers\Genetic\Operators\Mutators\UnbiasedMutation;
 use App\Optimizers\Genetic\Operators\Selectors\RouletteWheelSelection;
@@ -56,19 +56,20 @@ $slp = new SingleLayerPerceptron(
 $k = $ho->getUnlabeledDataForTraining();
 $l = $ho->getLabelForTraining();
 
+$mutation = new BiasedMutation(0.9);
 
-/*$g = new GeneticANNTrain(100, 200, 0.7, 0.3,
+$g = new GeneticANNTrain(20, 2000, 0.7, 0.3,
     new SLPFunction($slp, $k, $l), new RouletteWheelSelection(), new SinglePointCrossOver(),
-                         new BiasedMutation(0.8), new TerminalLoggable(), $slp->getWeightSize(), 1, 'MIN');
-*/
-//$g = new ParticleSwarmOptimization(100, 200, 2, 2, $slp->getWeightSize(), new SLPFunction($slp, $k, $l), 1, 0.989, -5, 5, new TerminalLoggable());
-//$g = new DifferentialEvolution(new SLPFunction($slp, $k, $l), new DECurrent2Best1Strategy(), $slp->getWeightSize(), 1500, 50, 1, 0.9, new TerminalLoggable(), -5, 5, 0.7, 1.1);
+                        $mutation, new TerminalLoggable(), $slp->getWeightSize(), 1, 'MIN');
 
-//$g->run();
-//var_dump($g->getBest());
-//echo get_class($g) . "\n";
+//$g = new ParticleSwarmOptimization(20, 2000, 2, 2, $slp->getWeightSize(), new SLPFunction($slp, $k, $l), 1, 0.989, -5, 5, new TerminalLoggable());
+$g = new DifferentialEvolution(new SLPFunction($slp, $k, $l), new DECurrent2Best1Strategy(), $slp->getWeightSize(), 1500, 50, 1, 0.9, new TerminalLoggable(), -5, 5, 0.7, 1.1);
 
-$k = new FloatChromosome([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]);
+$g->run();
+var_dump($g->getBest());
+echo get_class($g) . "\n";
 
-$l = new InputNodeMutation(3, 2);
-var_dump($l->mutate($k));
+//$k = new FloatChromosome([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]);
+
+//$l = new HiddenNodeMutation(3, 2);
+//var_dump($l->mutate($k));

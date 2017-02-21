@@ -11,7 +11,7 @@ namespace App\Optimizers\Genetic\Operators\Mutators;
 
 use App\Optimizers\Genetic\Operators\Elements\IChromosome;
 
-class InputNodeMutation implements IMutation
+class HiddenNodeMutation implements IMutation
 {
 
     private $inputSize;
